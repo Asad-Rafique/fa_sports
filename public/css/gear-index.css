@@ -1,0 +1,4728 @@
+/* =========================================================
+   FA SPORTS — GEAR INDEX
+   COMPLETE EDITORIAL SYSTEM
+   WHITE / RED / BLACK
+========================================================= */
+
+:root {
+    --fa-red: #e30613;
+    --fa-red-dark: #b8000c;
+    --fa-black: #090909;
+    --fa-black-2: #111111;
+    --fa-black-3: #181818;
+    --fa-white: #ffffff;
+    --fa-offwhite: #f5f5f2;
+    --fa-line: rgba(0, 0, 0, 0.12);
+    --fa-line-light: rgba(255, 255, 255, 0.14);
+    --fa-muted: #777;
+    --fa-ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   01 — GEAR INDEX HERO
+========================================================= */
+
+.fa-gear-final-hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 92px minmax(320px, .9fr) 1.35fr;
+    background: var(--fa-white);
+    color: var(--fa-black);
+}
+
+.fa-gear-final-wall {
+    position: relative;
+    z-index: 5;
+    background: var(--fa-black);
+    color: var(--fa-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 15px;
+    border-right: 1px solid #222;
+}
+
+.fa-gear-final-wall__brand {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--fa-white);
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: -.08em;
+}
+
+.fa-gear-final-wall__red-line {
+    width: 2px;
+    height: 90px;
+    background: var(--fa-red);
+}
+
+.fa-gear-final-wall__text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 8px;
+    line-height: 1.7;
+    letter-spacing: .18em;
+    font-weight: 700;
+    text-align: center;
+    opacity: .72;
+}
+
+.fa-gear-final-wall__number {
+    font-size: 9px;
+    letter-spacing: .14em;
+    color: #aaa;
+}
+
+.fa-gear-final-content {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px clamp(35px, 6vw, 100px);
+    background: var(--fa-white);
+}
+
+.fa-gear-final-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    margin-bottom: 35px;
+}
+
+.fa-gear-final-eyebrow span {
+    width: 28px;
+    height: 2px;
+    background: var(--fa-red);
+}
+
+.fa-gear-final-title {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(62px, 7vw, 125px);
+    line-height: .78;
+    letter-spacing: -.075em;
+    font-weight: 950;
+    text-transform: uppercase;
+}
+
+.fa-gear-final-title span {
+    display: block;
+}
+
+.fa-gear-final-title .is-red {
+    color: var(--fa-red);
+    margin-left: clamp(15px, 3vw, 50px);
+}
+
+.fa-gear-final-description {
+    max-width: 470px;
+    margin: 50px 0 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.fa-gear-final-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.fa-gear-final-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    min-height: 54px;
+    padding: 0 22px;
+    background: var(--fa-black);
+    color: var(--fa-white);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    transition: .35s var(--fa-ease);
+}
+
+.fa-gear-final-button strong {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--fa-red);
+}
+
+.fa-gear-final-button:hover {
+    background: var(--fa-red);
+    color: var(--fa-white);
+    transform: translateY(-3px);
+}
+
+.fa-gear-final-button:hover strong {
+    color: var(--fa-white);
+}
+
+.fa-gear-final-caption {
+    font-size: 8px;
+    letter-spacing: .18em;
+    font-weight: 800;
+    color: #888;
+}
+
+.fa-gear-final-stage {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 48%, rgba(227, 6, 19, .08), transparent 30%),
+        #111;
+    display: grid;
+    place-items: center;
+}
+
+.fa-gear-final-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .14;
+    background-image:
+        linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px);
+    background-size: 45px 45px;
+}
+
+.fa-gear-final-ring {
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 50%;
+    animation: faGearRotate 28s linear infinite;
+}
+
+.fa-gear-final-ring--large {
+    width: min(65vw, 650px);
+    height: min(65vw, 650px);
+}
+
+.fa-gear-final-ring--small {
+    width: min(40vw, 390px);
+    height: min(40vw, 390px);
+    border-color: rgba(227,6,19,.45);
+    animation-direction: reverse;
+    animation-duration: 18s;
+}
+
+.fa-gear-final-center {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--fa-red);
+    box-shadow: 0 0 0 8px rgba(227,6,19,.12),
+                0 0 35px rgba(227,6,19,.55);
+    z-index: 3;
+}
+
+.fa-gear-final-center span {
+    position: absolute;
+    inset: -35px;
+    border: 1px solid rgba(227,6,19,.25);
+    border-radius: 50%;
+}
+
+.fa-gear-final-object {
+    position: absolute;
+    z-index: 5;
+    width: 150px;
+    color: var(--fa-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform .45s var(--fa-ease);
+}
+
+.fa-gear-final-object:hover {
+    transform: scale(1.08);
+}
+
+.fa-gear-final-object small {
+    font-size: 8px;
+    color: var(--fa-red);
+    letter-spacing: .15em;
+    font-weight: 800;
+}
+
+.fa-gear-final-object svg {
+    width: 70px;
+    height: 70px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.2;
+    opacity: .9;
+}
+
+.fa-gear-final-object b {
+    font-size: 8px;
+    letter-spacing: .2em;
+}
+
+.fa-gear-final-object--jersey {
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fa-gear-final-object--boot {
+    left: 15%;
+    top: 48%;
+}
+
+.fa-gear-final-object--glove {
+    right: 15%;
+    top: 48%;
+}
+
+.fa-gear-final-object--bag {
+    bottom: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fa-gear-final-object--jersey:hover,
+.fa-gear-final-object--bag:hover {
+    transform: translateX(-50%) scale(1.08);
+}
+
+.fa-gear-final-accent {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: 7%;
+    bottom: 7%;
+    border: 2px solid var(--fa-red);
+    transform: rotate(45deg);
+    opacity: .45;
+}
+
+.fa-gear-final-meta {
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    right: 35px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #888;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+.fa-gear-final-meta i {
+    width: 25px;
+    height: 1px;
+    background: var(--fa-red);
+}
+
+.fa-gear-final-bottom {
+    position: absolute;
+    z-index: 10;
+    bottom: 24px;
+    left: calc(92px + 5%);
+    right: 5%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    color: #777;
+    font-size: 8px;
+    letter-spacing: .16em;
+    font-weight: 800;
+}
+
+.fa-gear-final-bottom div {
+    height: 1px;
+    background: #ddd;
+}
+
+
+/* =========================================================
+   02 — GEAR WALL
+========================================================= */
+
+.fa-gi-gear-wall {
+    position: relative;
+    background: var(--fa-offwhite);
+    padding: clamp(70px, 8vw, 125px) clamp(20px, 5vw, 80px);
+    color: var(--fa-black);
+}
+
+.fa-gi-gear-wall__header {
+    max-width: 1400px;
+    margin: 0 auto 55px;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 50px;
+    align-items: end;
+}
+
+.fa-gi-gear-wall__title > span,
+.fa-gi-gear-wall__intro > span {
+    font-size: 9px;
+    letter-spacing: .18em;
+    font-weight: 800;
+    color: #777;
+}
+
+.fa-gi-gear-wall__title h2 {
+    margin: 18px 0 0;
+    font-size: clamp(45px, 6vw, 88px);
+    line-height: .86;
+    letter-spacing: -.065em;
+    font-weight: 950;
+}
+
+.fa-gi-gear-wall__title h2 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-gear-wall__intro {
+    max-width: 380px;
+    justify-self: end;
+}
+
+.fa-gi-gear-wall__intro p {
+    margin: 15px 0 0;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.fa-gi-gear-wall__grid {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.45fr 1fr 1fr;
+    gap: 14px;
+}
+
+.fa-gi-gear-wall__card {
+    min-width: 0;
+}
+
+.fa-gi-gear-wall__card--feature {
+    grid-row: span 2;
+}
+
+.fa-gi-gear-wall__image {
+    position: relative;
+    height: 100%;
+    min-height: 330px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.fa-gi-gear-wall__card--feature .fa-gi-gear-wall__image {
+    min-height: 680px;
+}
+
+.fa-gi-gear-wall__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .8s var(--fa-ease);
+}
+
+.fa-gi-gear-wall__card:hover img {
+    transform: scale(1.045);
+}
+
+.fa-gi-gear-wall__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.1) 60%,
+        rgba(0,0,0,.05)
+    );
+}
+
+.fa-gi-gear-wall__number {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    color: var(--fa-white);
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.fa-gi-gear-wall__code {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: var(--fa-white);
+    font-size: 8px;
+    letter-spacing: .14em;
+    font-weight: 800;
+}
+
+.fa-gi-gear-wall__vertical {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: rgba(255,255,255,.7);
+    font-size: 7px;
+    letter-spacing: .2em;
+    font-weight: 800;
+}
+
+.fa-gi-gear-wall__label {
+    position: absolute;
+    left: 55px;
+    right: 20px;
+    bottom: 25px;
+    color: var(--fa-white);
+}
+
+.fa-gi-gear-wall__label small {
+    font-size: 8px;
+    letter-spacing: .15em;
+    color: #ddd;
+}
+
+.fa-gi-gear-wall__label h3 {
+    margin: 8px 0 0;
+    font-size: clamp(30px, 3vw, 55px);
+    line-height: .9;
+    letter-spacing: -.06em;
+    font-weight: 950;
+}
+
+.fa-gi-gear-wall__label em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-gear-wall__corner {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 35px;
+    height: 35px;
+    border-right: 2px solid var(--fa-red);
+    border-bottom: 2px solid var(--fa-red);
+}
+
+.fa-gi-gear-wall__caption {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 15px;
+    align-items: center;
+    padding: 17px 4px 0;
+}
+
+.fa-gi-gear-wall__caption > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fa-gi-gear-wall__caption span {
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .13em;
+}
+
+.fa-gi-gear-wall__caption strong {
+    color: var(--fa-red);
+    font-size: 9px;
+}
+
+.fa-gi-gear-wall__caption p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #777;
+}
+
+.fa-gi-gear-wall__caption b {
+    color: var(--fa-red);
+    font-size: 16px;
+}
+
+.fa-gi-gear-wall__bottom {
+    max-width: 1400px;
+    margin: 45px auto 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, auto) 1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 22px 0;
+}
+
+.fa-gi-gear-wall__bottom > div:not(.fa-gi-gear-wall__statement) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px 10px;
+}
+
+.fa-gi-gear-wall__bottom small {
+    font-size: 7px;
+    color: #999;
+    letter-spacing: .15em;
+}
+
+.fa-gi-gear-wall__bottom strong {
+    font-size: 16px;
+}
+
+.fa-gi-gear-wall__bottom span {
+    font-size: 8px;
+    color: #777;
+    letter-spacing: .12em;
+}
+
+.fa-gi-gear-wall__statement {
+    margin-left: auto;
+    text-align: right;
+}
+
+.fa-gi-gear-wall__statement span {
+    display: block;
+}
+
+.fa-gi-gear-wall__statement strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 17px;
+    line-height: 1;
+}
+
+.fa-gi-gear-wall__statement em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+
+/* =========================================================
+   03 — MATCH KIT ARCHIVE
+========================================================= */
+
+.fa-gi-kit-archive {
+    background: var(--fa-white);
+    padding: clamp(75px, 8vw, 130px) clamp(20px, 5vw, 80px);
+    color: var(--fa-black);
+}
+
+.fa-gi-kit-archive__head {
+    max-width: 1400px;
+    margin: 0 auto 55px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: end;
+}
+
+.fa-gi-kit-archive__eyebrow {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .18em;
+    color: #777;
+}
+
+.fa-gi-kit-archive h2 {
+    margin: 18px 0 0;
+    font-size: clamp(48px, 6.5vw, 100px);
+    line-height: .8;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.fa-gi-kit-archive h2 span {
+    color: var(--fa-red);
+}
+
+.fa-gi-kit-archive__intro {
+    max-width: 420px;
+    justify-self: end;
+}
+
+.fa-gi-kit-archive__intro strong {
+    font-size: 12px;
+    letter-spacing: .1em;
+}
+
+.fa-gi-kit-archive__intro p {
+    margin: 15px 0;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.fa-gi-kit-archive__index {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 13px;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-kit-archive__feature {
+    max-width: 1400px;
+    margin: 0 auto 55px;
+    display: grid;
+    grid-template-columns: 1.7fr .65fr;
+    min-height: 590px;
+}
+
+.fa-gi-kit-archive__feature-image {
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
+
+.fa-gi-kit-archive__feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.fa-gi-kit-archive__feature-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.5), transparent 70%);
+}
+
+.fa-gi-kit-archive__feature-code {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 8px;
+    letter-spacing: .16em;
+}
+
+.fa-gi-kit-archive__feature-mark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.7);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.fa-gi-kit-archive__feature-info {
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    color: #fff;
+}
+
+.fa-gi-kit-archive__feature-info span {
+    font-size: 8px;
+    letter-spacing: .17em;
+}
+
+.fa-gi-kit-archive__feature-info h3 {
+    margin: 10px 0 0;
+    font-size: clamp(30px, 4vw, 60px);
+    line-height: .85;
+    letter-spacing: -.05em;
+    font-weight: 950;
+}
+
+.fa-gi-kit-archive__feature-side {
+    background: var(--fa-black);
+    color: #fff;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-gi-kit-archive__side-number {
+    font-size: 65px;
+    font-weight: 950;
+    color: var(--fa-red);
+    line-height: 1;
+}
+
+.fa-gi-kit-archive__side-copy {
+    margin-top: auto;
+}
+
+.fa-gi-kit-archive__side-copy span {
+    font-size: 8px;
+    letter-spacing: .17em;
+    font-weight: 800;
+}
+
+.fa-gi-kit-archive__side-copy p {
+    margin: 15px 0 0;
+    font-size: 11px;
+    line-height: 1.8;
+    color: #aaa;
+}
+
+.fa-gi-kit-archive__specs {
+    margin: 35px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 16px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.fa-gi-kit-archive__specs div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-gi-kit-archive__specs small {
+    font-size: 7px;
+    color: #777;
+}
+
+.fa-gi-kit-archive__specs strong {
+    font-size: 9px;
+}
+
+.fa-gi-kit-archive__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 8px;
+    letter-spacing: .13em;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 16px;
+}
+
+.fa-gi-kit-archive__link span {
+    color: var(--fa-red);
+    font-size: 16px;
+}
+
+.fa-gi-kit-archive__rail {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.fa-gi-kit-archive__item {
+    border: 1px solid #ddd;
+    background: #fff;
+    transition: .35s var(--fa-ease);
+}
+
+.fa-gi-kit-archive__item:hover,
+.fa-gi-kit-archive__item.is-highlight {
+    border-color: var(--fa-red);
+    transform: translateY(-5px);
+}
+
+.fa-gi-kit-archive__item-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.fa-gi-kit-archive__item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s var(--fa-ease);
+}
+
+.fa-gi-kit-archive__item:hover img {
+    transform: scale(1.05);
+}
+
+.fa-gi-kit-archive__item-image span {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #fff;
+    background: var(--fa-black);
+    padding: 6px 8px;
+    font-size: 8px;
+}
+
+.fa-gi-kit-archive__item-text {
+    padding: 18px;
+}
+
+.fa-gi-kit-archive__item-text small {
+    color: var(--fa-red);
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-kit-archive__item-text strong {
+    display: block;
+    margin: 7px 0;
+    font-size: 14px;
+}
+
+.fa-gi-kit-archive__item-text p {
+    margin: 0;
+    color: #777;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.fa-gi-kit-archive__bottom {
+    max-width: 1400px;
+    margin: 55px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 20px;
+    align-items: end;
+}
+
+.fa-gi-kit-archive__bottom span {
+    font-size: 8px;
+    color: #888;
+    letter-spacing: .15em;
+}
+
+.fa-gi-kit-archive__bottom strong {
+    font-size: 20px;
+    line-height: .95;
+}
+
+.fa-gi-kit-archive__bottom strong::first-line {
+    color: var(--fa-black);
+}
+
+
+/* =========================================================
+   04 — APPAREL EDIT
+========================================================= */
+
+.fa-gi-apparel {
+    background: var(--fa-black);
+    color: #fff;
+    padding: clamp(70px, 8vw, 120px) clamp(20px, 5vw, 80px);
+}
+
+.fa-section-head {
+    max-width: 1400px;
+    margin: 0 auto 45px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.fa-section-head__index {
+    color: var(--fa-red);
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.fa-section-head__title {
+    margin: 0;
+    font-size: clamp(45px, 6vw, 90px);
+    line-height: .8;
+    letter-spacing: -.06em;
+    font-weight: 950;
+}
+
+.fa-gi-apparel__grid {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+.fa-gi-apparel__cell {
+    min-height: 270px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .35s var(--fa-ease);
+}
+
+.fa-gi-apparel__cell:hover {
+    background: #151515;
+}
+
+.fa-gi-apparel__img {
+    min-height: 160px;
+    display: grid;
+    place-items: center;
+}
+
+.fa-gi-icon {
+    width: 120px;
+    height: 120px;
+}
+
+.fa-gi-icon--light {
+    fill: none;
+    stroke: rgba(255,255,255,.8);
+    stroke-width: 1;
+}
+
+.fa-gi-apparel__name {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .04em;
+}
+
+.fa-gi-apparel__type {
+    margin-top: 6px;
+    font-size: 8px;
+    color: #888;
+    letter-spacing: .14em;
+}
+
+
+/* =========================================================
+   05 — FOOTWEAR LAB
+========================================================= */
+
+.fa-gi-footwear-lab {
+    background: var(--fa-offwhite);
+    color: var(--fa-black);
+    padding: clamp(75px, 8vw, 125px) clamp(20px, 5vw, 80px);
+}
+
+.fa-gi-footwear-lab__header {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: end;
+}
+
+.fa-gi-footwear-lab__eyebrow {
+    font-size: 8px;
+    letter-spacing: .17em;
+    color: #777;
+    font-weight: 900;
+}
+
+.fa-gi-footwear-lab__title h2 {
+    margin: 17px 0 0;
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: .78;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.fa-gi-footwear-lab__title h2 span {
+    color: var(--fa-red);
+}
+
+.fa-gi-footwear-lab__header-right {
+    max-width: 350px;
+}
+
+.fa-gi-footwear-lab__status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .13em;
+}
+
+.fa-gi-footwear-lab__status i {
+    width: 7px;
+    height: 7px;
+    background: var(--fa-red);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(227,6,19,.1);
+}
+
+.fa-gi-footwear-lab__header-right p {
+    margin: 15px 0 0;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.fa-gi-footwear-lab__stage {
+    max-width: 1400px;
+    margin: 60px auto 80px;
+    display: grid;
+    grid-template-columns: 190px minmax(300px, 1fr) 300px;
+    min-height: 600px;
+}
+
+.fa-gi-footwear-lab__tech {
+    background: var(--fa-black);
+    color: #fff;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-gi-footwear-lab__tech-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    letter-spacing: .13em;
+    font-weight: 800;
+}
+
+.fa-gi-footwear-lab__tech-head span {
+    color: var(--fa-red);
+}
+
+.fa-gi-footwear-lab__tech-line {
+    height: 1px;
+    background: #333;
+    margin: 25px 0;
+}
+
+.fa-gi-footwear-lab__metric {
+    padding: 18px 0;
+    border-bottom: 1px solid #292929;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fa-gi-footwear-lab__metric small {
+    color: #777;
+    font-size: 7px;
+    letter-spacing: .14em;
+}
+
+.fa-gi-footwear-lab__metric strong {
+    font-size: 22px;
+}
+
+.fa-gi-footwear-lab__metric span {
+    color: #888;
+    font-size: 7px;
+}
+
+.fa-gi-footwear-lab__tech-bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7px;
+    color: #777;
+    letter-spacing: .12em;
+}
+
+.fa-gi-footwear-lab__tech-bottom b {
+    color: #fff;
+}
+
+.fa-gi-footwear-lab__hero {
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+    background: #222;
+}
+
+.fa-gi-footwear-lab__hero img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+.fa-gi-footwear-lab__hero-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .18;
+    background-image:
+        linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px);
+    background-size: 35px 35px;
+}
+
+.fa-gi-footwear-lab__hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.8), transparent 65%);
+}
+
+.fa-gi-footwear-lab__hero-code {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    color: #fff;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-footwear-lab__hero-crosshair {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255,255,255,.5);
+}
+
+.fa-gi-footwear-lab__hero-crosshair::before,
+.fa-gi-footwear-lab__hero-crosshair::after {
+    content: "";
+    position: absolute;
+    background: rgba(255,255,255,.5);
+}
+
+.fa-gi-footwear-lab__hero-crosshair::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.fa-gi-footwear-lab__hero-crosshair::after {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+.fa-gi-footwear-lab__hero-label {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+
+.fa-gi-footwear-lab__hero-label span {
+    font-size: 8px;
+    letter-spacing: .16em;
+}
+
+.fa-gi-footwear-lab__hero-label h3 {
+    margin: 10px 0 0;
+    font-size: clamp(38px, 5vw, 72px);
+    line-height: .8;
+    letter-spacing: -.06em;
+    font-weight: 950;
+}
+
+.fa-gi-footwear-lab__hero-label em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-footwear-lab__hero-side {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    color: rgba(255,255,255,.7);
+    font-size: 7px;
+    line-height: 1.6;
+    letter-spacing: .16em;
+    writing-mode: vertical-rl;
+}
+
+.fa-gi-footwear-lab__info {
+    background: #fff;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-gi-footwear-lab__info-top {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-footwear-lab__info-main {
+    margin-top: auto;
+}
+
+.fa-gi-footwear-lab__info-main small {
+    font-size: 7px;
+    color: #888;
+    letter-spacing: .15em;
+}
+
+.fa-gi-footwear-lab__info-main h3 {
+    margin: 15px 0;
+    font-size: 35px;
+    line-height: .88;
+    letter-spacing: -.05em;
+    font-weight: 950;
+}
+
+.fa-gi-footwear-lab__info-main p {
+    color: #777;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.fa-gi-footwear-lab__explore {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #111;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .13em;
+}
+
+.fa-gi-footwear-lab__explore span {
+    color: var(--fa-red);
+    font-size: 15px;
+}
+
+.fa-gi-footwear-lab__archive {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.fa-gi-footwear-lab__archive-heading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+.fa-gi-footwear-lab__archive-heading span,
+.fa-gi-footwear-lab__archive-heading strong {
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-footwear-lab__archive-heading span {
+    color: #888;
+}
+
+.fa-gi-footwear-lab__cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.fa-gi-footwear-card {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.fa-gi-footwear-card__image {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fa-gi-footwear-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .6s var(--fa-ease);
+}
+
+.fa-gi-footwear-card:hover img {
+    transform: scale(1.05);
+}
+
+.fa-gi-footwear-card__image > span {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: #111;
+    color: #fff;
+    padding: 6px 8px;
+    font-size: 7px;
+    letter-spacing: .1em;
+}
+
+.fa-gi-footwear-card__corner {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 30px;
+    height: 30px;
+    border-right: 2px solid var(--fa-red);
+    border-bottom: 2px solid var(--fa-red);
+}
+
+.fa-gi-footwear-card__body {
+    position: relative;
+    padding: 20px;
+}
+
+.fa-gi-footwear-card__body small {
+    color: var(--fa-red);
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-footwear-card__body h4 {
+    margin: 10px 0;
+    font-size: 22px;
+    line-height: .9;
+    font-weight: 950;
+}
+
+.fa-gi-footwear-card__body h4 span {
+    color: var(--fa-red);
+}
+
+.fa-gi-footwear-card__body p {
+    margin: 0;
+    max-width: 220px;
+    color: #777;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.fa-gi-footwear-card__body b {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #bbb;
+}
+
+.fa-gi-footwear-lab__bottom {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    border-top: 1px solid #ccc;
+    padding-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+}
+
+.fa-gi-footwear-lab__bottom span {
+    color: #888;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-footwear-lab__bottom strong {
+    text-align: center;
+    font-size: 25px;
+    line-height: .9;
+}
+
+.fa-gi-footwear-lab__bottom em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+
+/* =========================================================
+   06 — GLOVE ARCHIVE
+========================================================= */
+
+.fa-gi-glove-archive {
+    background: #fff;
+    color: #111;
+    padding: clamp(75px, 8vw, 125px) clamp(20px, 5vw, 80px);
+}
+
+.fa-gi-glove-archive__header {
+    max-width: 1400px;
+    margin: auto auto 55px;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 50px;
+    align-items: end;
+}
+
+.fa-gi-glove-archive__eyebrow {
+    color: #777;
+    font-size: 8px;
+    letter-spacing: .17em;
+    font-weight: 900;
+}
+
+.fa-gi-glove-archive__title h2 {
+    margin: 18px 0 0;
+    font-size: clamp(50px, 6.5vw, 95px);
+    line-height: .8;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.fa-gi-glove-archive__title h2 span {
+    color: var(--fa-red);
+}
+
+.fa-gi-glove-archive__intro {
+    max-width: 360px;
+    justify-self: end;
+}
+
+.fa-gi-glove-archive__archive-mark {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fa-gi-glove-archive__archive-mark span {
+    color: #777;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-glove-archive__archive-mark strong {
+    font-size: 35px;
+    color: var(--fa-red);
+}
+
+.fa-gi-glove-archive__intro p {
+    margin: 15px 0 0;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.fa-gi-glove-archive__wall {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+}
+
+.fa-gi-glove-card {
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.fa-gi-glove-card--large {
+    grid-row: span 2;
+}
+
+.fa-gi-glove-card__image {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.fa-gi-glove-card--large .fa-gi-glove-card__image {
+    height: 100%;
+    min-height: 570px;
+}
+
+.fa-gi-glove-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .7s var(--fa-ease);
+}
+
+.fa-gi-glove-card:hover img {
+    transform: scale(1.05);
+}
+
+.fa-gi-glove-card__shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.7), transparent 65%);
+}
+
+.fa-gi-glove-card__number,
+.fa-gi-glove-card__code {
+    position: absolute;
+    top: 15px;
+    color: #fff;
+    font-size: 8px;
+    letter-spacing: .13em;
+}
+
+.fa-gi-glove-card__number {
+    left: 15px;
+}
+
+.fa-gi-glove-card__code {
+    right: 15px;
+}
+
+.fa-gi-glove-card__cross {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255,255,255,.35);
+}
+
+.fa-gi-glove-card__cross::before,
+.fa-gi-glove-card__cross::after {
+    content: "";
+    position: absolute;
+    background: rgba(255,255,255,.35);
+}
+
+.fa-gi-glove-card__cross::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.fa-gi-glove-card__cross::after {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+.fa-gi-glove-card__label {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    color: #fff;
+}
+
+.fa-gi-glove-card__label small {
+    font-size: 7px;
+    letter-spacing: .16em;
+}
+
+.fa-gi-glove-card__label strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 32px;
+    line-height: .85;
+    letter-spacing: -.05em;
+}
+
+.fa-gi-glove-card__body {
+    padding: 20px;
+}
+
+.fa-gi-glove-card__body small {
+    color: var(--fa-red);
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-glove-card__body h3 {
+    margin: 10px 0;
+    font-size: 25px;
+    line-height: .9;
+    font-weight: 950;
+}
+
+.fa-gi-glove-card__body h3 span {
+    color: var(--fa-red);
+}
+
+.fa-gi-glove-card__body p {
+    margin: 0;
+    color: #777;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.fa-gi-glove-archive__data {
+    max-width: 1400px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.fa-gi-glove-archive__data > div {
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fa-gi-glove-archive__data > div:last-child {
+    border-right: 0;
+}
+
+.fa-gi-glove-archive__data small {
+    font-size: 7px;
+    color: #999;
+    letter-spacing: .15em;
+}
+
+.fa-gi-glove-archive__data strong {
+    font-size: 10px;
+}
+
+.fa-gi-glove-archive__bottom {
+    max-width: 1400px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.fa-gi-glove-archive__bottom > span {
+    color: #888;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-glove-archive__bottom strong {
+    font-size: 26px;
+    line-height: .85;
+    text-align: center;
+}
+
+.fa-gi-glove-archive__bottom strong em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-glove-archive__bottom a {
+    justify-self: end;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+    padding-bottom: 7px;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .13em;
+}
+
+.fa-gi-glove-archive__bottom a b {
+    color: var(--fa-red);
+    margin-left: 10px;
+}
+
+
+/* =========================================================
+   07 — THE BAG ROOM
+========================================================= */
+
+.fa-gi-bag-room {
+    background: var(--fa-black);
+    color: #fff;
+    padding: clamp(70px, 8vw, 120px) clamp(20px, 5vw, 80px);
+}
+
+.fa-gi-bag-room__top {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #292929;
+    padding-bottom: 20px;
+}
+
+.fa-gi-bag-room__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-gi-bag-room__brand span {
+    color: #888;
+    font-size: 8px;
+    letter-spacing: .16em;
+}
+
+.fa-gi-bag-room__brand strong {
+    font-size: 12px;
+    letter-spacing: .1em;
+}
+
+.fa-gi-bag-room__meta {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 8px;
+    letter-spacing: .13em;
+    color: #777;
+}
+
+.fa-gi-bag-room__meta b {
+    color: #fff;
+}
+
+.fa-gi-bag-room__intro {
+    max-width: 1400px;
+    margin: 65px auto 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: end;
+}
+
+.fa-gi-bag-room__intro-title > span {
+    color: #777;
+    font-size: 8px;
+    letter-spacing: .17em;
+}
+
+.fa-gi-bag-room__intro-title h2 {
+    margin: 18px 0 0;
+    font-size: clamp(50px, 7vw, 105px);
+    line-height: .78;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.fa-gi-bag-room__intro-title h2 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-bag-room__intro > p {
+    max-width: 380px;
+    justify-self: end;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.fa-gi-bag-room__display {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 15px;
+}
+
+.fa-gi-bag-room__feature {
+    background: #161616;
+}
+
+.fa-gi-bag-room__feature-image {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+}
+
+.fa-gi-bag-room__feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .7s var(--fa-ease);
+}
+
+.fa-gi-bag-room__feature:hover img {
+    transform: scale(1.04);
+}
+
+.fa-gi-bag-room__feature-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.8), transparent 60%);
+}
+
+.fa-gi-bag-room__feature-code {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-bag-room__feature-mark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #555;
+    font-weight: 900;
+}
+
+.fa-gi-bag-room__feature-label {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+.fa-gi-bag-room__feature-label small {
+    font-size: 7px;
+    letter-spacing: .15em;
+    color: #bbb;
+}
+
+.fa-gi-bag-room__feature-label h3 {
+    margin: 10px 0 0;
+    font-size: 50px;
+    line-height: .8;
+    letter-spacing: -.06em;
+    font-weight: 950;
+}
+
+.fa-gi-bag-room__feature-label em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-bag-room__feature-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    border-top: 1px solid #292929;
+}
+
+.fa-gi-bag-room__feature-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-gi-bag-room__feature-info small {
+    color: #666;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-bag-room__feature-info strong {
+    font-size: 10px;
+}
+
+.fa-gi-bag-room__side {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.fa-gi-bag-item {
+    min-height: 125px;
+    background: #161616;
+    display: grid;
+    grid-template-columns: 38px 110px 1fr;
+    align-items: stretch;
+    border: 1px solid #222;
+    transition: .35s var(--fa-ease);
+}
+
+.fa-gi-bag-item:hover {
+    border-color: var(--fa-red);
+}
+
+.fa-gi-bag-item__number {
+    display: grid;
+    place-items: center;
+    color: var(--fa-red);
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.fa-gi-bag-item__image {
+    overflow: hidden;
+}
+
+.fa-gi-bag-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s var(--fa-ease);
+}
+
+.fa-gi-bag-item:hover img {
+    transform: scale(1.06);
+}
+
+.fa-gi-bag-item__content {
+    padding: 15px;
+    position: relative;
+}
+
+.fa-gi-bag-item__content small {
+    color: #666;
+    font-size: 7px;
+}
+
+.fa-gi-bag-item__content h3 {
+    margin: 6px 0;
+    font-size: 17px;
+    line-height: .9;
+    font-weight: 950;
+}
+
+.fa-gi-bag-item__content h3 span {
+    color: var(--fa-red);
+}
+
+.fa-gi-bag-item__content p {
+    margin: 0;
+    color: #777;
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+.fa-gi-bag-item__content b {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    color: var(--fa-red);
+}
+
+.fa-gi-bag-room__system {
+    max-width: 1400px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+}
+
+.fa-gi-bag-room__system > div {
+    padding: 20px;
+    border-right: 1px solid #292929;
+}
+
+.fa-gi-bag-room__system-title {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.fa-gi-bag-room__system-title span {
+    color: #666;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-bag-room__system-title strong {
+    font-size: 11px;
+}
+
+.fa-gi-bag-room__system > div:not(.fa-gi-bag-room__system-title) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fa-gi-bag-room__system small {
+    color: var(--fa-red);
+    font-size: 7px;
+}
+
+.fa-gi-bag-room__system span {
+    font-size: 8px;
+    color: #aaa;
+}
+
+.fa-gi-bag-room__footer {
+    max-width: 1400px;
+    margin: 55px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.fa-gi-bag-room__footer > span {
+    color: #666;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-bag-room__footer strong {
+    text-align: center;
+    font-size: 25px;
+    line-height: .9;
+}
+
+.fa-gi-bag-room__footer strong em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-bag-room__footer a {
+    justify-self: end;
+    color: #fff;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .13em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 7px;
+}
+
+.fa-gi-bag-room__footer a b {
+    color: var(--fa-red);
+    margin-left: 10px;
+}
+
+
+/* =========================================================
+   08 — PROTECTION SYSTEM
+========================================================= */
+
+.fa-gi-protection {
+    background: #f3f3f1;
+    color: #111;
+    padding: clamp(75px, 8vw, 125px) clamp(20px, 5vw, 80px);
+}
+
+.fa-gi-protection__top {
+    max-width: 1400px;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-gi-protection__identity {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-gi-protection__identity span {
+    font-size: 8px;
+    color: #777;
+    letter-spacing: .16em;
+}
+
+.fa-gi-protection__identity strong {
+    font-size: 12px;
+    letter-spacing: .1em;
+}
+
+.fa-gi-protection__status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 8px;
+    letter-spacing: .12em;
+}
+
+.fa-gi-protection__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--fa-red);
+}
+
+.fa-gi-protection__status b {
+    margin-left: 20px;
+}
+
+.fa-gi-protection__intro {
+    max-width: 1400px;
+    margin: 65px auto 55px;
+    display: grid;
+    grid-template-columns: 1fr .7fr;
+    gap: 50px;
+    align-items: end;
+}
+
+.fa-gi-protection__intro-left > span {
+    color: #777;
+    font-size: 8px;
+    letter-spacing: .16em;
+}
+
+.fa-gi-protection__intro-left h2 {
+    margin: 18px 0 0;
+    font-size: clamp(52px, 7vw, 105px);
+    line-height: .78;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.fa-gi-protection__intro-left h2 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-protection__intro-right p {
+    max-width: 400px;
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.fa-gi-protection__coordinates {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 13px;
+    font-size: 7px;
+    letter-spacing: .15em;
+    color: #888;
+}
+
+.fa-gi-protection__wall {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 15px;
+}
+
+.fa-gi-protection__hero-card {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.fa-gi-protection__image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.fa-gi-protection__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s var(--fa-ease);
+}
+
+.fa-gi-protection__hero-card:hover img {
+    transform: scale(1.04);
+}
+
+.fa-gi-protection__image-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .14;
+    background-image:
+        linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
+    background-size: 35px 35px;
+}
+
+.fa-gi-protection__number,
+.fa-gi-protection__tag {
+    position: absolute;
+    top: 18px;
+    color: #fff;
+    font-size: 8px;
+    letter-spacing: .14em;
+}
+
+.fa-gi-protection__number {
+    left: 18px;
+    color: var(--fa-red);
+}
+
+.fa-gi-protection__tag {
+    right: 18px;
+}
+
+.fa-gi-protection__hero-title {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    color: #fff;
+}
+
+.fa-gi-protection__hero-title small {
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-protection__hero-title h3 {
+    margin: 8px 0 0;
+    font-size: 42px;
+    line-height: .8;
+    letter-spacing: -.06em;
+    font-weight: 950;
+}
+
+.fa-gi-protection__hero-title h3 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-protection__hero-info {
+    display: grid;
+    grid-template-columns: 45px repeat(3, 1fr);
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.fa-gi-protection__hero-info > span {
+    color: var(--fa-red);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.fa-gi-protection__hero-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fa-gi-protection__hero-info small {
+    color: #999;
+    font-size: 7px;
+}
+
+.fa-gi-protection__hero-info strong {
+    font-size: 9px;
+}
+
+.fa-gi-protection__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.fa-gi-protection__card {
+    background: #fff;
+    border: 1px solid #ddd;
+    min-width: 0;
+}
+
+.fa-gi-protection__card-image {
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+}
+
+.fa-gi-protection__card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s var(--fa-ease);
+}
+
+.fa-gi-protection__card:hover img {
+    transform: scale(1.05);
+}
+
+.fa-gi-protection__card-image > span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.fa-gi-protection__card-code {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: #fff;
+    font-size: 7px;
+    letter-spacing: .12em;
+}
+
+.fa-gi-protection__card-info {
+    padding: 17px;
+}
+
+.fa-gi-protection__card-info small {
+    color: var(--fa-red);
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-protection__card-info h3 {
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: .9;
+    font-weight: 950;
+}
+
+.fa-gi-protection__card-info h3 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-protection__card-info p {
+    margin: 0;
+    color: #777;
+    font-size: 9px;
+}
+
+.fa-gi-protection__data {
+    max-width: 1400px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.fa-gi-protection__data > div {
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-gi-protection__data > div:last-child {
+    border-right: 0;
+}
+
+.fa-gi-protection__data small {
+    color: #999;
+    font-size: 7px;
+}
+
+.fa-gi-protection__data strong {
+    font-size: 13px;
+}
+
+.fa-gi-protection__data span {
+    color: #777;
+    font-size: 7px;
+}
+
+.fa-gi-protection__footer {
+    max-width: 1400px;
+    margin: 50px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.fa-gi-protection__footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fa-gi-protection__footer span {
+    color: #888;
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-protection__footer strong {
+    font-size: 26px;
+    line-height: .85;
+}
+
+.fa-gi-protection__footer strong em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-protection__footer a {
+    color: #111;
+    text-decoration: none;
+    font-size: 8px;
+    letter-spacing: .13em;
+    font-weight: 900;
+    border-bottom: 1px solid #111;
+    padding-bottom: 7px;
+}
+
+.fa-gi-protection__footer a b {
+    color: var(--fa-red);
+    margin-left: 10px;
+}
+
+
+/* =========================================================
+   09 — PRODUCT INDEX / THE FIVE
+========================================================= */
+
+.fa-gi-product-index {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    color: #111;
+    padding: clamp(75px, 8vw, 125px) clamp(20px, 5vw, 80px);
+}
+
+.fa-gi-product-index__header {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr .65fr;
+    gap: 50px;
+    align-items: end;
+}
+
+.fa-gi-product-index__eyebrow {
+    color: #777;
+    font-size: 8px;
+    letter-spacing: .17em;
+    font-weight: 900;
+}
+
+.fa-gi-product-index__header h2 {
+    margin: 18px 0 0;
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: .75;
+    letter-spacing: -.08em;
+    font-weight: 950;
+}
+
+.fa-gi-product-index__header h2 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-product-index__intro {
+    max-width: 380px;
+    justify-self: end;
+}
+
+.fa-gi-product-index__intro > span {
+    font-size: 8px;
+    letter-spacing: .15em;
+    color: #777;
+}
+
+.fa-gi-product-index__intro p {
+    margin: 14px 0 0;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.fa-gi-product-index__stage {
+    max-width: 1400px;
+    margin: 70px auto 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 13px;
+    align-items: stretch;
+}
+
+.fa-gi-product-index__product {
+    position: relative;
+    min-width: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    transition: .45s var(--fa-ease);
+}
+
+.fa-gi-product-index__product:hover {
+    transform: translateY(-8px);
+    border-color: var(--fa-red);
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+}
+
+.fa-gi-product-index__image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: #e8e8e5;
+}
+
+.fa-gi-product-index__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .8s var(--fa-ease);
+}
+
+.fa-gi-product-index__product:hover .fa-gi-product-index__image > img {
+    transform: scale(1.045);
+}
+
+.fa-gi-product-index__number {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    z-index: 4;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    background: #111;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.fa-gi-product-index__category {
+    position: absolute;
+    top: 18px;
+    right: 13px;
+    z-index: 4;
+    color: #111;
+    background: rgba(255,255,255,.9);
+    padding: 6px 7px;
+    font-size: 6px;
+    letter-spacing: .12em;
+    font-weight: 900;
+}
+
+.fa-product-template {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    color: #fff;
+    opacity: .98;
+}
+
+.fa-product-template__brand {
+    position: absolute;
+    left: 17px;
+    bottom: 115px;
+    font-size: 6px;
+    letter-spacing: .12em;
+    font-weight: 800;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.fa-product-template__edition {
+    position: absolute;
+    right: 15px;
+    bottom: 105px;
+    font-size: 6px;
+    letter-spacing: .14em;
+    writing-mode: vertical-rl;
+}
+
+.fa-product-template__dots {
+    position: absolute;
+    top: 55%;
+    right: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-product-template__dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.fa-product-template__marker {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 50%;
+}
+
+.fa-product-template__marker::before,
+.fa-product-template__marker::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    opacity: .7;
+}
+
+.fa-product-template__marker::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.fa-product-template__marker::after {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+.fa-product-template__line {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 95px;
+    height: 1px;
+    background: rgba(255,255,255,.35);
+}
+
+.fa-product-template__system {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 40px;
+}
+
+.fa-product-template__system small {
+    display: block;
+    font-size: 6px;
+    letter-spacing: .15em;
+    margin-bottom: 7px;
+}
+
+.fa-product-template__system strong {
+    display: block;
+    font-size: 17px;
+    line-height: .9;
+    letter-spacing: -.03em;
+}
+
+.fa-product-template__code {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    font-size: 6px;
+    letter-spacing: .15em;
+    color: rgba(255,255,255,.7);
+}
+
+.fa-gi-product-index__plus {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 5;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgba(255,255,255,.7);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+}
+
+.fa-gi-product-index__caption {
+    padding: 18px 15px 20px;
+    min-height: 105px;
+}
+
+.fa-gi-product-index__caption > span {
+    display: block;
+    color: #888;
+    font-size: 7px;
+    letter-spacing: .13em;
+}
+
+.fa-gi-product-index__caption strong {
+    display: block;
+    margin-top: 9px;
+    font-size: 17px;
+    line-height: .9;
+    letter-spacing: -.03em;
+}
+
+.fa-gi-product-index__caption strong em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-product-index__price {
+    margin-top: 13px;
+    color: var(--fa-red);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .03em;
+}
+
+.fa-gi-product-index__statement {
+    position: absolute;
+    z-index: 7;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 0 12px rgba(255,255,255,.75);
+    pointer-events: none;
+}
+
+.fa-gi-product-index__statement span {
+    font-size: 5px;
+    color: #999;
+    letter-spacing: .14em;
+}
+
+.fa-gi-product-index__statement strong {
+    margin-top: 7px;
+    font-size: 22px;
+    line-height: .78;
+    letter-spacing: -.06em;
+}
+
+.fa-gi-product-index__statement em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-product-index__statement small {
+    margin-top: 8px;
+    color: #777;
+    font-size: 4px;
+    letter-spacing: .1em;
+}
+
+.fa-gi-product-index__bottom {
+    max-width: 1400px;
+    margin: 45px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: auto auto auto 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.fa-gi-product-index__bottom > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px 10px;
+}
+
+.fa-gi-product-index__bottom small {
+    font-size: 7px;
+    color: #999;
+}
+
+.fa-gi-product-index__bottom strong {
+    font-size: 15px;
+}
+
+.fa-gi-product-index__bottom span {
+    font-size: 7px;
+    color: #777;
+}
+
+.fa-gi-product-index__bottom a {
+    justify-self: end;
+    color: #111;
+    text-decoration: none;
+    font-size: 8px;
+    letter-spacing: .13em;
+    font-weight: 900;
+    border-bottom: 1px solid #111;
+    padding-bottom: 7px;
+}
+
+.fa-gi-product-index__bottom a b {
+    color: var(--fa-red);
+    margin-left: 10px;
+}
+
+
+/* =========================================================
+   10 — PERFORMANCE CODE
+========================================================= */
+
+.fa-gi-performance-code {
+    background: var(--fa-black);
+    color: #fff;
+    padding: clamp(75px, 8vw, 125px) clamp(20px, 5vw, 80px);
+}
+
+.fa-gi-performance-code__top {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #292929;
+}
+
+.fa-gi-performance-code__identity {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-gi-performance-code__identity span,
+.fa-gi-performance-code__edition span {
+    color: #666;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-performance-code__identity strong {
+    font-size: 12px;
+}
+
+.fa-gi-performance-code__edition {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fa-gi-performance-code__edition b {
+    font-size: 9px;
+    color: #fff;
+}
+
+.fa-gi-performance-code__hero {
+    max-width: 1400px;
+    margin: 75px auto 65px;
+    display: grid;
+    grid-template-columns: .7fr 1.3fr .7fr;
+    gap: 50px;
+    align-items: end;
+}
+
+.fa-gi-performance-code__hero-label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fa-gi-performance-code__hero-label span {
+    color: var(--fa-red);
+    font-size: 8px;
+    letter-spacing: .15em;
+    font-weight: 900;
+}
+
+.fa-gi-performance-code__hero-label i {
+    width: 30px;
+    height: 1px;
+    background: var(--fa-red);
+}
+
+.fa-gi-performance-code__hero-label small {
+    color: #666;
+    font-size: 6px;
+    letter-spacing: .13em;
+}
+
+.fa-gi-performance-code__hero h2 {
+    margin: 0;
+    font-size: clamp(48px, 6.5vw, 100px);
+    line-height: .78;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.fa-gi-performance-code__hero h2 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-performance-code__hero p {
+    margin: 0;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.fa-gi-performance-code__grid {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
+}
+
+.fa-gi-performance-code__item {
+    min-height: 310px;
+    padding: 25px;
+    position: relative;
+    border-right: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    transition: .35s var(--fa-ease);
+}
+
+.fa-gi-performance-code__item:hover,
+.fa-gi-performance-code__item.is-active {
+    background: #121212;
+}
+
+.fa-gi-performance-code__number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #555;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.fa-gi-performance-code__icon {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: var(--fa-red);
+    font-size: 20px;
+}
+
+.fa-gi-performance-code__content {
+    margin-top: 80px;
+}
+
+.fa-gi-performance-code__content > span {
+    color: #666;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-performance-code__content h3 {
+    margin: 12px 0 0;
+    font-size: 34px;
+    line-height: .8;
+    letter-spacing: -.05em;
+    font-weight: 950;
+}
+
+.fa-gi-performance-code__content strong {
+    display: block;
+    margin-top: 7px;
+    color: var(--fa-red);
+    font-size: 11px;
+    letter-spacing: .1em;
+}
+
+.fa-gi-performance-code__content p {
+    max-width: 270px;
+    margin: 17px 0 0;
+    color: #777;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.fa-gi-performance-code__index {
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+    color: #444;
+    font-size: 7px;
+    letter-spacing: .13em;
+}
+
+.fa-gi-performance-code__equation {
+    max-width: 1400px;
+    margin: 65px auto 0;
+    padding: 25px 0;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+}
+
+.fa-gi-performance-code__equation-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.fa-gi-performance-code__equation-label span,
+.fa-gi-performance-code__equation-label small {
+    color: #666;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-performance-code__formula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: clamp(18px, 2vw, 30px);
+    font-weight: 900;
+}
+
+.fa-gi-performance-code__formula strong {
+    color: #fff;
+}
+
+.fa-gi-performance-code__formula b {
+    color: #444;
+}
+
+.fa-gi-performance-code__formula span {
+    color: var(--fa-red);
+}
+
+.fa-gi-performance-code__formula em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-performance-code__closing {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 35px;
+    align-items: center;
+}
+
+.fa-gi-performance-code__closing-mark {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #fff;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.fa-gi-performance-code__closing-copy > span {
+    color: #666;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+.fa-gi-performance-code__closing-copy h3 {
+    margin: 10px 0 0;
+    font-size: clamp(25px, 3vw, 42px);
+    line-height: .85;
+    letter-spacing: -.05em;
+    font-weight: 950;
+}
+
+.fa-gi-performance-code__closing-copy h3 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.fa-gi-performance-code__closing-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+}
+
+.fa-gi-performance-code__closing-meta span {
+    color: #666;
+    font-size: 7px;
+    letter-spacing: .15em;
+}
+
+
+/* =========================================================
+   11 — GLOBAL IMAGE / LINK SAFETY
+========================================================= */
+
+.fa-gi-gear-wall a,
+.fa-gi-kit-archive a,
+.fa-gi-footwear-lab a,
+.fa-gi-glove-archive a,
+.fa-gi-bag-room a,
+.fa-gi-protection a,
+.fa-gi-product-index a,
+.fa-gi-performance-code a {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.fa-gi-gear-wall img,
+.fa-gi-kit-archive img,
+.fa-gi-footwear-lab img,
+.fa-gi-glove-archive img,
+.fa-gi-bag-room img,
+.fa-gi-protection img,
+.fa-gi-product-index img {
+    background: #ddd;
+}
+
+
+/* =========================================================
+   12 — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .fa-gear-final-hero {
+        grid-template-columns: 65px 1fr;
+    }
+
+    .fa-gear-final-stage {
+        grid-column: 1 / -1;
+        min-height: 650px;
+    }
+
+    .fa-gear-final-content {
+        min-height: 650px;
+    }
+
+    .fa-gear-final-bottom {
+        left: 90px;
+    }
+
+    .fa-gi-gear-wall__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-gi-gear-wall__card--feature {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .fa-gi-gear-wall__card--feature .fa-gi-gear-wall__image {
+        min-height: 550px;
+    }
+
+    .fa-gi-gear-wall__bottom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fa-gi-gear-wall__statement {
+        grid-column: 1 / -1;
+        margin-left: 0;
+        text-align: left;
+        padding-top: 10px;
+    }
+
+    .fa-gi-kit-archive__feature {
+        grid-template-columns: 1.2fr .8fr;
+    }
+
+    .fa-gi-kit-archive__rail {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fa-gi-apparel__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fa-gi-footwear-lab__stage {
+        grid-template-columns: 160px 1fr;
+    }
+
+    .fa-gi-footwear-lab__info {
+        grid-column: 1 / -1;
+        min-height: 280px;
+    }
+
+    .fa-gi-product-index__stage {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fa-gi-product-index__statement {
+        width: 115px;
+        height: 115px;
+    }
+
+    .fa-gi-performance-code__hero {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .fa-gi-performance-code__hero p {
+        grid-column: 2;
+    }
+
+    .fa-gi-performance-code__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fa-gi-protection__wall {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   13 — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .fa-gear-final-hero {
+        display: block;
+        min-height: auto;
+    }
+
+    .fa-gear-final-wall {
+        height: 62px;
+        width: 100%;
+        flex-direction: row;
+        padding: 0 18px;
+        border-right: 0;
+        border-bottom: 1px solid #222;
+    }
+
+    .fa-gear-final-wall__brand {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .fa-gear-final-wall__red-line {
+        width: 45px;
+        height: 2px;
+    }
+
+    .fa-gear-final-wall__text {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 6px;
+        max-width: 160px;
+        line-height: 1.3;
+    }
+
+    .fa-gear-final-wall__number {
+        margin-left: auto;
+    }
+
+    .fa-gear-final-content {
+        min-height: 560px;
+        padding: 55px 25px;
+    }
+
+    .fa-gear-final-title {
+        font-size: clamp(55px, 18vw, 90px);
+    }
+
+    .fa-gear-final-description {
+        margin-top: 35px;
+        font-size: 12px;
+    }
+
+    .fa-gear-final-actions {
+        margin-top: 28px;
+    }
+
+    .fa-gear-final-caption {
+        width: 100%;
+    }
+
+    .fa-gear-final-stage {
+        min-height: 500px;
+    }
+
+    .fa-gear-final-ring--large {
+        width: 390px;
+        height: 390px;
+    }
+
+    .fa-gear-final-ring--small {
+        width: 250px;
+        height: 250px;
+    }
+
+    .fa-gear-final-object {
+        width: 90px;
+    }
+
+    .fa-gear-final-object svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .fa-gear-final-object--boot {
+        left: 7%;
+    }
+
+    .fa-gear-final-object--glove {
+        right: 7%;
+    }
+
+    .fa-gear-final-meta {
+        top: 78px;
+        right: 18px;
+    }
+
+    .fa-gear-final-bottom {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 15px;
+        font-size: 6px;
+    }
+
+    .fa-gear-final-bottom span:first-child {
+        display: none;
+    }
+
+    .fa-gear-final-bottom div {
+        display: none;
+    }
+
+
+    /* Gear wall */
+
+    .fa-gi-gear-wall,
+    .fa-gi-kit-archive,
+    .fa-gi-footwear-lab,
+    .fa-gi-glove-archive,
+    .fa-gi-bag-room,
+    .fa-gi-protection,
+    .fa-gi-product-index,
+    .fa-gi-performance-code {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .fa-gi-gear-wall__header,
+    .fa-gi-kit-archive__head,
+    .fa-gi-glove-archive__header {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .fa-gi-gear-wall__intro,
+    .fa-gi-kit-archive__intro,
+    .fa-gi-glove-archive__intro {
+        justify-self: start;
+    }
+
+    .fa-gi-gear-wall__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-gear-wall__card--feature {
+        grid-column: auto;
+    }
+
+    .fa-gi-gear-wall__card--feature .fa-gi-gear-wall__image {
+        min-height: 470px;
+    }
+
+    .fa-gi-gear-wall__image {
+        min-height: 320px;
+    }
+
+    .fa-gi-gear-wall__caption {
+        grid-template-columns: 1fr auto;
+    }
+
+    .fa-gi-gear-wall__caption > div {
+        grid-column: 1 / -1;
+    }
+
+    .fa-gi-gear-wall__caption p {
+        grid-column: 1;
+    }
+
+    .fa-gi-gear-wall__bottom {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .fa-gi-gear-wall__statement {
+        grid-column: 1 / -1;
+    }
+
+
+    /* Match archive */
+
+    .fa-gi-kit-archive__feature {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .fa-gi-kit-archive__feature-image {
+        min-height: 450px;
+    }
+
+    .fa-gi-kit-archive__feature-side {
+        min-height: 450px;
+    }
+
+    .fa-gi-kit-archive__rail {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-kit-archive__bottom {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    /* Apparel */
+
+    .fa-section-head {
+        gap: 15px;
+    }
+
+    .fa-gi-apparel__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-gi-apparel__cell {
+        min-height: 220px;
+        padding: 18px;
+    }
+
+    .fa-gi-icon {
+        width: 85px;
+        height: 85px;
+    }
+
+
+    /* Footwear */
+
+    .fa-gi-footwear-lab__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fa-gi-footwear-lab__header-right {
+        max-width: none;
+    }
+
+    .fa-gi-footwear-lab__stage {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+    .fa-gi-footwear-lab__tech {
+        min-height: 300px;
+    }
+
+    .fa-gi-footwear-lab__hero {
+        min-height: 450px;
+    }
+
+    .fa-gi-footwear-lab__info {
+        min-height: 350px;
+    }
+
+    .fa-gi-footwear-lab__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-footwear-lab__bottom {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .fa-gi-footwear-lab__bottom strong {
+        text-align: left;
+    }
+
+
+    /* Gloves */
+
+    .fa-gi-glove-archive__wall {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-glove-card--large {
+        grid-row: auto;
+    }
+
+    .fa-gi-glove-card--large .fa-gi-glove-card__image {
+        min-height: 450px;
+    }
+
+    .fa-gi-glove-archive__data {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-gi-glove-archive__data > div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .fa-gi-glove-archive__bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-glove-archive__bottom strong {
+        text-align: left;
+    }
+
+    .fa-gi-glove-archive__bottom a {
+        justify-self: start;
+    }
+
+
+    /* Bag room */
+
+    .fa-gi-bag-room__top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fa-gi-bag-room__meta {
+        justify-content: space-between;
+    }
+
+    .fa-gi-bag-room__intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .fa-gi-bag-room__intro > p {
+        justify-self: start;
+    }
+
+    .fa-gi-bag-room__display {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-bag-room__feature-image {
+        height: 450px;
+    }
+
+    .fa-gi-bag-item {
+        grid-template-columns: 30px 95px 1fr;
+    }
+
+    .fa-gi-bag-room__system {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-gi-bag-room__system-title {
+        grid-column: 1 / -1;
+    }
+
+    .fa-gi-bag-room__footer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fa-gi-bag-room__footer strong {
+        text-align: left;
+    }
+
+    .fa-gi-bag-room__footer a {
+        justify-self: start;
+    }
+
+
+    /* Protection */
+
+    .fa-gi-protection__top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fa-gi-protection__status {
+        justify-content: flex-start;
+    }
+
+    .fa-gi-protection__intro {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-protection__wall {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-protection__image {
+        height: 430px;
+    }
+
+    .fa-gi-protection__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-protection__data {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-gi-protection__data > div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .fa-gi-protection__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+
+    /* Product index */
+
+    .fa-gi-product-index__header {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .fa-gi-product-index__intro {
+        justify-self: start;
+    }
+
+    .fa-gi-product-index__stage {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 45px;
+    }
+
+    .fa-gi-product-index__image {
+        height: 390px;
+    }
+
+    .fa-product-template__brand {
+        left: 10px;
+        bottom: 100px;
+        font-size: 5px;
+    }
+
+    .fa-product-template__edition {
+        right: 10px;
+        bottom: 92px;
+    }
+
+    .fa-product-template__line {
+        left: 12px;
+        right: 12px;
+        bottom: 83px;
+    }
+
+    .fa-product-template__system {
+        left: 16px;
+        right: 16px;
+        bottom: 32px;
+    }
+
+    .fa-product-template__system strong {
+        font-size: 14px;
+    }
+
+    .fa-product-template__code {
+        left: 16px;
+        bottom: 12px;
+    }
+
+    .fa-gi-product-index__caption strong {
+        font-size: 14px;
+    }
+
+    .fa-gi-product-index__statement {
+        width: 95px;
+        height: 95px;
+        box-shadow: 0 0 0 8px rgba(255,255,255,.8);
+    }
+
+    .fa-gi-product-index__statement strong {
+        font-size: 17px;
+    }
+
+    .fa-gi-product-index__bottom {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-gi-product-index__bottom a {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+
+
+    /* Performance code */
+
+    .fa-gi-performance-code__top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fa-gi-performance-code__edition {
+        text-align: left;
+    }
+
+    .fa-gi-performance-code__hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 55px;
+    }
+
+    .fa-gi-performance-code__hero p {
+        grid-column: auto;
+    }
+
+    .fa-gi-performance-code__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-performance-code__item {
+        min-height: 280px;
+    }
+
+    .fa-gi-performance-code__formula {
+        justify-content: flex-start;
+        gap: 9px;
+        font-size: 15px;
+    }
+
+    .fa-gi-performance-code__closing {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+    }
+
+    .fa-gi-performance-code__closing-meta {
+        grid-column: 2;
+        text-align: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   14 — SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .fa-gear-final-title {
+        font-size: 53px;
+    }
+
+    .fa-gear-final-stage {
+        min-height: 430px;
+    }
+
+    .fa-gear-final-object--jersey {
+        top: 17%;
+    }
+
+    .fa-gear-final-object--bag {
+        bottom: 14%;
+    }
+
+    .fa-gear-final-object--boot {
+        left: 2%;
+    }
+
+    .fa-gear-final-object--glove {
+        right: 2%;
+    }
+
+    .fa-gi-gear-wall__title h2,
+    .fa-gi-kit-archive h2,
+    .fa-gi-glove-archive__title h2,
+    .fa-gi-product-index__header h2 {
+        font-size: 48px;
+    }
+
+    .fa-gi-apparel__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-apparel__cell {
+        min-height: 190px;
+    }
+
+    .fa-gi-product-index__stage {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-product-index__image {
+        height: 470px;
+    }
+
+    .fa-gi-product-index__statement {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        grid-column: 1;
+        margin: 10px auto;
+    }
+
+    .fa-gi-product-index__bottom {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-gi-protection__data {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-protection__data > div {
+        border-right: 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .fa-gi-bag-room__system {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-bag-room__system > div {
+        border-right: 0;
+        border-bottom: 1px solid #292929;
+    }
+
+    .fa-gi-bag-item {
+        grid-template-columns: 28px 80px 1fr;
+    }
+
+    .fa-gi-bag-item__content h3 {
+        font-size: 14px;
+    }
+
+    .fa-gi-footwear-lab__hero-label h3 {
+        font-size: 42px;
+    }
+
+    .fa-gi-performance-code__hero h2 {
+        font-size: 52px;
+    }
+
+    .fa-gi-performance-code__formula {
+        font-size: 13px;
+    }
+
+    .fa-gi-performance-code__closing {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-gi-performance-code__closing-meta {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   15 — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+
+/* =========================================================
+   16 — ANIMATION
+========================================================= */
+
+@keyframes faGearRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* =========================================================
+   FA SPORTS — PRODUCT PRICES
+   PREMIUM PRICE SYSTEM
+   WHITE / RED / BLACK
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   PRODUCT INDEX — THE FIVE
+--------------------------------------------------------- */
+
+.fa-gi-product-index__price {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 14px;
+    padding: 9px 14px;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Product price hover */
+
+.fa-gi-product-index__product:hover
+.fa-gi-product-index__price {
+    background: #e21b2d;
+    color: #ffffff;
+    border-color: #e21b2d;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------------------------------------------------------
+   APPAREL EDIT — PRODUCT PRICE
+--------------------------------------------------------- */
+
+.fa-gi-apparel__price {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #e21b2d;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTWEAR LAB — MAIN PRICE
+--------------------------------------------------------- */
+
+.fa-gi-footwear-lab__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 28px;
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.fa-gi-footwear-lab__price small {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+}
+
+
+.fa-gi-footwear-lab__price strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: clamp(20px, 2.2vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTWEAR ARCHIVE — CARD PRICES
+--------------------------------------------------------- */
+
+.fa-gi-footwear-card__price {
+    display: block;
+
+    margin-top: 18px;
+
+    color: #e21b2d;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   GLOVE ARCHIVE — PRICES
+--------------------------------------------------------- */
+
+.fa-gi-glove-card__price {
+    display: block;
+
+    color: #e21b2d;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+.fa-gi-glove-card__body .fa-gi-glove-card__price {
+    margin-top: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   BAG ROOM — FEATURE PRICE
+--------------------------------------------------------- */
+
+.fa-gi-bag-room__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 6px;
+}
+
+
+.fa-gi-bag-room__price small {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 1.3;
+}
+
+
+.fa-gi-bag-room__price strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    line-height: 1.1;
+}
+
+
+/* ---------------------------------------------------------
+   BAG ROOM — SIDE CARD PRICES
+--------------------------------------------------------- */
+
+.fa-gi-bag-item__price {
+    display: block;
+
+    margin-top: 16px;
+
+    color: #e21b2d;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   PROTECTION SYSTEM — MAIN PRICE
+--------------------------------------------------------- */
+
+.fa-gi-protection__hero-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 6px;
+}
+
+
+.fa-gi-protection__hero-price small {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 1.3;
+}
+
+
+.fa-gi-protection__hero-price strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 1.1;
+}
+
+
+/* ---------------------------------------------------------
+   PROTECTION SYSTEM — CARD PRICES
+--------------------------------------------------------- */
+
+.fa-gi-protection__price {
+    display: block;
+
+    margin-top: 18px;
+
+    color: #e21b2d;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE RESPONSIVE
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .fa-gi-product-index__price {
+        margin-top: 10px;
+        padding: 8px 11px;
+
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .fa-gi-apparel__price {
+        margin-top: 8px;
+
+        font-size: 12px;
+    }
+
+
+    .fa-gi-footwear-lab__price {
+        margin-top: 20px;
+        padding-top: 13px;
+    }
+
+
+    .fa-gi-footwear-lab__price strong {
+        font-size: 24px;
+    }
+
+
+    .fa-gi-footwear-card__price,
+    .fa-gi-glove-card__price,
+    .fa-gi-bag-item__price,
+    .fa-gi-protection__price {
+        margin-top: 12px;
+
+        font-size: 13px;
+    }
+
+
+    .fa-gi-bag-room__price strong {
+        font-size: 18px;
+    }
+
+
+    .fa-gi-protection__hero-price strong {
+        font-size: 20px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .fa-gi-product-index__price {
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+
+    .fa-gi-apparel__price,
+    .fa-gi-footwear-card__price,
+    .fa-gi-glove-card__price,
+    .fa-gi-bag-item__price,
+    .fa-gi-protection__price {
+        font-size: 12px;
+    }
+
+}
+/* =========================================================
+   FA SPORTS — GEAR INDEX FINAL HERO
+   WHITE HERO THEME
+========================================================= */
+
+.fa-gear-final-hero {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+
+/* Hero content */
+.fa-gear-final-content {
+    color: #111111 !important;
+}
+
+/* Eyebrow */
+.fa-gear-final-eyebrow {
+    color: #111111 !important;
+}
+
+.fa-gear-final-eyebrow span {
+    background: #e21b2d !important;
+}
+
+/* Main title */
+.fa-gear-final-title {
+    color: #111111 !important;
+}
+
+.fa-gear-final-title span {
+    color: #111111 !important;
+}
+
+/* GEAR red */
+.fa-gear-final-title .is-red {
+    color: #e21b2d !important;
+}
+
+/* Hero description */
+.fa-gear-final-hero p {
+    color: #555555 !important;
+}
+
+/* Hero links / buttons */
+.fa-gear-final-hero a {
+    color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+.fa-gear-final-hero a:hover {
+    color: #ffffff !important;
+    background: #e21b2d !important;
+    border-color: #e21b2d !important;
+}
+
+/* Hero decorative elements */
+.fa-gear-final-hero::before,
+.fa-gear-final-hero::after {
+    background: #111111 !important;
+}
+
+/* Red decorative accents */
+.fa-gear-final-hero .is-red {
+    color: #e21b2d !important;
+}
+
+/* Hero image/video area */
+.fa-gear-final-hero img,
+.fa-gear-final-hero video {
+    background: #f5f5f5 !important;
+}
+
+/* Hero small/meta text */
+.fa-gear-final-hero small {
+    color: #666666 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .fa-gear-final-hero {
+        background: #ffffff !important;
+    }
+
+    .fa-gear-final-title {
+        color: #111111 !important;
+    }
+
+}
+/* =========================================================
+   FA SPORTS — MATCH KIT ARCHIVE
+   Larger Image Frame / Better Image Fit
+   ========================================================= */
+
+.fa-gi-kit-archive__feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* Main image frame */
+.fa-gi-kit-archive__feature-image {
+    position: relative;
+    width: 100%;
+    min-height: 620px;
+    height: 620px;
+    overflow: hidden;
+    isolation: isolate;
+    background: #f4f4f2;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-sizing: border-box;
+}
+
+/* Image itself */
+.fa-gi-kit-archive__feature-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 18px;
+    box-sizing: border-box;
+    background: #f4f4f2;
+}
+
+/* Bigger editorial frame around image */
+.fa-gi-kit-archive__feature-image::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* Inner red technical frame */
+.fa-gi-kit-archive__feature-image::after {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px solid rgba(190, 0, 0, 0.45);
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* Existing overlay */
+.fa-gi-kit-archive__feature-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.02) 0%,
+            rgba(0, 0, 0, 0) 55%,
+            rgba(0, 0, 0, 0.16) 100%
+        );
+}
+
+/* Archive code */
+.fa-gi-kit-archive__feature-code {
+    position: absolute;
+    top: 34px;
+    left: 38px;
+    z-index: 6;
+}
+
+/* FA mark */
+.fa-gi-kit-archive__feature-mark {
+    position: absolute;
+    right: 38px;
+    top: 34px;
+    z-index: 6;
+}
+
+/* Feature information */
+.fa-gi-kit-archive__feature-info {
+    position: absolute;
+    left: 38px;
+    right: 38px;
+    bottom: 34px;
+    z-index: 6;
+}
+
+/* Side information panel */
+.fa-gi-kit-archive__feature-side {
+    min-height: 620px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Make archive rail images clean */
+.fa-gi-kit-archive__item-image {
+    position: relative;
+    overflow: hidden;
+    background: #f4f4f2;
+}
+
+.fa-gi-kit-archive__item-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .fa-gi-kit-archive__feature {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .fa-gi-kit-archive__feature-image {
+        height: 560px;
+        min-height: 560px;
+    }
+
+    .fa-gi-kit-archive__feature-side {
+        height: auto;
+        min-height: auto;
+        gap: 24px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .fa-gi-kit-archive__feature-image {
+        height: 430px;
+        min-height: 430px;
+    }
+
+    .fa-gi-kit-archive__feature-image img {
+        padding: 12px;
+    }
+
+    .fa-gi-kit-archive__feature-image::before {
+        inset: 10px;
+    }
+
+    .fa-gi-kit-archive__feature-image::after {
+        inset: 20px;
+    }
+
+    .fa-gi-kit-archive__feature-code {
+        top: 25px;
+        left: 25px;
+    }
+
+    .fa-gi-kit-archive__feature-mark {
+        top: 25px;
+        right: 25px;
+    }
+
+    .fa-gi-kit-archive__feature-info {
+        left: 25px;
+        right: 25px;
+        bottom: 25px;
+    }
+}
+/* =========================================================
+   FA SPORTS — GEAR INDEX HERO
+   RIGHT CIRCULAR LOGO FRAME — WHITE THEME
+   ========================================================= */
+
+.fa-gear-final-hero__visual,
+.fa-gear-final-hero__visual * {
+    /* keep existing layout */
+}
+
+/* Main circular box */
+.fa-gear-final-hero__visual {
+    background: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.16) !important;
+    color: #111111 !important;
+}
+
+/* Circular inner frame */
+.fa-gear-final-hero__visual::before {
+    background: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.18) !important;
+}
+
+/* If there is another circular ring */
+.fa-gear-final-hero__visual::after {
+    border-color: rgba(190, 0, 0, 0.45) !important;
+}
+
+/* Four logo holders */
+.fa-gear-final-hero__visual .logo,
+.fa-gear-final-hero__visual [class*="logo"],
+.fa-gear-final-hero__visual [class*="mark"],
+.fa-gear-final-hero__visual [class*="badge"] {
+    background: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.14) !important;
+    color: #111111 !important;
+}
+
+/* Text / small labels inside the circle */
+.fa-gear-final-hero__visual span,
+.fa-gear-final-hero__visual small {
+    color: #111111 !important;
+}
+
+/* Make red details stay visible on white */
+.fa-gear-final-hero__visual .red,
+.fa-gear-final-hero__visual [class*="red"] {
+    color: #c40000 !important;
+}
+
+/* =========================================================
+   HERO RIGHT SIDE — WHITE CLEAN SURFACE
+   ========================================================= */
+
+.fa-gear-final-hero__visual img {
+    background: #ffffff !important;
+}
+
+/* Remove dark overlays if the existing design has one */
+.fa-gear-final-hero__visual > .overlay,
+.fa-gear-final-hero__visual > [class*="overlay"] {
+    background: transparent !important;
+}
+/* =========================================================
+   FA GEAR INDEX — HERO RIGHT CIRCLE
+   WHITE THEME OVERRIDE
+========================================================= */
+
+.fa-gear-final-stage {
+    background: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.04),
+        0 30px 80px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Technical grid */
+.fa-gear-final-grid {
+    opacity: 0.45 !important;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.055) 1px, transparent 1px) !important;
+}
+
+/* Outer circles */
+.fa-gear-final-ring {
+    border-color: rgba(0, 0, 0, 0.14) !important;
+}
+
+.fa-gear-final-ring--large {
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.025),
+        0 0 0 1px rgba(0, 0, 0, 0.025) !important;
+}
+
+.fa-gear-final-ring--small {
+    border-color: rgba(220, 0, 0, 0.30) !important;
+}
+
+/* Center circle */
+.fa-gear-final-center {
+    background: #ffffff !important;
+    border-color: #111111 !important;
+    box-shadow:
+        0 0 0 8px rgba(255, 255, 255, 0.92),
+        0 0 0 9px rgba(0, 0, 0, 0.12) !important;
+}
+
+.fa-gear-final-center span {
+    background: #e00000 !important;
+}
+
+/* Four logo/icon objects */
+.fa-gear-final-object {
+    color: #111111 !important;
+}
+
+.fa-gear-final-object svg {
+    color: #111111 !important;
+    fill: none !important;
+    stroke: #111111 !important;
+}
+
+.fa-gear-final-object small {
+    color: #e00000 !important;
+}
+
+.fa-gear-final-object b {
+    color: #111111 !important;
+}
+
+/* Icon white card / frame */
+.fa-gear-final-object::before {
+    background: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.13) !important;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Accent details */
+.fa-gear-final-accent {
+    background: #e00000 !important;
+    box-shadow: 0 0 20px rgba(224, 0, 0, 0.18) !important;
+}
+
+/* Keep technical marks visible */
+.fa-gear-final-stage::before,
+.fa-gear-final-stage::after {
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}

@@ -1,0 +1,773 @@
+/* =========================================================
+   FA SPORTS — PARTNER & DISTRIBUTOR
+   ========================================================= */
+
+.fa-partnership-page {
+    background: #fff;
+    color: #111;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.fa-partnership-hero {
+    min-height: 560px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    background:
+        linear-gradient(135deg, #ffffff 0%, #f7f7f7 60%, #eeeeee 100%);
+    overflow: hidden;
+    padding: 90px 7vw 75px;
+}
+
+.fa-partnership-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 31%;
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 0, 0, .07);
+    transform: skewX(-18deg);
+}
+
+.fa-partnership-hero__content {
+    position: relative;
+    z-index: 5;
+    max-width: 720px;
+}
+
+.fa-partnership-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.fa-partnership-kicker::before {
+    content: "";
+    width: 42px;
+    height: 4px;
+    background: #e50914;
+}
+
+.fa-partnership-kicker::after {
+    content: "";
+    width: 18px;
+    height: 4px;
+    background: #111;
+}
+
+.fa-partnership-hero h1 {
+    margin: 0;
+    font-size: clamp(48px, 6vw, 86px);
+    line-height: .88;
+    letter-spacing: -4px;
+    font-weight: 950;
+    color: #111;
+}
+
+.fa-partnership-hero h1 span {
+    color: #e50914;
+}
+
+.fa-partnership-hero__content p {
+    max-width: 610px;
+    margin: 30px 0 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #5d5d5d;
+}
+
+
+/* HERO VISUAL */
+
+.fa-partnership-hero__visual {
+    position: relative;
+    min-height: 400px;
+    z-index: 2;
+}
+
+.fa-hero-circle {
+    position: absolute;
+    width: 410px;
+    height: 410px;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    background:
+        linear-gradient(145deg, #080808, #1c1c1c);
+    box-shadow: 0 30px 70px rgba(0,0,0,.2);
+}
+
+.fa-hero-circle::before {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+}
+
+.fa-hero-circle::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 520px;
+    background: #e50914;
+    transform: rotate(38deg);
+    right: 110px;
+    top: -65px;
+    opacity: .9;
+}
+
+.fa-hero-badge {
+    position: absolute;
+    right: 115px;
+    top: 105px;
+    width: 170px;
+    height: 170px;
+    border: 2px solid rgba(255,255,255,.35);
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transform: rotate(-5deg);
+}
+
+.fa-hero-badge span {
+    font-size: 68px;
+    line-height: .8;
+    font-weight: 950;
+    color: #e50914;
+    letter-spacing: -7px;
+}
+
+.fa-hero-badge small {
+    margin-top: 15px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.fa-hero-feature {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.fa-hero-feature .feature-icon {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #e50914;
+    display: grid;
+    place-items: center;
+    color: #e50914;
+    font-size: 19px;
+}
+
+.fa-hero-feature strong {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.fa-hero-feature small {
+    display: block;
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.feature-one {
+    right: 35px;
+    top: 35px;
+}
+
+.feature-two {
+    right: 30px;
+    bottom: 80px;
+}
+
+.feature-three {
+    left: 40px;
+    bottom: 35px;
+}
+
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.fa-form-alert {
+    width: min(1160px, 90%);
+    margin: 35px auto 0;
+    padding: 20px 24px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    border-left: 5px solid;
+}
+
+.fa-form-alert--success {
+    background: #f2faf4;
+    border-color: #16803c;
+}
+
+.fa-form-alert--error {
+    background: #fff4f4;
+    border-color: #e50914;
+}
+
+.alert-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #e50914;
+    color: white;
+    font-weight: 900;
+}
+
+.fa-form-alert--success .alert-icon {
+    background: #16803c;
+}
+
+.fa-form-alert strong {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.fa-form-alert p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+.fa-form-alert ul {
+    margin: 7px 0 0;
+    padding-left: 18px;
+}
+
+
+/* =========================================================
+   APPLICATION SECTION
+   ========================================================= */
+
+.fa-partnership-applications {
+    padding: 100px 7vw 110px;
+    background: #fff;
+}
+
+.fa-partnership-intro {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.fa-partnership-intro > span {
+    display: block;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #e50914;
+    margin-bottom: 14px;
+}
+
+.fa-partnership-intro h2 {
+    margin: 0;
+    font-size: clamp(34px, 4vw, 55px);
+    line-height: .95;
+    letter-spacing: -2px;
+}
+
+.fa-partnership-intro h2 strong {
+    color: #e50914;
+}
+
+.fa-partnership-intro p {
+    color: #777;
+    line-height: 1.7;
+    margin: 18px auto 0;
+    max-width: 620px;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.fa-partnership-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.fa-application-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #dedede;
+    box-shadow: 0 20px 55px rgba(0,0,0,.08);
+    padding: 42px;
+    overflow: hidden;
+}
+
+.fa-application-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 75px 75px 0;
+    border-color: transparent #111 transparent transparent;
+}
+
+.fa-card-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 145px;
+    background: #e50914;
+}
+
+.fa-card-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fa-card-icon {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #111;
+    transform: skewX(-8deg);
+    position: relative;
+}
+
+.fa-card-icon::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid #e50914;
+}
+
+.fa-card-icon svg {
+    width: 36px;
+    height: 36px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: skewX(8deg);
+}
+
+.fa-card-label {
+    display: block;
+    color: #e50914;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 900;
+}
+
+.fa-card-top h3 {
+    margin: 5px 0 0;
+    font-size: 38px;
+    line-height: .9;
+    letter-spacing: -1px;
+}
+
+.fa-card-description {
+    color: #6a6a6a;
+    line-height: 1.65;
+    margin: 25px 0 30px;
+    max-width: 570px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.fa-partnership-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.fa-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.fa-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.fa-form-field label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    color: #222;
+}
+
+.fa-form-field input,
+.fa-form-field select,
+.fa-form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    background: #fafafa;
+    color: #111;
+    padding: 14px 15px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: .25s ease;
+}
+
+.fa-form-field textarea {
+    min-height: 115px;
+    resize: vertical;
+}
+
+.fa-form-field input:focus,
+.fa-form-field select:focus,
+.fa-form-field textarea:focus {
+    background: #fff;
+    border-color: #e50914;
+    box-shadow: 0 0 0 3px rgba(229,9,20,.08);
+}
+
+.fa-form-field input::placeholder,
+.fa-form-field textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* BUTTON */
+
+.fa-submit-button {
+    margin-top: 5px;
+    min-height: 55px;
+    border: 0;
+    background: #e50914;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    transition: .25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.fa-submit-button::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    background: rgba(255,255,255,.12);
+    transform: skewX(-25deg);
+    left: -100px;
+    transition: .4s ease;
+}
+
+.fa-submit-button:hover {
+    background: #111;
+    transform: translateY(-2px);
+}
+
+.fa-submit-button:hover::before {
+    left: 110%;
+}
+
+.fa-submit-button b {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.fa-card-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 32px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.fa-card-benefits > div {
+    padding: 0 14px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.fa-card-benefits > div:first-child {
+    padding-left: 0;
+}
+
+.fa-card-benefits > div:last-child {
+    border-right: 0;
+}
+
+.fa-card-benefits span {
+    display: block;
+    color: #e50914;
+    font-size: 10px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.fa-card-benefits strong {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.fa-card-benefits small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.fa-partnership-bottom {
+    position: relative;
+    padding: 95px 25px;
+    text-align: center;
+    background:
+        linear-gradient(135deg, #080808, #171717);
+    color: white;
+    overflow: hidden;
+}
+
+.fa-partnership-bottom::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: #e50914;
+    opacity: .12;
+    border-radius: 50%;
+    left: -180px;
+    top: -250px;
+}
+
+.fa-partnership-bottom::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background: #e50914;
+    right: -100px;
+    bottom: -20px;
+    transform: rotate(-12deg);
+}
+
+.fa-bottom-line {
+    width: 60px;
+    height: 4px;
+    background: #e50914;
+    margin: 0 auto 22px;
+}
+
+.fa-partnership-bottom > span {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #aaa;
+}
+
+.fa-partnership-bottom h2 {
+    margin: 15px 0 12px;
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: .9;
+    letter-spacing: -3px;
+}
+
+.fa-partnership-bottom h2 strong {
+    color: #e50914;
+}
+
+.fa-partnership-bottom p {
+    margin: 0;
+    color: #aaa;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .fa-partnership-hero {
+        grid-template-columns: 1fr;
+        padding-top: 75px;
+    }
+
+    .fa-partnership-hero__visual {
+        min-height: 390px;
+        margin-top: 30px;
+    }
+
+    .fa-hero-circle {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .fa-hero-badge {
+        right: 50%;
+        transform: translateX(50%) rotate(-5deg);
+    }
+
+    .feature-one {
+        right: calc(50% - 205px);
+    }
+
+    .feature-two {
+        right: calc(50% - 210px);
+    }
+
+    .feature-three {
+        left: calc(50% - 205px);
+    }
+
+    .fa-partnership-grid {
+        grid-template-columns: 1fr;
+        max-width: 750px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .fa-partnership-hero {
+        padding: 65px 22px 45px;
+    }
+
+    .fa-partnership-hero h1 {
+        font-size: 48px;
+        letter-spacing: -2.5px;
+    }
+
+    .fa-partnership-hero__content p {
+        font-size: 14px;
+    }
+
+    .fa-partnership-hero__visual {
+        min-height: 310px;
+    }
+
+    .fa-hero-circle {
+        width: 290px;
+        height: 290px;
+    }
+
+    .fa-hero-badge {
+        width: 125px;
+        height: 125px;
+        top: 78px;
+    }
+
+    .fa-hero-badge span {
+        font-size: 48px;
+    }
+
+    .fa-hero-badge small {
+        font-size: 8px;
+    }
+
+    .fa-hero-feature {
+        transform: scale(.8);
+    }
+
+    .feature-one {
+        right: 0;
+    }
+
+    .feature-two {
+        right: 0;
+        bottom: 35px;
+    }
+
+    .feature-three {
+        left: 0;
+        bottom: 0;
+    }
+
+    .fa-partnership-applications {
+        padding: 70px 18px;
+    }
+
+    .fa-application-card {
+        padding: 30px 22px;
+    }
+
+    .fa-card-top h3 {
+        font-size: 31px;
+    }
+
+    .fa-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-card-benefits {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .fa-card-benefits > div,
+    .fa-card-benefits > div:first-child {
+        padding: 0 0 15px;
+        border-right: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .fa-card-benefits > div:last-child {
+        border-bottom: 0;
+    }
+
+    .fa-partnership-bottom {
+        padding: 75px 20px;
+    }
+}
