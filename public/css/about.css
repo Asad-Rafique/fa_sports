@@ -1,0 +1,1368 @@
+/* =========================================================
+   FA SPORTS — ABOUT PAGE
+   Editorial / Premium Team Profile
+========================================================= */
+
+:root {
+    --fa-red: #e30613;
+    --fa-red-dark: #b9000b;
+    --fa-black: #080808;
+    --fa-dark: #111111;
+    --fa-white: #ffffff;
+    --fa-soft: #f5f5f3;
+    --fa-gray: #777777;
+    --fa-line: #dedede;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.about-hero,
+.about-story,
+.about-statement,
+.about-team,
+.about-values,
+.about-final {
+    width: 100%;
+    overflow: hidden;
+}
+
+.about-wrap {
+    width: min(1240px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.about-eyebrow,
+.about-label,
+.about-hero__small {
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight:700;
+}
+/* =========================================================
+   FA SPORTS — ABOUT HERO
+   PREMIUM EDITORIAL / NO IMAGE
+========================================================= */
+
+.about-hero {
+    position: relative;
+
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    color: #080808;
+
+    padding: 32px 6vw 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   RED GEOMETRIC BLOCK
+========================================================= */
+
+.about-hero__red-block {
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    right: -20px;
+    top: 150px;
+
+    background: #e30613;
+
+    transform: rotate(45deg);
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   BLACK OUTLINE
+========================================================= */
+
+.about-hero__outline {
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    right: 10px;
+    top: 130px;
+
+    border: 1px solid #080808;
+
+    transform: rotate(45deg);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.about-hero__top {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #d9d9d9;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+}
+
+
+.about-hero__top span:first-child {
+    color: #e30613;
+}
+
+
+/* =========================================================
+   MAIN HERO
+========================================================= */
+
+.about-hero__main {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    min-height: 500px;
+
+    padding-left: 0;
+}
+
+
+/* =========================================================
+   COMPANY PROFILE LABEL
+========================================================= */
+
+.about-hero__label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+}
+
+
+.about-hero__label span {
+    width: 32px;
+
+    height: 3px;
+
+    background: #e30613;
+
+    display: block;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.about-hero__main h1 {
+    margin: 0;
+
+    padding: 0;
+
+    text-align: left;
+
+    font-size: clamp(95px, 12vw, 175px);
+
+    line-height: .78;
+
+    letter-spacing: -.09em;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+
+.about-hero__main h1 span {
+    color: #e30613;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-hero__copy {
+    position: relative;
+
+    max-width: 360px;
+
+    margin-top: 42px;
+
+    margin-left: 8px;
+
+    padding-left: 22px;
+
+    padding-bottom: 8px;
+}
+
+
+.about-hero__copy::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background: #e30613;
+}
+
+
+.about-hero__copy p {
+    margin: 0 0 25px;
+
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO LINK
+========================================================= */
+
+.about-hero__copy a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    color: #080808;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #080808;
+
+    transition: all .3s ease;
+}
+
+
+.about-hero__copy a span {
+    color: #e30613;
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+.about-hero__copy a:hover {
+    color: #e30613;
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   BOTTOM INFORMATION
+========================================================= */
+
+.about-hero__bottom {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #d9d9d9;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+}
+
+
+.about-hero__bottom span:nth-child(2) {
+    color: #e30613;
+}
+
+
+/* =========================================================
+   FA MARK
+========================================================= */
+
+.about-hero__mark {
+    position: absolute;
+
+    right: 135px;
+
+    top: 275px;
+
+    z-index: 4;
+
+    color: #ffffff;
+
+    font-size: 90px;
+
+    line-height: .8;
+
+    font-weight: 900;
+
+    letter-spacing: -.1em;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SUBTLE DECORATION
+========================================================= */
+
+.about-hero::after {
+    content: "04";
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 3;
+
+    color: rgba(8, 8, 8, .12);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: .2em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .about-hero {
+        min-height: 650px;
+
+        padding-left: 5vw;
+
+        padding-right: 5vw;
+    }
+
+
+    .about-hero__main {
+        min-height: 470px;
+    }
+
+
+    .about-hero__main h1 {
+        font-size: clamp(85px, 13vw, 145px);
+    }
+
+
+    .about-hero__red-block {
+        width: 330px;
+
+        height: 330px;
+
+        right: -10px;
+
+        top: 160px;
+    }
+
+
+    .about-hero__outline {
+        width: 370px;
+
+        height: 370px;
+
+        right: 15px;
+
+        top: 140px;
+    }
+
+
+    .about-hero__mark {
+        right: 105px;
+
+        top: 275px;
+
+        font-size: 75px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-hero {
+        min-height: 650px;
+
+        padding: 22px 20px 25px;
+    }
+
+
+    .about-hero__top {
+        font-size: 8px;
+
+        letter-spacing: .1em;
+    }
+
+
+    .about-hero__top span:nth-child(2) {
+        display: none;
+    }
+
+
+    .about-hero__main {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        min-height: 500px;
+    }
+
+
+    .about-hero__label {
+        margin-bottom: 25px;
+
+        font-size: 8px;
+    }
+
+
+    .about-hero__label span {
+        width: 25px;
+
+        height: 2px;
+    }
+
+
+    .about-hero__main h1 {
+        font-size: clamp(82px, 22vw, 120px);
+
+        line-height: .8;
+
+        text-align: left;
+    }
+
+
+    .about-hero__copy {
+        margin-top: 40px;
+
+        margin-left: 8px;
+
+        max-width: 280px;
+
+        padding-left: 18px;
+    }
+
+
+    .about-hero__copy p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .about-hero__red-block {
+        width: 250px;
+
+        height: 250px;
+
+        right: -45px;
+
+        top: 250px;
+    }
+
+
+    .about-hero__outline {
+        width: 280px;
+
+        height: 280px;
+
+        right: -20px;
+
+        top: 235px;
+    }
+
+
+    .about-hero__mark {
+        right: 55px;
+
+        top: 355px;
+
+        font-size: 60px;
+    }
+
+
+    .about-hero__bottom {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        font-size: 7px;
+
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .about-hero {
+        min-height: 620px;
+    }
+
+
+    .about-hero__main h1 {
+        font-size: 78px;
+    }
+
+
+    .about-hero__copy {
+        margin-top: 35px;
+    }
+
+
+    .about-hero__bottom span:nth-child(4) {
+        display: none;
+    }
+
+
+    .about-hero__red-block {
+        width: 220px;
+
+        height: 220px;
+
+        right: -40px;
+
+        top: 270px;
+    }
+
+
+    .about-hero__outline {
+        width: 250px;
+
+        height: 250px;
+
+        right: -15px;
+
+        top: 255px;
+    }
+
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.about-story {
+    padding: 150px 0;
+    background: var(--fa-white);
+}
+
+.about-label {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    color: var(--fa-black);
+}
+
+.about-label span:first-child {
+    color: var(--fa-red);
+}
+
+.about-label span:last-child {
+    color: #777;
+}
+
+.about-story__content {
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.about-story h2,
+.about-team__heading h2,
+.about-values__heading h2 {
+    margin: 0;
+    font-size: clamp(58px, 7vw, 105px);
+    line-height: .88;
+    letter-spacing: -.06em;
+    font-weight: 900;
+}
+
+.about-story h2 em,
+.about-team__heading h2 em,
+.about-values__heading h2 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.about-story__text {
+    max-width: 550px;
+}
+
+.about-story__text p {
+    margin: 0 0 28px;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.about-statement {
+    position: relative;
+    padding: 150px 8vw;
+    background: var(--fa-red);
+    color: #fff;
+}
+
+.about-statement__number {
+    position: absolute;
+    left: 7vw;
+    top: 55px;
+    font-size: 11px;
+    letter-spacing: .16em;
+    font-weight: 800;
+}
+
+.about-statement__content {
+    width: min(1050px, 100%);
+    margin: auto;
+}
+
+.about-statement__content > span {
+    display: block;
+    margin-bottom: 35px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.about-statement h2 {
+    margin: 0;
+    font-size: clamp(55px, 7vw, 110px);
+    line-height: .9;
+    letter-spacing: -.06em;
+    font-weight: 900;
+}
+
+.about-statement h2 strong {
+    display: block;
+    color: var(--fa-black);
+}
+
+.about-statement p {
+    max-width: 550px;
+    margin: 45px 0 0 auto;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.about-team {
+    padding: 150px 0 170px;
+    background: var(--fa-soft);
+}
+
+.about-team__heading {
+    display: grid;
+    grid-template-columns: .7fr 1fr .8fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 120px;
+}
+
+.about-team__heading p {
+    margin: 0;
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.about-members {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+
+/* =========================================================
+   MEMBER ROW
+========================================================= */
+
+.about-member {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    align-items: center;
+    gap: 100px;
+
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.about-member.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-member--reverse {
+    direction: rtl;
+}
+
+.about-member--reverse > * {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   MEMBER IMAGE
+========================================================= */
+
+.about-member__visual {
+    position: relative;
+    min-height: 500px;
+}
+
+.about-member__image-wrap {
+    position: relative;
+    width: min(470px, 100%);
+    height: 500px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.about-member__image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 65%,
+        rgba(0,0,0,.38)
+    );
+    pointer-events: none;
+}
+
+.about-member__image-wrap img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition:
+        transform .8s ease,
+        filter .8s ease;
+}
+
+.about-member:hover .about-member__image-wrap img {
+    transform: scale(1.045);
+    filter: grayscale(0%);
+}
+
+.about-member__visual::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: -18px;
+    top: -18px;
+    background: var(--fa-red);
+    z-index: 0;
+}
+
+.about-member__image-wrap {
+    z-index: 1;
+}
+
+.about-member__index {
+    position: absolute;
+    right: 35px;
+    bottom: 30px;
+    z-index: 3;
+    color: #fff;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -.06em;
+}
+
+.about-member__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--fa-black);
+    color: #fff;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   MEMBER CONTENT
+========================================================= */
+
+.about-member__content {
+    max-width: 500px;
+}
+
+.about-member__topline {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.about-member__topline span {
+    color: var(--fa-red);
+    font-size: 10px;
+    letter-spacing: .16em;
+    font-weight: 800;
+}
+
+.about-member__topline i {
+    width: 55px;
+    height: 1px;
+    background: var(--fa-black);
+}
+
+.about-member__content h3 {
+    margin: 0;
+    font-size: clamp(42px, 4.5vw, 68px);
+    line-height: .95;
+    letter-spacing: -.05em;
+    font-weight: 900;
+    color: var(--fa-black);
+}
+
+.about-member__content h4 {
+    margin: 15px 0 28px;
+    color: var(--fa-red);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.about-member__content p {
+    max-width: 470px;
+    margin: 0;
+    color: #606060;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.about-member__signature {
+    display: inline-block;
+    margin-top: 40px;
+    padding-top: 13px;
+    border-top: 1px solid #cfcfcf;
+    color: #999;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.about-values {
+    padding: 150px 0;
+    background: #fff;
+}
+
+.about-values__heading {
+    margin: 70px 0 100px;
+}
+
+.about-values__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--fa-line);
+}
+
+.about-value {
+    padding: 35px 25px 20px;
+    border-right: 1px solid var(--fa-line);
+}
+
+.about-value:first-child {
+    padding-left: 0;
+}
+
+.about-value:last-child {
+    border-right: 0;
+}
+
+.about-value span {
+    color: var(--fa-red);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.about-value h3 {
+    margin: 55px 0 18px;
+    font-size: 18px;
+    letter-spacing: -.02em;
+}
+
+.about-value p {
+    margin: 0;
+    max-width: 220px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.about-final {
+    padding: 150px 30px;
+    background: var(--fa-black);
+    color: #fff;
+    text-align: center;
+}
+
+.about-final__inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-final__inner > span {
+    color: var(--fa-red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.about-final h2 {
+    margin: 35px 0;
+    font-size: clamp(65px, 9vw, 125px);
+    line-height: .84;
+    letter-spacing: -.07em;
+    font-weight: 900;
+}
+
+.about-final h2 em {
+    color: var(--fa-red);
+    font-style: normal;
+}
+
+.about-final p {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.about-final a {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    padding: 18px 25px;
+    background: var(--fa-red);
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+.about-final a:hover {
+    background: #fff;
+    color: var(--fa-black);
+    transform: translateY(-3px);
+}
+
+.about-final a span {
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.about-empty {
+    padding: 60px;
+    border: 1px solid var(--fa-line);
+    text-align: center;
+    color: #777;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .about-wrap {
+        width: min(100% - 50px, 850px);
+    }
+
+    .about-hero {
+        min-height: 650px;
+    }
+
+    .about-hero::before {
+        width: 330px;
+        height: 330px;
+        right: -100px;
+    }
+
+    .about-hero::after {
+        right: 40px;
+        font-size: 90px;
+    }
+
+    .about-hero__main {
+        grid-template-columns: 1fr .7fr;
+        gap: 40px;
+    }
+
+    .about-story__content {
+        gap: 50px;
+    }
+
+    .about-team__heading {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-team__heading p {
+        grid-column: 2;
+    }
+
+    .about-member {
+        gap: 50px;
+    }
+
+    .about-member__visual,
+    .about-member__image-wrap {
+        height: 420px;
+        min-height: 420px;
+    }
+
+    .about-values__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-value {
+        min-height: 210px;
+        border-bottom: 1px solid var(--fa-line);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-wrap {
+        width: calc(100% - 36px);
+    }
+
+    .about-hero {
+        min-height: 650px;
+        padding: 25px 20px;
+    }
+
+    .about-hero::before {
+        width: 250px;
+        height: 250px;
+        right: -100px;
+        top: 330px;
+    }
+
+    .about-hero::after {
+        right: 25px;
+        top: 390px;
+        font-size: 70px;
+    }
+
+    .about-hero__main {
+        display: block;
+    }
+
+    .about-hero__title h1 {
+        font-size: clamp(65px, 18vw, 100px);
+    }
+
+    .about-hero__intro {
+        padding-top: 50px;
+        max-width: 290px;
+    }
+
+    .about-hero__bottom {
+        font-size: 9px;
+    }
+
+    .about-story,
+    .about-team,
+    .about-values {
+        padding: 90px 0;
+    }
+
+    .about-story__content {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .about-story h2,
+    .about-team__heading h2,
+    .about-values__heading h2 {
+        font-size: 58px;
+    }
+
+    .about-story__text {
+        margin-top: 45px;
+    }
+
+    .about-statement {
+        padding: 100px 25px;
+    }
+
+    .about-statement h2 {
+        font-size: 58px;
+    }
+
+    .about-statement p {
+        margin-left: 0;
+    }
+
+    .about-team__heading {
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .about-team__heading h2 {
+        margin: 45px 0;
+    }
+
+    .about-members {
+        gap: 80px;
+    }
+
+    .about-member,
+    .about-member--reverse {
+        display: block;
+        direction: ltr;
+        min-height: auto;
+    }
+
+    .about-member__visual {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+
+    .about-member__image-wrap {
+        width: 100%;
+        height: 430px;
+    }
+
+    .about-member__content {
+        padding-top: 40px;
+    }
+
+    .about-member__content h3 {
+        font-size: 48px;
+    }
+
+    .about-member__content p {
+        font-size: 15px;
+    }
+
+    .about-values__heading {
+        margin: 55px 0 60px;
+    }
+
+    .about-values__grid {
+        display: block;
+    }
+
+    .about-value,
+    .about-value:first-child {
+        padding: 30px 0;
+        border-right: 0;
+        min-height: auto;
+    }
+
+    .about-value h3 {
+        margin-top: 30px;
+    }
+
+    .about-final {
+        padding: 100px 25px;
+    }
+
+    .about-final h2 {
+        font-size: 65px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .about-hero__top,
+    .about-hero__bottom {
+        font-size: 8px;
+        letter-spacing: .1em;
+    }
+
+    .about-hero__title h1 {
+        font-size: 60px;
+    }
+
+    .about-member__image-wrap {
+        height: 360px;
+    }
+
+    .about-member__content h3 {
+        font-size: 42px;
+    }
+
+    .about-final h2 {
+        font-size: 54px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-member {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .about-member__image-wrap img {
+        transition: none;
+    }
+
+}

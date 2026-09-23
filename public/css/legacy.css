@@ -1,0 +1,2959 @@
+/* =========================================================
+   FA SPORTS — THE FA LEGACY
+   COMPLETE EDITORIAL STYLES
+   WHITE / BLACK / RED
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT / RESET
+   ========================================================= */
+
+.fa-lg-hero,
+.fa-lg-opening,
+.fa-lg-origin,
+.fa-lg-timeline,
+.fa-lg-thennow,
+.fa-lg-philosophy,
+.fa-lg-why,
+.fa-lg-people,
+.fa-global,
+.fa-lg-numbers,
+.fa-lg-milestones,
+.fa-lg-today,
+.fa-lg-future,
+.fa-lg-vision,
+.fa-lg-statement {
+    box-sizing: border-box;
+}
+
+.fa-lg-hero *,
+.fa-lg-opening *,
+.fa-lg-origin *,
+.fa-lg-timeline *,
+.fa-lg-thennow *,
+.fa-lg-philosophy *,
+.fa-lg-why *,
+.fa-lg-people *,
+.fa-global *,
+.fa-lg-numbers *,
+.fa-lg-milestones *,
+.fa-lg-today *,
+.fa-lg-future *,
+.fa-lg-vision *,
+.fa-lg-statement * {
+    box-sizing: border-box;
+}
+
+.fa-lg-hero img,
+.fa-lg-origin img,
+.fa-lg-timeline img,
+.fa-lg-milestones img {
+    display: block;
+    max-width: 100%;
+}
+
+.fa-lg-hero a,
+.fa-lg-opening a,
+.fa-lg-origin a,
+.fa-lg-timeline a,
+.fa-lg-thennow a,
+.fa-lg-philosophy a,
+.fa-lg-people a,
+.fa-global a,
+.fa-lg-today a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SHARED SECTION HEAD
+   ========================================================= */
+
+.fa-section-head {
+    margin-bottom: 55px;
+}
+
+.fa-section-head__title {
+    margin: 0;
+    font-size: clamp(52px, 7vw, 105px);
+    line-height: .88;
+    letter-spacing: -.055em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.fa-section-head--dark {
+    color: #090909;
+}
+
+.fa-section-head--light {
+    color: #fff;
+}
+
+.fa-red {
+    color: #e00000;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.fa-lg-hero {
+    position: relative;
+    min-height: 760px;
+    height: 92vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: #090909;
+}
+
+.fa-lg-hero__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: .11;
+    transform: scale(1.02);
+}
+
+.fa-lg-hero__scrim {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.98) 0%,
+            rgba(255,255,255,.94) 48%,
+            rgba(255,255,255,.78) 100%
+        );
+}
+
+.fa-lg-hero__line {
+    position: absolute;
+    left: 2.4vw;
+    top: 9%;
+    bottom: 9%;
+    width: 1px;
+    background: rgba(0,0,0,.16);
+}
+
+.fa-lg-hero__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 6vw;
+}
+
+.fa-lg-hero__headline {
+    margin: 0;
+    color: #e00000;
+    font-size: clamp(78px, 10vw, 158px);
+    line-height: .78;
+    letter-spacing: -.075em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.fa-lg-hero__sub {
+    margin: 45px 0 0;
+    max-width: 560px;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: .18em;
+    font-weight: 600;
+    color: #111;
+}
+
+
+/* =========================================================
+   OPENING STATEMENT
+   ========================================================= */
+
+.fa-lg-opening {
+    position: relative;
+    background: #fff;
+    color: #090909;
+    padding: 145px 7vw 155px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.fa-lg-opening__inner {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.fa-lg-opening__intro {
+    max-width: 1060px;
+}
+
+.fa-lg-opening__eyebrow,
+.fa-lg-timeline__eyebrow,
+.fa-lg-thennow__eyebrow,
+.fa-lg-philosophy__eyebrow,
+.fa-lg-people__eyebrow,
+.fa-global__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    color: #e00000;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.fa-lg-opening__eyebrow::before,
+.fa-lg-timeline__eyebrow::before,
+.fa-lg-thennow__eyebrow::before,
+.fa-lg-philosophy__eyebrow::before,
+.fa-lg-people__eyebrow::before,
+.fa-global__eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: #e00000;
+}
+
+.fa-lg-opening__headline {
+    margin: 0;
+    font-size: clamp(58px, 8vw, 124px);
+    line-height: .86;
+    letter-spacing: -.065em;
+    font-weight: 850;
+    text-transform: uppercase;
+}
+
+.fa-lg-opening__headline span {
+    color: #e00000;
+}
+
+.fa-lg-opening__copy {
+    max-width: 700px;
+    margin: 42px 0 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.fa-lg-opening__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 90px;
+}
+
+.fa-lg-opening__card {
+    min-height: 410px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f4f4f2;
+    border: 1px solid #e2e2df;
+    transition:
+        transform .45s ease,
+        background .45s ease,
+        border-color .45s ease;
+}
+
+.fa-lg-opening__card:hover {
+    transform: translateY(-10px);
+    background: #fff;
+    border-color: #111;
+}
+
+.fa-lg-opening__card-number {
+    font-size: 13px;
+    font-weight: 800;
+    color: #e00000;
+}
+
+.fa-lg-opening__card-label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    color: #777;
+}
+
+.fa-lg-opening__card h3 {
+    margin: 0;
+    font-size: clamp(31px, 3vw, 49px);
+    line-height: .91;
+    letter-spacing: -.045em;
+}
+
+.fa-lg-opening__card p {
+    max-width: 360px;
+    margin: 25px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* =========================================================
+   FA ORIGIN
+   ========================================================= */
+
+.fa-lg-origin {
+    display: grid;
+    grid-template-columns: 32% 68%;
+    min-height: 760px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    color: #090909;
+}
+
+.fa-lg-origin__year {
+    padding: 70px 7vw;
+    background: #f4f4f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fa-lg-origin__year span {
+    font-size: clamp(100px, 13vw, 205px);
+    line-height: .75;
+    letter-spacing: -.09em;
+    font-weight: 850;
+    color: #111;
+}
+
+.fa-lg-origin__year small {
+    margin-top: 35px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+    color: #e00000;
+}
+
+.fa-lg-origin__story {
+    position: relative;
+    padding: 90px 7vw;
+    overflow: hidden;
+}
+
+.fa-lg-origin__story .fa-section-head__title {
+    font-size: clamp(58px, 7vw, 105px);
+}
+
+.fa-lg-origin__copy {
+    max-width: 690px;
+    margin: 32px 0 0;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.fa-lg-origin__statement {
+    margin-top: 55px;
+    padding-left: 25px;
+    border-left: 4px solid #e00000;
+}
+
+.fa-lg-origin__statement span {
+    display: block;
+    margin-bottom: 13px;
+    color: #e00000;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.fa-lg-origin__statement strong {
+    display: block;
+    font-size: clamp(25px, 3vw, 44px);
+    line-height: .98;
+    letter-spacing: -.04em;
+}
+
+.fa-lg-origin__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 31%;
+    height: 43%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: .82;
+}
+
+
+/* =========================================================
+   FA TIMELINE
+   ========================================================= */
+
+.fa-lg-timeline {
+    position: relative;
+    overflow: hidden;
+    padding: 150px 7vw 140px;
+    background:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+        #090909;
+    background-size: 80px 80px;
+    color: #fff;
+}
+
+.fa-lg-timeline__header {
+    max-width: 1250px;
+    margin: 0 auto 115px;
+}
+
+.fa-lg-timeline__eyebrow {
+    color: #fff;
+}
+
+.fa-lg-timeline__eyebrow::before {
+    background: #e00000;
+}
+
+.fa-lg-timeline__heading {
+    margin: 0;
+    font-size: clamp(65px, 9vw, 145px);
+    line-height: .82;
+    letter-spacing: -.075em;
+    font-weight: 850;
+}
+
+.fa-lg-timeline__heading span {
+    color: #e00000;
+}
+
+.fa-lg-timeline__intro {
+    max-width: 600px;
+    margin: 38px 0 0;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #999;
+}
+
+.fa-lg-timeline__journey {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.fa-lg-timeline__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(255,255,255,.16);
+    transform: translateX(-50%);
+}
+
+.fa-lg-timeline__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 90px minmax(0, 1fr);
+    align-items: center;
+    min-height: 530px;
+}
+
+.fa-lg-timeline__side {
+    min-width: 0;
+}
+
+.fa-lg-timeline__side--image {
+    grid-column: 1;
+}
+
+.fa-lg-timeline__side--content {
+    grid-column: 3;
+}
+
+.fa-lg-timeline__item.is-reverse .fa-lg-timeline__side--image {
+    grid-column: 3;
+}
+
+.fa-lg-timeline__item.is-reverse .fa-lg-timeline__side--content {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.fa-lg-timeline__image-wrap {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1.28 / 1;
+    background: #161616;
+}
+
+.fa-lg-timeline__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: .9;
+    transition:
+        transform .8s cubic-bezier(.2,.7,.2,1),
+        filter .5s ease;
+}
+
+.fa-lg-timeline__image-wrap:hover .fa-lg-timeline__image {
+    transform: scale(1.06);
+    filter: grayscale(0%);
+}
+
+.fa-lg-timeline__image-number {
+    position: absolute;
+    left: 22px;
+    top: 20px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.fa-lg-timeline__image-label {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    font-size: 9px;
+    letter-spacing: .17em;
+    font-weight: 800;
+    color: #fff;
+}
+
+.fa-lg-timeline__marker {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+}
+
+.fa-lg-timeline__marker span {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #090909;
+    background: #e00000;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #090909;
+}
+
+.fa-lg-timeline__content {
+    padding: 45px 55px;
+}
+
+.fa-lg-timeline__item:not(.is-reverse) .fa-lg-timeline__content {
+    padding-left: 55px;
+}
+
+.fa-lg-timeline__item.is-reverse .fa-lg-timeline__content {
+    text-align: right;
+    padding-right: 55px;
+}
+
+.fa-lg-timeline__year {
+    display: block;
+    margin-bottom: 8px;
+    color: #e00000;
+    font-size: clamp(50px, 5vw, 78px);
+    line-height: .85;
+    font-weight: 850;
+    letter-spacing: -.07em;
+}
+
+.fa-lg-timeline__chapter {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .2em;
+    color: #777;
+}
+
+.fa-lg-timeline__title {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 58px);
+    line-height: .9;
+    letter-spacing: -.055em;
+    text-transform: uppercase;
+}
+
+.fa-lg-timeline__title span {
+    color: #e00000;
+}
+
+.fa-lg-timeline__description {
+    max-width: 490px;
+    margin: 27px 0 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #999;
+}
+
+.fa-lg-timeline__item.is-reverse .fa-lg-timeline__description {
+    margin-left: auto;
+}
+
+.fa-lg-timeline__tags {
+    display: flex;
+    gap: 9px;
+    margin-top: 27px;
+}
+
+.fa-lg-timeline__item.is-reverse .fa-lg-timeline__tags {
+    justify-content: flex-end;
+}
+
+.fa-lg-timeline__tags span {
+    padding: 7px 10px;
+    border: 1px solid #333;
+    color: #888;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.fa-lg-timeline__ending {
+    max-width: 1000px;
+    margin: 140px auto 0;
+    padding-top: 70px;
+    border-top: 1px solid #292929;
+    text-align: center;
+}
+
+.fa-lg-timeline__ending > span {
+    color: #e00000;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.fa-lg-timeline__ending h3 {
+    margin: 25px 0 0;
+    font-size: clamp(45px, 7vw, 100px);
+    line-height: .85;
+    letter-spacing: -.065em;
+}
+
+.fa-lg-timeline__ending p {
+    max-width: 500px;
+    margin: 30px auto 0;
+    color: #888;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   THEN / NOW
+   ========================================================= */
+
+.fa-lg-thennow {
+    padding: 150px 7vw 140px;
+    background: #fff;
+    color: #090909;
+}
+
+.fa-lg-thennow__header,
+.fa-lg-philosophy__header,
+.fa-lg-people__header {
+    max-width: 1200px;
+    margin: 0 auto 110px;
+}
+
+.fa-lg-thennow__heading,
+.fa-lg-philosophy__heading,
+.fa-lg-people__heading {
+    margin: 0;
+    font-size: clamp(65px, 9vw, 140px);
+    line-height: .82;
+    letter-spacing: -.075em;
+    font-weight: 850;
+}
+
+.fa-lg-thennow__heading span {
+    color: #e00000;
+}
+
+.fa-lg-thennow__intro,
+.fa-lg-philosophy__intro,
+.fa-lg-people__intro {
+    max-width: 610px;
+    margin: 35px 0 0;
+    color: #666;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.fa-lg-thennow__timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fa-lg-thennow__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: #d8d8d8;
+}
+
+.fa-lg-thennow__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+    min-height: 330px;
+    align-items: center;
+}
+
+.fa-lg-thennow__item--left .fa-lg-thennow__card {
+    grid-column: 1;
+}
+
+.fa-lg-thennow__item--left .fa-lg-thennow__dot {
+    grid-column: 2;
+}
+
+.fa-lg-thennow__item--right .fa-lg-thennow__dot {
+    grid-column: 2;
+}
+
+.fa-lg-thennow__item--right .fa-lg-thennow__card {
+    grid-column: 3;
+}
+
+.fa-lg-thennow__card {
+    padding: 38px 42px;
+    background: #f5f5f3;
+    border: 1px solid #e1e1de;
+    transition: transform .45s ease, border-color .45s ease;
+}
+
+.fa-lg-thennow__card:hover {
+    transform: translateY(-8px);
+    border-color: #111;
+}
+
+.fa-lg-thennow__card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-lg-thennow__number {
+    color: #e00000;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.fa-lg-thennow__label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.fa-lg-thennow__card h3 {
+    margin: 32px 0 0;
+    font-size: clamp(30px, 4vw, 55px);
+    line-height: .9;
+    letter-spacing: -.055em;
+}
+
+.fa-lg-thennow__arrow {
+    margin-top: 18px;
+    color: #e00000;
+    font-size: 28px;
+}
+
+.fa-lg-thennow__card p {
+    max-width: 450px;
+    margin: 20px 0 0;
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.fa-lg-thennow__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    color: #888;
+    font-size: 8px;
+    letter-spacing: .15em;
+    font-weight: 800;
+}
+
+.fa-lg-thennow__dot {
+    justify-self: center;
+    width: 14px;
+    height: 14px;
+    background: #e00000;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #ccc;
+    z-index: 2;
+}
+
+.fa-lg-thennow__ending {
+    max-width: 900px;
+    margin: 120px auto 0;
+    padding-top: 70px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.fa-lg-thennow__ending > span {
+    color: #e00000;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.fa-lg-thennow__ending h3 {
+    margin: 25px 0;
+    font-size: clamp(45px, 7vw, 95px);
+    line-height: .84;
+    letter-spacing: -.07em;
+}
+
+.fa-lg-thennow__ending em {
+    color: #e00000;
+    font-style: normal;
+}
+
+.fa-lg-thennow__ending p {
+    color: #777;
+}
+
+
+/* =========================================================
+   PERFORMANCE PHILOSOPHY
+   ========================================================= */
+
+.fa-lg-philosophy {
+    padding: 150px 7vw;
+    background: #f5f5f3;
+    color: #090909;
+}
+
+.fa-lg-philosophy__timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fa-lg-philosophy__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: #d2d2cf;
+}
+
+.fa-lg-philosophy__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+    min-height: 350px;
+    align-items: center;
+}
+
+.fa-lg-philosophy__item--left .fa-lg-philosophy__card {
+    grid-column: 1;
+}
+
+.fa-lg-philosophy__item--left .fa-lg-philosophy__dot {
+    grid-column: 2;
+}
+
+.fa-lg-philosophy__item--right .fa-lg-philosophy__dot {
+    grid-column: 2;
+}
+
+.fa-lg-philosophy__item--right .fa-lg-philosophy__card {
+    grid-column: 3;
+}
+
+.fa-lg-philosophy__card {
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #dededb;
+    transition: transform .45s ease, box-shadow .45s ease;
+}
+
+.fa-lg-philosophy__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 55px rgba(0,0,0,.07);
+}
+
+.fa-lg-philosophy__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-lg-philosophy__number {
+    color: #e00000;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.fa-lg-philosophy__index {
+    font-size: 9px;
+    letter-spacing: .18em;
+    font-weight: 800;
+    color: #888;
+}
+
+.fa-lg-philosophy__card h3 {
+    margin: 35px 0 0;
+    font-size: clamp(30px, 4vw, 55px);
+    line-height: .9;
+    letter-spacing: -.055em;
+}
+
+.fa-lg-philosophy__card h3 em {
+    color: #e00000;
+    font-style: normal;
+}
+
+.fa-lg-philosophy__card p {
+    max-width: 470px;
+    margin: 22px 0 0;
+    color: #666;
+    line-height: 1.75;
+    font-size: 14px;
+}
+
+.fa-lg-philosophy__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 14px;
+    border-top: 1px solid #ddd;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .15em;
+    color: #888;
+}
+
+.fa-lg-philosophy__dot {
+    justify-self: center;
+    width: 14px;
+    height: 14px;
+    background: #e00000;
+    border: 4px solid #f5f5f3;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #ccc;
+    z-index: 2;
+}
+
+.fa-lg-philosophy__statement {
+    max-width: 900px;
+    margin: 130px auto 0;
+    text-align: center;
+}
+
+.fa-lg-philosophy__statement-line {
+    width: 50px;
+    height: 3px;
+    margin: 0 auto 30px;
+    background: #e00000;
+}
+
+.fa-lg-philosophy__statement > span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .2em;
+    color: #e00000;
+}
+
+.fa-lg-philosophy__statement h3 {
+    margin: 25px 0;
+    font-size: clamp(45px, 7vw, 95px);
+    line-height: .84;
+    letter-spacing: -.07em;
+}
+
+.fa-lg-philosophy__statement em {
+    color: #e00000;
+    font-style: normal;
+}
+
+.fa-lg-philosophy__statement p {
+    color: #777;
+}
+
+
+/* =========================================================
+   WHY FA SPORTS
+   ========================================================= */
+
+.fa-lg-why {
+    padding: 135px 7vw;
+    background: #fff;
+    color: #090909;
+}
+
+.fa-lg-why__list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #ddd;
+}
+
+.fa-lg-why__list li {
+    position: relative;
+    padding: 28px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: clamp(25px, 4vw, 55px);
+    font-weight: 750;
+    letter-spacing: -.04em;
+    transition: padding-left .4s ease, color .4s ease;
+}
+
+.fa-lg-why__list li::before {
+    content: "→";
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    color: #e00000;
+    transition: width .4s ease;
+}
+
+.fa-lg-why__list li:hover {
+    padding-left: 30px;
+    color: #e00000;
+}
+
+.fa-lg-why__list li:hover::before {
+    width: 45px;
+}
+
+
+/* =========================================================
+   PEOPLE
+   ========================================================= */
+
+.fa-lg-people {
+    padding: 150px 7vw 140px;
+    background: #fff;
+    color: #090909;
+}
+
+.fa-lg-people__timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fa-lg-people__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: #d7d7d7;
+}
+
+.fa-lg-people__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+    min-height: 360px;
+    align-items: center;
+}
+
+.fa-lg-people__item--left .fa-lg-people__card {
+    grid-column: 1;
+}
+
+.fa-lg-people__item--left .fa-lg-people__dot {
+    grid-column: 2;
+}
+
+.fa-lg-people__item--right .fa-lg-people__dot {
+    grid-column: 2;
+}
+
+.fa-lg-people__item--right .fa-lg-people__card {
+    grid-column: 3;
+}
+
+.fa-lg-people__card {
+    padding: 40px;
+    background: #f5f5f3;
+    border: 1px solid #ddd;
+    transition: transform .45s ease, border-color .45s ease;
+}
+
+.fa-lg-people__card:hover {
+    transform: translateY(-8px);
+    border-color: #111;
+}
+
+.fa-lg-people__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-lg-people__number {
+    color: #e00000;
+    font-weight: 800;
+}
+
+.fa-lg-people__role {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.fa-lg-people__small {
+    display: block;
+    margin-top: 32px;
+    color: #999;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.fa-lg-people__card h3 {
+    margin: 18px 0 0;
+    font-size: clamp(35px, 4vw, 60px);
+    line-height: .84;
+    letter-spacing: -.06em;
+}
+
+.fa-lg-people__card h3 em {
+    color: #e00000;
+    font-style: normal;
+}
+
+.fa-lg-people__card p {
+    max-width: 470px;
+    margin: 25px 0 0;
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.fa-lg-people__signature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 14px;
+    border-top: 1px solid #ddd;
+    color: #888;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+
+.fa-lg-people__dot {
+    justify-self: center;
+    width: 14px;
+    height: 14px;
+    background: #e00000;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #ccc;
+    z-index: 2;
+}
+
+.fa-lg-people__ending {
+    max-width: 900px;
+    margin: 120px auto 0;
+    padding-top: 70px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.fa-lg-people__ending > span {
+    color: #e00000;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.fa-lg-people__ending h3 {
+    margin: 25px 0;
+    font-size: clamp(45px, 7vw, 95px);
+    line-height: .84;
+    letter-spacing: -.07em;
+}
+
+.fa-lg-people__ending em {
+    color: #e00000;
+    font-style: normal;
+}
+
+.fa-lg-people__ending p {
+    color: #777;
+}
+
+
+/* =========================================================
+   GLOBAL REACH
+   ========================================================= */
+
+.fa-global {
+    padding: 150px 6vw 130px;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.fa-global__header {
+    max-width: 1400px;
+    margin: 0 auto 80px;
+}
+
+.fa-global__eyebrow {
+    color: #fff;
+}
+
+.fa-global__header-grid {
+    display: grid;
+    grid-template-columns: 1.4fr .6fr;
+    gap: 80px;
+    align-items: end;
+}
+
+.fa-global__title {
+    margin: 0;
+    font-size: clamp(65px, 9vw, 145px);
+    line-height: .82;
+    letter-spacing: -.075em;
+    font-weight: 850;
+}
+
+.fa-global__title em {
+    color: #e00000;
+    font-style: normal;
+}
+
+.fa-global__header-copy {
+    padding-bottom: 10px;
+}
+
+.fa-global__header-copy p {
+    margin: 0 0 25px;
+    color: #999;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.fa-global__header-copy span {
+    color: #e00000;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.fa-global__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 22px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.fa-global__map-card {
+    min-width: 0;
+    background: #111;
+    border: 1px solid #252525;
+}
+
+.fa-global__map-head,
+.fa-global__map-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 22px;
+    color: #777;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.fa-global__map {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+        #0d0d0d;
+    background-size: 55px 55px;
+}
+
+.fa-global__map-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 9px;
+    letter-spacing: .15em;
+}
+
+.fa-global__map-loading span {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #e00000;
+    border-radius: 50%;
+    animation: faPulse 1.4s infinite;
+}
+
+@keyframes faPulse {
+    0%, 100% {
+        transform: scale(.7);
+        opacity: .35;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fa-global__map-footer {
+    border-top: 1px solid #222;
+}
+
+.fa-global__map-footer div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fa-global__legend-dot,
+.fa-global__legend-line,
+.fa-global__legend-region {
+    display: inline-block;
+}
+
+.fa-global__legend-dot {
+    width: 7px;
+    height: 7px;
+    background: #e00000;
+    border-radius: 50%;
+}
+
+.fa-global__legend-line {
+    width: 20px;
+    height: 1px;
+    background: #e00000;
+}
+
+.fa-global__legend-region {
+    width: 7px;
+    height: 7px;
+    border: 1px solid #e00000;
+}
+
+.fa-global__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    background: #111;
+    border: 1px solid #252525;
+}
+
+.fa-global__side-intro > span {
+    color: #e00000;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.fa-global__side-intro h3 {
+    margin: 24px 0 15px;
+    font-size: 34px;
+    line-height: .9;
+    letter-spacing: -.045em;
+}
+
+.fa-global__side-intro h3 strong {
+    color: #e00000;
+    display: block;
+}
+
+.fa-global__side-intro p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.fa-global__stats {
+    margin: 50px 0;
+    border-top: 1px solid #292929;
+}
+
+.fa-global__stat {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    padding: 18px 0;
+    border-bottom: 1px solid #292929;
+}
+
+.fa-global__stat strong {
+    grid-row: span 2;
+    color: #e00000;
+    font-size: 28px;
+}
+
+.fa-global__stat span,
+.fa-global__stat b {
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.fa-global__stat span {
+    color: #777;
+}
+
+.fa-global__stat b {
+    color: #ddd;
+}
+
+.fa-global__regions-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #777;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.fa-global__regions button {
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border: 0;
+    border-top: 1px solid #292929;
+    background: transparent;
+    color: #aaa;
+    text-align: left;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    transition: color .3s ease, padding-left .3s ease;
+}
+
+.fa-global__regions button span {
+    color: #e00000;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.fa-global__regions button:hover {
+    padding-left: 8px;
+    color: #fff;
+}
+
+.fa-global__statement {
+    max-width: 1000px;
+    margin: 120px auto 0;
+    padding-top: 70px;
+    border-top: 1px solid #292929;
+    text-align: center;
+}
+
+.fa-global__statement > span {
+    color: #e00000;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.fa-global__statement h3 {
+    margin: 25px 0;
+    font-size: clamp(48px, 7vw, 100px);
+    line-height: .84;
+    letter-spacing: -.07em;
+}
+
+.fa-global__statement em {
+    color: #e00000;
+    font-style: normal;
+}
+
+.fa-global__statement p {
+    color: #777;
+}
+
+
+/* =========================================================
+   PERFORMANCE NUMBERS
+   ========================================================= */
+
+.fa-lg-numbers {
+    padding: 100px 7vw;
+    background: #fff;
+}
+
+.fa-lg-numbers__grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.fa-lg-numbers__cell {
+    min-height: 190px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.fa-lg-numbers__value {
+    color: #e00000;
+    font-size: clamp(50px, 6vw, 85px);
+    line-height: .85;
+    font-weight: 850;
+    letter-spacing: -.06em;
+}
+
+.fa-lg-numbers__label {
+    margin-top: 18px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+
+/* =========================================================
+   MILESTONE WALL
+   ========================================================= */
+
+.fa-lg-milestones {
+    padding: 130px 7vw;
+    background: #f5f5f3;
+    color: #090909;
+}
+
+.fa-lg-milestones__grid {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.fa-lg-milestones__cell {
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    background: #111;
+}
+
+.fa-lg-milestones__cell.is-large {
+    grid-row: span 2;
+    min-height: 650px;
+}
+
+.fa-lg-milestones__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: .85;
+    transition: transform .7s ease, filter .5s ease;
+}
+
+.fa-lg-milestones__cell:hover .fa-lg-milestones__img {
+    transform: scale(1.06);
+    filter: grayscale(0);
+}
+
+.fa-lg-milestones__year,
+.fa-lg-milestones__title {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+}
+
+.fa-lg-milestones__year {
+    top: 20px;
+    left: 20px;
+    color: #e00000;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.fa-lg-milestones__title {
+    left: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   TODAY
+   ========================================================= */
+
+.fa-lg-today {
+    padding: 130px 7vw;
+    background: #090909;
+    color: #fff;
+}
+
+.fa-lg-today__grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
+}
+
+.fa-lg-today__portal {
+    min-height: 180px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-end;
+    border-right: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    color: #fff;
+    transition: background .35s ease, color .35s ease;
+}
+
+.fa-lg-today__portal span {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.fa-lg-today__portal:hover {
+    background: #e00000;
+}
+
+
+/* =========================================================
+   FUTURE
+   ========================================================= */
+
+.fa-lg-future {
+    padding: 140px 7vw;
+    background: #111;
+    color: #fff;
+}
+
+.fa-lg-future__list {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.fa-lg-future__list li {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    padding: 35px 0;
+    border-top: 1px solid #292929;
+}
+
+.fa-lg-future__list h4 {
+    margin: 0;
+    color: #e00000;
+    font-size: 25px;
+    letter-spacing: -.03em;
+}
+
+.fa-lg-future__list p {
+    margin: 0;
+    max-width: 650px;
+    color: #888;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   VISION
+   ========================================================= */
+
+.fa-lg-vision {
+    padding: 100px 7vw;
+    background: #e00000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.fa-lg-vision__track {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.fa-lg-vision__track li {
+    position: relative;
+    font-size: clamp(25px, 4vw, 60px);
+    line-height: .9;
+    letter-spacing: -.055em;
+    font-weight: 800;
+    opacity: .35;
+}
+
+.fa-lg-vision__track li.is-active {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   FINAL LEGACY STATEMENT
+   ========================================================= */
+
+.fa-lg-statement {
+    min-height: 75vh;
+    padding: 100px 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #090909;
+    text-align: center;
+}
+
+.fa-lg-statement__text {
+    margin: 0;
+    max-width: 1250px;
+    font-size: clamp(55px, 9vw, 145px);
+    line-height: .82;
+    letter-spacing: -.075em;
+    font-weight: 850;
+}
+
+.fa-lg-statement__text .fa-red {
+    color: #e00000;
+}
+
+
+/* =========================================================
+   LEGACY — PERMANENT VISIBILITY FIX
+   Sections are visible without JavaScript / scroll reveal
+   ========================================================= */
+
+.fa-lg-opening,
+.fa-lg-origin,
+.fa-lg-timeline,
+.fa-lg-thennow,
+.fa-lg-philosophy,
+.fa-lg-why,
+.fa-lg-people,
+.fa-global,
+.fa-lg-numbers,
+.fa-lg-milestones,
+.fa-lg-today,
+.fa-lg-future,
+.fa-lg-vision,
+.fa-lg-statement,
+.fa-lg-craft,
+.fa-lg-evolution,
+.fa-lg-materials,
+.fa-lg-code,
+.fa-lg-legacy-statement {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Cards and timeline items must also stay visible */
+.fa-lg-opening__card,
+.fa-lg-timeline__item,
+.fa-lg-thennow__item,
+.fa-lg-philosophy__item,
+.fa-lg-people__item {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* JavaScript classes cannot hide anything */
+.fa-lg-opening.is-visible,
+.fa-lg-origin.is-visible,
+.fa-lg-timeline.is-visible,
+.fa-lg-thennow.is-visible,
+.fa-lg-philosophy.is-visible,
+.fa-lg-why.is-visible,
+.fa-lg-people.is-visible,
+.fa-global.is-visible,
+.fa-lg-numbers.is-visible,
+.fa-lg-milestones.is-visible,
+.fa-lg-today.is-visible,
+.fa-lg-future.is-visible,
+.fa-lg-vision.is-visible,
+.fa-lg-statement.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Timeline / cards with JS-added classes */
+.fa-lg-opening.is-visible .fa-lg-opening__card,
+.fa-lg-timeline.is-visible .fa-lg-timeline__item,
+.fa-lg-thennow.is-visible .fa-lg-thennow__item,
+.fa-lg-philosophy.is-visible .fa-lg-philosophy__item,
+.fa-lg-people.is-visible .fa-lg-people__item {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+
+/* =========================================================
+   LEGACY — FIX INVALID TRANSITIONS
+   ========================================================= */
+
+.fa-lg-opening__card {
+    transition:
+        transform .45s ease,
+        background .45s ease,
+        border-color .45s ease;
+}
+
+.fa-lg-today__portal {
+    transition:
+        background .35s ease,
+        color .35s ease;
+}
+
+
+/* =========================================================
+   LEGACY — REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fa-lg-opening__card,
+    .fa-lg-timeline__image,
+    .fa-lg-thennow__card,
+    .fa-lg-philosophy__card,
+    .fa-lg-people__card,
+    .fa-lg-milestones__img,
+    .fa-global__map-loading span {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .fa-lg-origin {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-lg-origin__year {
+        min-height: 300px;
+    }
+
+    .fa-lg-origin__story {
+        min-height: 700px;
+    }
+
+    .fa-lg-origin__img {
+        width: 38%;
+    }
+
+    .fa-global__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-global__side {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+    }
+
+    .fa-global__stats {
+        margin: 0;
+    }
+
+    .fa-global__regions {
+        grid-column: 1 / -1;
+    }
+
+    .fa-lg-numbers__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fa-lg-milestones__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fa-lg-milestones__cell.is-large {
+        grid-row: auto;
+        min-height: 450px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET TIMELINES
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .fa-lg-hero {
+        min-height: 650px;
+        height: 90svh;
+    }
+
+    .fa-lg-hero__headline {
+        font-size: clamp(70px, 15vw, 110px);
+    }
+
+    .fa-lg-hero__content {
+        padding: 0 9vw;
+    }
+
+    .fa-lg-opening,
+    .fa-lg-thennow,
+    .fa-lg-philosophy,
+    .fa-lg-people,
+    .fa-lg-timeline,
+    .fa-global {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .fa-lg-opening__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-lg-origin__img {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 350px;
+        margin-top: 60px;
+    }
+
+    .fa-lg-timeline__line,
+    .fa-lg-thennow__line,
+    .fa-lg-philosophy__line,
+    .fa-lg-people__line {
+        left: 23px;
+        transform: none;
+    }
+
+    .fa-lg-timeline__item,
+    .fa-lg-thennow__item,
+    .fa-lg-philosophy__item,
+    .fa-lg-people__item {
+        display: grid;
+        grid-template-columns: 46px minmax(0, 1fr);
+        min-height: auto;
+        padding: 35px 0;
+        align-items: start;
+    }
+
+    .fa-lg-timeline__side--image,
+    .fa-lg-timeline__side--content,
+    .fa-lg-timeline__item.is-reverse .fa-lg-timeline__side--image,
+    .fa-lg-timeline__item.is-reverse .fa-lg-timeline__side--content {
+        grid-column: 2;
+        grid-row: auto;
+    }
+
+    .fa-lg-timeline__marker {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-items: flex-start;
+        padding-top: 25px;
+    }
+
+    .fa-lg-timeline__content,
+    .fa-lg-timeline__item.is-reverse .fa-lg-timeline__content,
+    .fa-lg-timeline__item:not(.is-reverse) .fa-lg-timeline__content {
+        padding: 35px 0 10px;
+        text-align: left;
+    }
+
+    .fa-lg-timeline__item.is-reverse .fa-lg-timeline__description {
+        margin-left: 0;
+    }
+
+    .fa-lg-timeline__item.is-reverse .fa-lg-timeline__tags {
+        justify-content: flex-start;
+    }
+
+    .fa-lg-thennow__item--left .fa-lg-thennow__card,
+    .fa-lg-thennow__item--right .fa-lg-thennow__card,
+    .fa-lg-philosophy__item--left .fa-lg-philosophy__card,
+    .fa-lg-philosophy__item--right .fa-lg-philosophy__card,
+    .fa-lg-people__item--left .fa-lg-people__card,
+    .fa-lg-people__item--right .fa-lg-people__card {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .fa-lg-thennow__item--left .fa-lg-thennow__dot,
+    .fa-lg-thennow__item--right .fa-lg-thennow__dot,
+    .fa-lg-philosophy__item--left .fa-lg-philosophy__dot,
+    .fa-lg-philosophy__item--right .fa-lg-philosophy__dot,
+    .fa-lg-people__item--left .fa-lg-people__dot,
+    .fa-lg-people__item--right .fa-lg-people__dot {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+        margin-top: 30px;
+    }
+
+    .fa-lg-timeline__image-wrap {
+        aspect-ratio: 1.15 / 1;
+    }
+
+    .fa-lg-numbers__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-lg-today__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fa-lg-future__list li {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-lg-vision__track {
+        flex-direction: column;
+    }
+
+    .fa-global__header-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .fa-global__map {
+        min-height: 450px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .fa-lg-hero {
+        min-height: 590px;
+        height: 88svh;
+    }
+
+    .fa-lg-hero__headline {
+        font-size: clamp(57px, 17vw, 82px);
+        line-height: .8;
+    }
+
+    .fa-lg-hero__sub {
+        margin-top: 30px;
+        font-size: 11px;
+        letter-spacing: .13em;
+    }
+
+    .fa-lg-opening,
+    .fa-lg-origin__story,
+    .fa-lg-timeline,
+    .fa-lg-thennow,
+    .fa-lg-philosophy,
+    .fa-lg-people,
+    .fa-global,
+    .fa-lg-why,
+    .fa-lg-milestones,
+    .fa-lg-today,
+    .fa-lg-future {
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+
+    .fa-lg-opening__headline,
+    .fa-lg-timeline__heading,
+    .fa-lg-thennow__heading,
+    .fa-lg-philosophy__heading,
+    .fa-lg-people__heading,
+    .fa-global__title {
+        font-size: clamp(48px, 14vw, 75px);
+    }
+
+    .fa-lg-opening__copy,
+    .fa-lg-timeline__intro,
+    .fa-lg-thennow__intro,
+    .fa-lg-philosophy__intro,
+    .fa-lg-people__intro {
+        font-size: 14px;
+    }
+
+    .fa-lg-opening__card {
+        min-height: 330px;
+        padding: 25px;
+    }
+
+    .fa-lg-opening__card h3 {
+        font-size: 34px;
+    }
+
+    .fa-lg-origin__year {
+        min-height: 230px;
+        padding: 55px 7vw;
+    }
+
+    .fa-lg-origin__year span {
+        font-size: 85px;
+    }
+
+    .fa-lg-origin__story {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .fa-lg-origin__story .fa-section-head__title {
+        font-size: 52px;
+    }
+
+    .fa-lg-origin__img {
+        height: 260px;
+    }
+
+    .fa-lg-timeline__content {
+        padding-top: 25px;
+    }
+
+    .fa-lg-timeline__year {
+        font-size: 55px;
+    }
+
+    .fa-lg-timeline__title {
+        font-size: 31px;
+    }
+
+    .fa-lg-timeline__description {
+        font-size: 13px;
+    }
+
+    .fa-lg-timeline__tags {
+        flex-wrap: wrap;
+    }
+
+    .fa-lg-thennow__card,
+    .fa-lg-philosophy__card,
+    .fa-lg-people__card {
+        padding: 27px;
+    }
+
+    .fa-lg-thennow__card h3,
+    .fa-lg-philosophy__card h3,
+    .fa-lg-people__card h3 {
+        font-size: 34px;
+    }
+
+    .fa-lg-numbers__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-lg-milestones__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-lg-milestones__cell,
+    .fa-lg-milestones__cell.is-large {
+        min-height: 330px;
+    }
+
+    .fa-lg-today__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fa-lg-today__portal {
+        min-height: 135px;
+    }
+
+    .fa-global__side {
+        display: block;
+    }
+
+    .fa-global__stats {
+        margin: 40px 0;
+    }
+
+    .fa-global__map {
+        min-height: 350px;
+    }
+
+    .fa-global__map-head,
+    .fa-global__map-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .fa-global__statement h3 {
+        font-size: 48px;
+    }
+
+    .fa-lg-statement {
+        min-height: 55vh;
+    }
+
+    .fa-lg-statement__text {
+        font-size: clamp(45px, 13vw, 70px);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fa-lg-opening,
+    .fa-lg-origin,
+    .fa-lg-timeline,
+    .fa-lg-thennow,
+    .fa-lg-philosophy,
+    .fa-lg-why,
+    .fa-lg-people,
+    .fa-global,
+    .fa-lg-numbers,
+    .fa-lg-milestones,
+    .fa-lg-today,
+    .fa-lg-future,
+    .fa-lg-vision,
+    .fa-lg-statement,
+
+    .fa-lg-opening__card,
+    .fa-lg-timeline__item,
+    .fa-lg-thennow__item,
+    .fa-lg-philosophy__item,
+    .fa-lg-people__item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .fa-lg-timeline__image,
+    .fa-lg-milestones__img {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   LEGACY SAFETY FALLBACK
+   If JavaScript does not load, content will still appear.
+   ========================================================= */
+
+html.fa-legacy-js-failed
+    .fa-lg-opening,
+html.fa-legacy-js-failed
+    .fa-lg-origin,
+html.fa-legacy-js-failed
+    .fa-lg-timeline,
+html.fa-legacy-js-failed
+    .fa-lg-thennow,
+html.fa-legacy-js-failed
+    .fa-lg-philosophy,
+html.fa-legacy-js-failed
+    .fa-lg-why,
+html.fa-legacy-js-failed
+    .fa-lg-people,
+html.fa-legacy-js-failed
+    .fa-global,
+html.fa-legacy-js-failed
+    .fa-lg-numbers,
+html.fa-legacy-js-failed
+    .fa-lg-milestones,
+html.fa-legacy-js-failed
+    .fa-lg-today,
+html.fa-legacy-js-failed
+    .fa-lg-future,
+html.fa-legacy-js-failed
+    .fa-lg-vision,
+html.fa-legacy-js-failed
+    .fa-lg-statement {
+    opacity: 1;
+    transform: none;
+}
+
+html.fa-legacy-js-failed
+    .fa-lg-opening__card,
+html.fa-legacy-js-failed
+    .fa-lg-timeline__item,
+html.fa-legacy-js-failed
+    .fa-lg-thennow__item,
+html.fa-legacy-js-failed
+    .fa-lg-philosophy__item,
+html.fa-legacy-js-failed
+    .fa-lg-people__item {
+    opacity: 1;
+    transform: none;
+}
+/* =========================================================
+   FA SPORTS — GLOBAL MAP / LEAFLET
+   ========================================================= */
+
+.fa-global__map {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    height: 520px;
+    overflow: hidden;
+    background: #111;
+    z-index: 1;
+}
+
+.fa-global__map .leaflet-container {
+    width: 100%;
+    height: 100%;
+    background: #111;
+    font-family: inherit;
+}
+
+/* Dark map appearance */
+.fa-global__map .leaflet-tile {
+    filter: grayscale(1) contrast(1.15) brightness(.72);
+}
+
+.fa-global__map .leaflet-control-zoom {
+    border: 1px solid rgba(255,255,255,.25) !important;
+}
+
+.fa-global__map .leaflet-control-zoom a {
+    background: #111 !important;
+    color: #fff !important;
+    border-color: rgba(255,255,255,.15) !important;
+}
+
+.fa-global__map .leaflet-control-attribution {
+    background: rgba(0,0,0,.7) !important;
+    color: rgba(255,255,255,.65) !important;
+}
+
+.fa-global__map .leaflet-control-attribution a {
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   ORIGIN MARKER
+   ========================================================= */
+
+.fa-map-origin-marker {
+    background: transparent;
+    border: 0;
+}
+
+.fa-map-origin-marker span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #d71920;
+    border: 3px solid #fff;
+    box-shadow:
+        0 0 0 5px rgba(215,25,32,.25),
+        0 0 25px rgba(215,25,32,.8);
+    animation: faMapPulse 2s infinite;
+}
+
+
+/* =========================================================
+   REGION MARKERS
+   ========================================================= */
+
+.fa-map-region-marker {
+    background: transparent;
+    border: 0;
+}
+
+.fa-map-region-marker span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #d71920;
+    box-shadow: 0 0 12px rgba(255,255,255,.55);
+}
+
+
+/* =========================================================
+   TOOLTIP
+   ========================================================= */
+
+.fa-map-tooltip {
+    background: #111 !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,.2) !important;
+    border-radius: 0 !important;
+    padding: 7px 10px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.fa-map-tooltip::before {
+    border-top-color: #111 !important;
+}
+
+
+/* =========================================================
+   POPUP
+   ========================================================= */
+
+.fa-map-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
+}
+
+.fa-map-popup strong {
+    font-size: 14px;
+    letter-spacing: .08em;
+}
+
+.fa-map-popup span {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.fa-map-popup small {
+    color: #d71920;
+    font-size: 9px;
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.fa-global__map-loading {
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #111;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    transition: opacity .4s ease;
+}
+
+.fa-global__map-loading span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d71920;
+    box-shadow: 0 0 15px rgba(215,25,32,.8);
+    animation: faMapPulse 1.2s infinite;
+}
+
+
+@keyframes faMapPulse {
+
+    0%,
+    100% {
+        transform: scale(.8);
+        opacity: .65;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .fa-global__map {
+        min-height: 420px;
+        height: 420px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .fa-global__map {
+        min-height: 340px;
+        height: 340px;
+    }
+
+}
+/* =========================================================
+   FA SPORTS — FINAL CTA + FOOTER
+   PREMIUM EDITORIAL STYLE
+========================================================= */
+
+.fa-final-cta--triple {
+    position: relative;
+    overflow: hidden;
+    padding: 110px 7vw 100px;
+    background: #ffffff;
+    border-top: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+/* subtle background architecture */
+.fa-final-cta--triple::before {
+    content: "FA";
+    position: absolute;
+    right: -30px;
+    top: -90px;
+    font-size: clamp(180px, 25vw, 430px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.08em;
+    color: rgba(0, 0, 0, 0.025);
+    pointer-events: none;
+}
+
+/* red vertical accent */
+.fa-final-cta--triple::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 2px;
+    height: 55px;
+    background: #e00000;
+}
+
+/* =========================================================
+   HEADLINE
+========================================================= */
+
+.fa-final-cta__headline--sm {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 900px;
+
+    font-size: clamp(48px, 7vw, 105px);
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #080808;
+}
+
+.fa-final-cta__headline--sm .fa-red {
+    color: #e00000;
+}
+
+/* =========================================================
+   SUBTEXT
+========================================================= */
+
+.fa-gi-final__sub {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+    margin: 34px auto 0;
+
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.13em;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   CTA BUTTON ROW
+========================================================= */
+
+.fa-final-cta__row {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.fa-final-cta__row .fa-btn {
+    min-width: 205px;
+    min-height: 54px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px 25px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* red button */
+.fa-final-cta__row .fa-btn--red {
+    background: #e00000;
+    border: 1px solid #e00000;
+    color: #ffffff;
+}
+
+.fa-final-cta__row .fa-btn--red:hover {
+    background: #080808;
+    border-color: #080808;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* outline buttons */
+.fa-final-cta__row .fa-btn--outline {
+    background: #ffffff;
+    border: 1px solid #111111;
+    color: #111111;
+}
+
+.fa-final-cta__row .fa-btn--outline:hover {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.fa-footer--pg {
+    position: relative;
+    overflow: hidden;
+
+    padding: 90px 7vw 28px;
+
+    background: #080808;
+    color: #ffffff;
+
+    border-top: 5px solid #e00000;
+}
+
+/* =========================================================
+   FOOTER LEAD
+========================================================= */
+
+.fa-footer--pg .fa-footer__lead {
+    margin: 0 0 80px;
+
+    font-size: clamp(45px, 7vw, 105px);
+    line-height: 0.82;
+    letter-spacing: -0.06em;
+    font-weight: 900;
+
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.fa-footer--pg .fa-footer__lead::first-line {
+    color: #ffffff;
+}
+
+/* =========================================================
+   FOOTER GRID
+========================================================= */
+
+.fa-footer--pg .fa-footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+    padding: 35px 0 70px;
+
+    border-top: 1px solid rgba(255,255,255,0.16);
+}
+
+/* columns */
+
+.fa-footer--pg .fa-footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* column title */
+
+.fa-footer--pg .fa-footer__title {
+    position: relative;
+
+    margin: 0 0 25px;
+
+    padding-left: 18px;
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+
+    color: #ffffff;
+}
+
+/* red line before title */
+
+.fa-footer--pg .fa-footer__title::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    background: #e00000;
+
+    transform: translateY(-50%);
+}
+
+/* footer links */
+
+.fa-footer--pg .fa-footer__col a {
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0 0 13px;
+
+    color: rgba(255,255,255,0.62);
+
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.fa-footer--pg .fa-footer__col a:hover {
+    color: #ffffff;
+    transform: translateX(6px);
+}
+
+/* small red hover indicator */
+
+.fa-footer--pg .fa-footer__col a::before {
+    content: "↗";
+
+    position: absolute;
+    left: -18px;
+
+    opacity: 0;
+
+    color: #e00000;
+
+    transition: opacity 0.2s ease;
+}
+
+.fa-footer--pg .fa-footer__col a:hover::before {
+    opacity: 1;
+}
+
+/* =========================================================
+   HUGE WORDMARK
+========================================================= */
+
+.fa-footer--pg .fa-footer__wordmark {
+    position: relative;
+
+    margin: 15px 0 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.16);
+
+    font-size: clamp(70px, 16vw, 240px);
+    line-height: 0.78;
+
+    letter-spacing: -0.085em;
+    font-weight: 950;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+/* red slash */
+
+.fa-footer--pg .fa-footer__wordmark::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -16px;
+
+    width: 80px;
+    height: 5px;
+
+    background: #e00000;
+}
+
+/* =========================================================
+   LEGAL
+========================================================= */
+
+.fa-footer--pg .fa-footer__legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    font-size: 9px;
+    line-height: 1.5;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,0.42);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .fa-final-cta--triple {
+        padding: 80px 6vw 75px;
+    }
+
+    .fa-final-cta__headline--sm {
+        font-size: clamp(48px, 14vw, 78px);
+    }
+
+    .fa-gi-final__sub {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .fa-final-cta__row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .fa-final-cta__row .fa-btn {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .fa-footer--pg {
+        padding: 70px 6vw 25px;
+    }
+
+    .fa-footer--pg .fa-footer__lead {
+        margin-bottom: 55px;
+        font-size: clamp(48px, 14vw, 82px);
+    }
+
+    .fa-footer--pg .fa-footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 25px;
+        padding-bottom: 55px;
+    }
+
+    .fa-footer--pg .fa-footer__wordmark {
+        font-size: 24vw;
+    }
+
+    .fa-footer--pg .fa-footer__legal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .fa-final-cta--triple {
+        padding: 70px 20px 65px;
+    }
+
+    .fa-final-cta__headline--sm {
+        font-size: 50px;
+    }
+
+    .fa-footer--pg .fa-footer__grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .fa-footer--pg .fa-footer__wordmark {
+        font-size: 25vw;
+    }
+}
