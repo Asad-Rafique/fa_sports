@@ -71,16 +71,6 @@
             </a>
         </div>
 
-
-        {{-- FOLLOW --}}
-        <div class="fa-footer__col">
-            <h3 class="fa-footer__title">FOLLOW THE DRIVE</h3>
-
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
-            <a href="#">YouTube</a>
-        </div>
-
     </div>
 
 

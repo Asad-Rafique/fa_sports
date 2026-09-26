@@ -598,10 +598,7 @@ FA SPORTS — MATCH KIT ARCHIVE
 
             </div>
 
-            <div class="fa-gi-kit-archive__price">
-                <small>STARTING FROM</small>
-                <strong>PKR 5,800</strong>
-            </div>
+            
 
             <a
                 href="{{ url('/performance-gear') }}"
@@ -640,10 +637,6 @@ FA SPORTS — MATCH KIT ARCHIVE
 
                 <p>Built around colour, crest and character.</p>
 
-                <div class="fa-gi-kit-archive__item-price">
-                    PKR 5,200
-                </div>
-
             </div>
 
         </article>
@@ -669,10 +662,6 @@ FA SPORTS — MATCH KIT ARCHIVE
                 <strong>FIELD READY</strong>
 
                 <p>Performance-first construction for competition.</p>
-
-                <div class="fa-gi-kit-archive__item-price">
-                    PKR 5,800
-                </div>
 
             </div>
 
@@ -700,10 +689,6 @@ FA SPORTS — MATCH KIT ARCHIVE
 
                 <p>Precision details that complete the uniform.</p>
 
-                <div class="fa-gi-kit-archive__item-price">
-                    PKR 6,000
-                </div>
-
             </div>
 
         </article>
@@ -729,10 +714,6 @@ FA SPORTS — MATCH KIT ARCHIVE
                 <strong>GAME FORM</strong>
 
                 <p>Designed for movement from whistle to whistle.</p>
-
-                <div class="fa-gi-kit-archive__item-price">
-                    PKR 6,200
-                </div>
 
             </div>
 
@@ -966,10 +947,6 @@ FA SPORTS — FOOTWEAR LAB
                         around fast movement.
                     </p>
 
-                    <div class="fa-gi-footwear-card__price">
-                        PKR 6,900
-                    </div>
-
                     <b>01</b>
 
                 </div>
@@ -1008,10 +985,6 @@ FA SPORTS — FOOTWEAR LAB
                         controlled direction changes.
                     </p>
 
-                    <div class="fa-gi-footwear-card__price">
-                        PKR 7,200
-                    </div>
-
                     <b>02</b>
 
                 </div>
@@ -1049,10 +1022,6 @@ FA SPORTS — FOOTWEAR LAB
                         Performance footwear designed to
                         stay locked through the action.
                     </p>
-
-                    <div class="fa-gi-footwear-card__price">
-                        PKR 7,500
-                    </div>
 
                     <b>03</b>
 
@@ -1155,10 +1124,6 @@ FA SPORTS — GLOVE ARCHIVE
 
             </div>
 
-            <div class="fa-gi-glove-card__price">
-                PKR 3,500
-            </div>
-
         </article>
 
 
@@ -1196,10 +1161,6 @@ FA SPORTS — GLOVE ARCHIVE
                     Built around secure handling and
                     confident contact.
                 </p>
-
-                <div class="fa-gi-glove-card__price">
-                    PKR 3,800
-                </div>
 
             </div>
 
@@ -1241,10 +1202,6 @@ FA SPORTS — GLOVE ARCHIVE
                     without losing protection.
                 </p>
 
-                <div class="fa-gi-glove-card__price">
-                    PKR 3,600
-                </div>
-
             </div>
 
         </article>
@@ -1285,10 +1242,6 @@ FA SPORTS — GLOVE ARCHIVE
                     moments of play.
                 </p>
 
-                <div class="fa-gi-glove-card__price">
-                    PKR 4,000
-                </div>
-
             </div>
 
         </article>
@@ -1328,10 +1281,6 @@ FA SPORTS — GLOVE ARCHIVE
                     A secure fit engineered around
                     control and performance.
                 </p>
-
-                <div class="fa-gi-glove-card__price">
-                    PKR 4,200
-                </div>
 
             </div>
 
@@ -1481,11 +1430,6 @@ FA SPORTS — THE BAG ROOM
                     <strong>FIELD</strong>
                 </div>
 
-                <div class="fa-gi-bag-room__price">
-                    <small>PRICE</small>
-                    <strong>PKR 4,500</strong>
-                </div>
-
             </div>
 
         </article>
@@ -1521,10 +1465,6 @@ FA SPORTS — THE BAG ROOM
                         Built for movement beyond the field.
                     </p>
 
-                    <div class="fa-gi-bag-item__price">
-                        PKR 3,900
-                    </div>
-
                     <b>↗</b>
 
                 </div>
@@ -1558,10 +1498,6 @@ FA SPORTS — THE BAG ROOM
                     <p>
                         Organized storage for match essentials.
                     </p>
-
-                    <div class="fa-gi-bag-item__price">
-                        PKR 4,200
-                    </div>
 
                     <b>↗</b>
 
@@ -1597,10 +1533,6 @@ FA SPORTS — THE BAG ROOM
                         Compact carry for everyday equipment.
                     </p>
 
-                    <div class="fa-gi-bag-item__price">
-                        PKR 2,800
-                    </div>
-
                     <b>↗</b>
 
                 </div>
@@ -1634,10 +1566,6 @@ FA SPORTS — THE BAG ROOM
                     <p>
                         Designed for training and everyday use.
                     </p>
-
-                    <div class="fa-gi-bag-item__price">
-                        PKR 2,500
-                    </div>
 
                     <b>↗</b>
 
@@ -1804,11 +1732,6 @@ FA SPORTS — PROTECTION SYSTEM
                     <strong>ACTIVE</strong>
                 </div>
 
-                <div class="fa-gi-protection__hero-price">
-                    <small>PRICE</small>
-                    <strong>PKR 5,500</strong>
-                </div>
-
             </div>
 
         </article>
@@ -1843,10 +1766,6 @@ FA SPORTS — PROTECTION SYSTEM
 
                     <p>Coverage built for demanding play.</p>
 
-                    <strong class="fa-gi-protection__price">
-                        PKR 6,500
-                    </strong>
-
                 </div>
 
             </article>
@@ -1878,9 +1797,6 @@ FA SPORTS — PROTECTION SYSTEM
 
                     <p>Built to stay with the player.</p>
 
-                    <strong class="fa-gi-protection__price">
-                        PKR 1,200
-                    </strong>
 
                 </div>
 
@@ -1913,10 +1829,6 @@ FA SPORTS — PROTECTION SYSTEM
 
                     <p>Support where controlled movement matters.</p>
 
-                    <strong class="fa-gi-protection__price">
-                        PKR 1,800
-                    </strong>
-
                 </div>
 
             </article>
@@ -1947,10 +1859,6 @@ FA SPORTS — PROTECTION SYSTEM
                     <h3>GROUND <em>CONTROL</em></h3>
 
                     <p>Protection from training room to field.</p>
-
-                    <strong class="fa-gi-protection__price">
-                        PKR 3,200
-                    </strong>
 
                 </div>
 
@@ -1983,9 +1891,6 @@ FA SPORTS — PROTECTION SYSTEM
 
                     <p>Protection that travels with the system.</p>
 
-                    <strong class="fa-gi-protection__price">
-                        PKR 2,900
-                    </strong>
 
                 </div>
 
@@ -2146,10 +2051,6 @@ THE FIVE / SPORTSWEAR SUIT EDIT
                     PERFORMANCE <em>CORE</em>
                 </strong>
 
-                <div class="fa-gi-product-index__price">
-                    PKR 4,500
-                </div>
-
             </div>
 
         </article>
@@ -2213,10 +2114,6 @@ THE FIVE / SPORTSWEAR SUIT EDIT
                 <strong>
                     TEAM <em>FORM</em>
                 </strong>
-
-                <div class="fa-gi-product-index__price">
-                    PKR 5,200
-                </div>
 
             </div>
 
@@ -2282,10 +2179,6 @@ THE FIVE / SPORTSWEAR SUIT EDIT
                     MATCH <em>READY</em>
                 </strong>
 
-                <div class="fa-gi-product-index__price">
-                    PKR 5,800
-                </div>
-
             </div>
 
         </article>
@@ -2350,10 +2243,6 @@ THE FIVE / SPORTSWEAR SUIT EDIT
                     TRAIN <em>MOVE</em>
                 </strong>
 
-                <div class="fa-gi-product-index__price">
-                    PKR 4,900
-                </div>
-
             </div>
 
         </article>
@@ -2417,10 +2306,6 @@ THE FIVE / SPORTSWEAR SUIT EDIT
                 <strong>
                     ELITE <em>PERFORM</em>
                 </strong>
-
-                <div class="fa-gi-product-index__price">
-                    PKR 6,500
-                </div>
 
             </div>
 

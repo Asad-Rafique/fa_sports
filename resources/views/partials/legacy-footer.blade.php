@@ -29,12 +29,6 @@
             <a href="{{ route('home') }}#playbook">The Playbook</a>
             <a href="{{ route('home') }}#craft">The Craft</a>
         </div>
-        <div class="fa-footer__col">
-            <h3 class="fa-footer__title">CONNECT</h3>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-        </div>
     </div>
 
     <div class="fa-footer__wordmark">FA SPORTS</div>

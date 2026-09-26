@@ -13,6 +13,7 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\TeamLabController;
 use App\Http\Controllers\PartnershipRequestController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CustomizeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -49,3 +50,11 @@ Route::post('/partnership', [PartnershipRequestController::class, 'store'])
 
 Route::get('/about', [AboutController::class, 'index'])
     ->name('about');
+
+Route::get('/customize', [CustomizeController::class, 'index'])
+    ->name('customize');
+
+Route::post('/customize', [CustomizeController::class, 'store'])
+    ->name('customize.store');
+
+

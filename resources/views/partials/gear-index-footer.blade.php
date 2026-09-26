@@ -24,13 +24,6 @@
             <a href="{{ route('partnership') }}#kit-studio">Alliance</a>
             <a href="{{ route('team-lab') }}">Build Your Team</a>
         </div>
-        <div class="fa-footer__col">
-            <h3 class="fa-footer__title">CONNECT</h3>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">YouTube</a>
-        </div>
     </div>
 
     <div class="fa-footer__wordmark">FA SPORTS</div>

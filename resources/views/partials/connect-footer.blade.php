@@ -1,20 +1,13 @@
-<section class="fa-final-cta fa-final-cta--triple" id="final-cta">
-    <h2 class="fa-final-cta__headline fa-final-cta__headline--sm">
-        START<br>THE<br><span class="fa-red">CONVERSATION.</span>
-    </h2>
-    <p class="fa-gi-final__sub">YOUR NEXT PROJECT STARTS WITH A MESSAGE.</p>
-    <div class="fa-final-cta__row">
-        <a href="#enquiry" class="fa-btn fa-btn--red">SEND AN ENQUIRY</a>
-        <a href="{{ route('performance-gear') }}" class="fa-btn fa-btn--outline">EXPLORE FA SPORTS</a>
-    </div>
-</section>
 
 <footer class="fa-footer fa-footer--pg">
     <p class="fa-footer__lead">THE GAME STARTS<br>BEFORE THE GAME.</p>
 
     <div class="fa-footer__grid">
+
+        {{-- EXPLORE --}}
         <div class="fa-footer__col">
             <h3 class="fa-footer__title">EXPLORE</h3>
+
             <a href="{{ route('home') }}#arena">The Arena</a>
             <a href="{{ route('performance-gear') }}">Performance Gear</a>
             <a href="{{ route('gear-index') }}">The Gear Index</a>
@@ -24,20 +17,46 @@
             <a href="{{ route('home') }}#craft">The Craft</a>
             <a href="{{ route('legacy') }}">The FA Legacy</a>
         </div>
+
+
+        {{-- SUPPORT --}}
         <div class="fa-footer__col">
-            <h3 class="fa-footer__title">CONNECT</h3>
-            <a href="{{ route('connect') }}">Connect With FA</a>
-            <a href="{{ config('contact.social.instagram') ?? '#' }}">Instagram</a>
-            <a href="{{ config('contact.social.facebook') ?? '#' }}">Facebook</a>
-            <a href="{{ config('contact.social.linkedin') ?? '#' }}">LinkedIn</a>
-            <a href="{{ config('contact.social.youtube') ?? '#' }}">YouTube</a>
+            <h3 class="fa-footer__title">SUPPORT</h3>
+
+            <a href="{{ route('connect') }}">Contact</a>
+
+            <a href="https://www.linkedin.com/in/faizan-ali-fa-sports-05bbb3370?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a href="{{ route('partnership') }}">
+                Partner With Us
+            </a>
+
+            <a href="{{ route('quote') }}">
+                Request a Quote
+            </a>
         </div>
+
     </div>
 
-    <div class="fa-footer__wordmark">FA SPORTS</div>
 
+    {{-- LARGE WORDMARK --}}
+    <div class="fa-footer__wordmark">
+        FA SPORTS
+    </div>
+
+
+    {{-- LEGAL --}}
     <div class="fa-footer__legal">
-        <span>&copy; {{ date('Y') }} FA SPORTS. All rights reserved.</span>
-        <span>PERFORM. FUEL. PERSIST.</span>
+        <span>
+            &copy; {{ date('Y') }} FA SPORTS. All rights reserved.
+        </span>
+
+        <span>
+            PERFORM. FUEL. PERSIST.
+        </span>
     </div>
+
 </footer>
+

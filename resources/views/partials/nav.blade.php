@@ -14,6 +14,8 @@
         <nav class="fa-nav__links" aria-label="Primary">
             <a href="{{ route('home') }}" class="fa-nav__link">THE ARENA</a>
             <a href="{{ route('performance-gear') }}" class="fa-nav__link">PERFORMANCE GEAR</a>
+                        <a href="{{ route('about') }}" class="fa-nav__link">ABOUT US</a>
+                         <a href="{{ route('customize') }}" class="fa-nav__link">CUSTOMIZE</a>
             <a href="{{ route('disciplines') }}" class="fa-nav__link">DISCIPLINES</a>
             <a href="{{ route('team-lab') }}" class="fa-nav__link">TEAM LAB</a>
             <a href="{{ route('gear-index') }}" class="fa-nav__link">GEAR INDEX</a>
