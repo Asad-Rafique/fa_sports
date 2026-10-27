@@ -395,11 +395,6 @@
 {{-- ============ THE FA EDGE ============ --}}
 <section class="fa-edge" id="fa-edge">
 
-    <div class="fa-section-head fa-section-head--dark">
-        <span class="fa-section-head__index">04</span>
-        <h2 class="fa-section-head__title">THE FA EDGE</h2>
-    </div>
-
     <div class="fa-edge__intro">
 
         <div class="fa-edge__headline-wrap">
@@ -527,11 +522,6 @@
 </section>{{-- ============ THE FA STANDARD ============ --}}
 <section class="fa-standard" id="fa-standard">
 
-    <div class="fa-section-head fa-section-head--light">
-        <span class="fa-section-head__index">04</span>
-        <h2 class="fa-section-head__title">THE FA STANDARD</h2>
-    </div>
-
     <div class="fa-standard__intro">
         <div class="fa-standard__headline-wrap">
             <span class="fa-standard__eyebrow">ENGINEERED FOR THE GAME</span>
@@ -649,13 +639,6 @@
 {{-- ============ FA PERFORMANCE SYSTEM ============ --}}
 
 <section class="fa-system" id="performance-system">
-
-
-<div class="fa-section-head fa-section-head--dark">
-    <span class="fa-section-head__index">06</span>
-    <h2 class="fa-section-head__title">FA PERFORMANCE SYSTEM</h2>
-</div>
-
 <div class="fa-system__intro">
 
     <div>

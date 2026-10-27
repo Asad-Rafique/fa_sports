@@ -184,14 +184,13 @@
 </section>
 
     
+
 {{-- =========================================================
-    THE FA TIMELINE — EDITORIAL VERTICAL TIMELINE
+    THE FA TIMELINE — BUILT OVER TIME
 ========================================================= --}}
 <section class="fa-lg-timeline" id="timeline">
 
-    {{-- =========================
-        TIMELINE HEADER
-    ========================== --}}
+    {{-- TIMELINE HEADER --}}
     <div class="fa-lg-timeline__header">
 
         <div class="fa-lg-timeline__eyebrow">
@@ -204,124 +203,205 @@
         </h2>
 
         <p class="fa-lg-timeline__intro">
-            From the first product to the systems we build today,
-            every chapter has shaped the FA SPORTS standard.
+            From essential sports equipment to specialized protective gear,
+            every product reflects a commitment to quality, preparation
+            and performance.
         </p>
 
     </div>
-{{-- =========================
-    VERTICAL JOURNEY
-========================== --}}
-<div class="fa-lg-timeline__journey">
 
-    {{-- CENTER VERTICAL LINE --}}
-    <div class="fa-lg-timeline__line"></div>
+    {{-- VERTICAL PRODUCT JOURNEY --}}
+    <div class="fa-lg-timeline__journey">
 
-    @for ($i = 73; $i <= 90; $i++)
+        {{-- CENTER VERTICAL LINE --}}
+        <div class="fa-lg-timeline__line"></div>
 
         @php
-            $index = $i - 73;
-            $isReverse = $index % 2 !== 0;
+            $legacyProducts = [
+                [
+                    'image' => 'images/legacy/product-063.jpg',
+                    'alt' => 'Sports gloves',
+                    'title' => 'SPORTS GLOVES',
+                    'description' => 'Designed for a secure grip, comfortable handling and reliable control when every movement matters.',
+                    'tags' => ['GRIP', 'CONTROL', 'COMFORT'],
+                ],
+                [
+                    'image' => 'images/legacy/product-074.jpg',
+                    'alt' => 'Sports travel luggage bag',
+                    'title' => 'SPORTS TRAVEL BAG',
+                    'description' => 'A practical travel companion for carrying essential sports equipment, training clothing and personal gear.',
+                    'tags' => ['STORAGE', 'TRAVEL', 'UTILITY'],
+                ],
+                [
+                    'image' => 'images/legacy/product-075.jpg',
+                    'alt' => 'Sports ball carrying bag',
+                    'title' => 'BALL CARRY BAG',
+                    'description' => 'Made for keeping training balls together, organized and ready for practice, team sessions and match preparation.',
+                    'tags' => ['TEAM GEAR', 'STORAGE', 'TRAINING'],
+                ],
+                [
+                    'image' => 'images/legacy/fa-crest-cap.jpg',
+                    'alt' => 'Sports cap',
+                    'title' => 'SPORTS CAP',
+                    'description' => 'A versatile sports essential that completes the look with everyday comfort and a clean athletic style.',
+                    'tags' => ['SPORTSWEAR', 'COMFORT', 'STYLE'],
+                ],
+                [
+                    'image' => 'images/legacy/product-077.jpg',
+                    'alt' => 'Sports uniform carrying bag',
+                    'title' => 'TEAM KIT BAG',
+                    'description' => 'Dedicated storage for team uniforms and match-day essentials, helping keep kits together and ready to go.',
+                    'tags' => ['TEAMWEAR', 'ORGANIZATION', 'TRAVEL'],
+                ],
+                [
+                    'image' => 'images/legacy/product-078.jpg',
+                    'alt' => 'Boxing equipment bag',
+                    'title' => 'BOXING GEAR BAG',
+                    'description' => 'A dedicated carry solution for boxing training essentials, helping athletes keep their equipment organized between sessions.',
+                    'tags' => ['BOXING', 'EQUIPMENT', 'STORAGE'],
+                ],
+                [
+                    'image' => 'images/legacy/product-079.jpg',
+                    'alt' => 'Leg protective equipment',
+                    'title' => 'LEG PROTECTION',
+                    'description' => 'Protective equipment designed to cover vulnerable areas and support confidence during demanding sporting activity.',
+                    'tags' => ['PROTECTION', 'SUPPORT', 'MOVEMENT'],
+                ],
+                [
+                    'image' => 'images/legacy/product-080.jpg',
+                    'alt' => 'Sports shoe with leather sole',
+                    'title' => 'LEATHER SOLE FOOTWEAR',
+                    'description' => 'Footwear construction focused on a dependable foundation, practical wear and the demands of the sport.',
+                    'tags' => ['FOOTWEAR', 'CONSTRUCTION', 'DURABILITY'],
+                ],
+                [
+                    'image' => 'images/legacy/product-081.jpg',
+                    'alt' => 'Protective sports helmet',
+                    'title' => 'PROTECTIVE HELMET',
+                    'description' => 'Head protection developed for sports where appropriate coverage and a secure fit are essential.',
+                    'tags' => ['HEAD PROTECTION', 'FIT', 'SAFETY'],
+                ],
+                [
+                    'image' => 'images/legacy/product-082.jpg',
+                    'alt' => 'Boxing head guard',
+                    'title' => 'BOXING HEAD GUARD',
+                    'description' => 'Protective headgear intended for boxing training, with coverage designed around the needs of the sport.',
+                    'tags' => ['BOXING', 'HEADGEAR', 'PROTECTION'],
+                ],
+                [
+                    'image' => 'images/legacy/product-083.jpg',
+                    'alt' => 'Specialized protective sports equipment',
+                    'title' => 'PERFORMANCE PROTECTION',
+                    'description' => 'Specialized protective equipment made to complement an athlete’s kit and the demands of active training.',
+                    'tags' => ['PROTECTIVE GEAR', 'TRAINING', 'FUNCTION'],
+                ],
+                [
+                    'image' => 'images/legacy/product-084.jpg',
+                    'alt' => 'Soft sports protective pads',
+                    'title' => 'SOFT PROTECTIVE PADS',
+                    'description' => 'Lightweight padded protection designed for comfort and coverage in sports that require additional cushioning.',
+                    'tags' => ['PADDING', 'COMFORT', 'COVERAGE'],
+                ],
+                [
+                    'image' => 'images/legacy/product-085.jpg',
+                    'alt' => 'Leg guards and protective pads',
+                    'title' => 'LEG GUARDS',
+                    'description' => 'Protective guards designed to cover the legs and support confidence during sport-specific movement.',
+                    'tags' => ['LEG PROTECTION', 'COVERAGE', 'SUPPORT'],
+                ],
+
+                [
+                    'image' => 'images/legacy/product-087.jpg',
+                    'alt' => 'Small soft protective pads',
+                    'title' => 'UNDER UNIFORM PROTECTIVES',
+                    'description' => 'Compact padded protectors for different sporting needs, with a focus on practical coverage and comfortable wear.',
+                    'tags' => ['PADDING', 'PROTECTION', 'FLEXIBILITY'],
+                ],
+                [
+                    'image' => 'images/legacy/product-088.jpg',
+                    'alt' => 'Sports water bottle',
+                    'title' => 'SOFT IMPACT PADS',
+                    'description' => 'A simple training essential that keeps hydration close at hand through practice, competition and recovery.',
+                    'tags' => ['HYDRATION', 'TRAINING', 'ESSENTIALS'],
+                ],
+                [
+                    'image' => 'images/legacy/product-089.jpg',
+                    'alt' => 'Sports socks',
+                    'title' => 'SPORTS WATER BOTTLES',
+                    'description' => 'An everyday performance essential designed to complement athletic footwear with a comfortable fit during activity.',
+                    'tags' => ['COMFORT', 'FIT', 'PERFORMANCE'],
+                ],
+            ];
         @endphp
 
-        <article
-            class="fa-lg-timeline__item {{ $isReverse ? 'is-reverse' : '' }}"
-        >
+        @foreach ($legacyProducts as $index => $product)
 
-            {{-- =========================
-                IMAGE SIDE
-            ========================== --}}
-            <div class="fa-lg-timeline__side fa-lg-timeline__side--image">
+            @php
+                $isReverse = $index % 2 !== 0;
+            @endphp
 
-                <div class="fa-lg-timeline__image-wrap">
+            <article
+                class="fa-lg-timeline__item {{ $isReverse ? 'is-reverse' : '' }}"
+            >
 
-    @if ($i === 73)
+                {{-- IMAGE SIDE --}}
+                <div class="fa-lg-timeline__side fa-lg-timeline__side--image">
 
-        {{-- FIRST TIMELINE IMAGE --}}
-        <img
-            src="{{ asset('images/legacy/product-063.jpg') }}"
-            alt="FA SPORTS archive product"
-            class="fa-lg-timeline__image"
-            loading="lazy"
-        >
+                    <div class="fa-lg-timeline__image-wrap">
 
-    @elseif ($i === 76)
+                        <img
+                            src="{{ asset($product['image']) }}"
+                            alt="{{ $product['alt'] }}"
+                            class="fa-lg-timeline__image"
+                            loading="lazy"
+                        >
 
-        {{-- FOURTH TIMELINE IMAGE --}}
-        <img
-            src="{{ asset('images/legacy/fa-crest-cap.jpg') }}"
-            alt="FA SPORTS archive product"
-            class="fa-lg-timeline__image"
-            loading="lazy"
-        >
+                        <span class="fa-lg-timeline__image-label">
+                            FA SPORTS / {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                        </span>
 
-    @else
-
-        {{-- OTHER TIMELINE IMAGES --}}
-        <img
-            src="{{ asset('images/legacy/product-' . str_pad($i, 3, '0', STR_PAD_LEFT) . '.jpg') }}"
-            alt="FA SPORTS archive product"
-            class="fa-lg-timeline__image"
-            loading="lazy"
-        >
-
-    @endif
-
-    <span class="fa-lg-timeline__image-label">
-        FA SPORTS / ARCHIVE
-    </span>
-
-</div>
-
-            </div>
-
-
-            {{-- =========================
-                CENTER MARKER
-            ========================== --}}
-            <div class="fa-lg-timeline__marker">
-                <span></span>
-            </div>
-
-
-            {{-- =========================
-                TEXT SIDE
-            ========================== --}}
-            <div class="fa-lg-timeline__side fa-lg-timeline__side--content">
-
-                <div class="fa-lg-timeline__content">
-
-                    {{-- 73–90 YEAR NUMBER REMOVED --}}
-
-                    <span class="fa-lg-timeline__chapter">
-                        CHAPTER {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
-                    </span>
-
-                    <h3 class="fa-lg-timeline__title">
-                        FA SPORTS
-                    </h3>
-
-                    <p class="fa-lg-timeline__description">
-                        A defining chapter in the evolution of FA SPORTS —
-                        shaped by craftsmanship, experience and the pursuit
-                        of better performance.
-                    </p>
-
-                    <div class="fa-lg-timeline__tags">
-                        <span>CRAFT</span>
-                        <span>PERFORMANCE</span>
-                        <span>PROGRESS</span>
                     </div>
 
                 </div>
 
-            </div>
+                {{-- CENTER MARKER --}}
+                <div class="fa-lg-timeline__marker">
+                    <span></span>
+                </div>
 
-        </article>
+                {{-- PRODUCT CONTENT --}}
+                <div class="fa-lg-timeline__side fa-lg-timeline__side--content">
 
-    @endfor
+                    <div class="fa-lg-timeline__content">
 
-</div>
+                        <span class="fa-lg-timeline__chapter">
+                            PRODUCT {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                        </span>
+
+                        <h3 class="fa-lg-timeline__title">
+                            {{ $product['title'] }}
+                        </h3>
+
+                        <p class="fa-lg-timeline__description">
+                            {{ $product['description'] }}
+                        </p>
+
+                        <div class="fa-lg-timeline__tags">
+                            @foreach ($product['tags'] as $tag)
+                                <span>{{ $tag }}</span>
+                            @endforeach
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        @endforeach
+
+    </div>
+
 
 
 
@@ -1277,44 +1357,6 @@
 
     </div>
 
-</section>
-{{-- ============ FA PERFORMANCE NUMBERS ============ --}}
-<section class="fa-lg-numbers">
-    <div class="fa-lg-numbers__grid" id="numbersGrid">
-        @foreach ($statistics as $stat)
-            <div class="fa-lg-numbers__cell">
-                <span class="fa-lg-numbers__value" data-count="{{ $stat->value }}" data-suffix="{{ $stat->suffix }}">0</span>
-                <span class="fa-lg-numbers__label">{{ $stat->label }}</span>
-            </div>
-        @endforeach
-    </div>
-</section>
-
-{{-- ============ TODAY ============ --}}
-<section class="fa-lg-today">
-    <div class="fa-section-head fa-section-head--light">
-        <h2 class="fa-section-head__title">THIS IS<br>FA SPORTS NOW.</h2>
-    </div>
-    <div class="fa-lg-today__grid">
-        <a href="{{ route('performance-gear') }}" class="fa-lg-today__portal"><span>PERFORMANCE GEAR</span></a>
-        <a href="{{ route('team-lab') }}" class="fa-lg-today__portal"><span>TEAM LAB</span></a>
-        <a href="{{ route('performance-gear') }}#kit-studio" class="fa-lg-today__portal"><span>KIT STUDIO</span></a>
-        <a href="{{ route('gear-index') }}" class="fa-lg-today__portal"><span>THE GEAR INDEX</span></a>
-        <a href="{{ route('home') }}#craft" class="fa-lg-today__portal"><span>THE CRAFT</span></a>
-        <a href="{{ route('home') }}#playbook" class="fa-lg-today__portal"><span>THE PLAYBOOK</span></a>
-    </div>
-</section>
-
-{{-- ============ THE FUTURE ============ --}}
-<section class="fa-lg-future">
-    <div class="fa-section-head fa-section-head--light">
-        <h2 class="fa-section-head__title">THE NEXT CHAPTER<br>IS ALREADY MOVING.</h2>
-    </div>
-    <ul class="fa-lg-future__list">
-        @foreach ($futureInitiatives as $item)
-            <li><h4>{{ $item->title }}</h4><p>{{ $item->description }}</p></li>
-        @endforeach
-    </ul>
 </section>
 
 {{-- ============ 2030 / FUTURE VISION ============ --}}

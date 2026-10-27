@@ -8,7 +8,6 @@
 </section>
 
 <footer class="fa-footer fa-footer--pg">
-    <p class="fa-footer__lead">PERFORMANCE DOESN'T WAIT.</p>
 
     <div class="fa-footer__grid">
         <div class="fa-footer__col">

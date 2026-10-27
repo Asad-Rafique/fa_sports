@@ -1,0 +1,252 @@
+
+/* ==========================================
+   FA SPORTS — CUSTOM LAB LAYOUT REFINEMENT
+   Images + Customization + WhatsApp Sections
+========================================== */
+
+.customizer-page {
+    --custom-gap: clamp(24px, 3.2vw, 52px);
+}
+
+/* PRODUCT SECTIONS */
+.customizer-page .custom-product {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    align-items: start;
+    gap: var(--custom-gap);
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: clamp(32px, 5vw, 76px) clamp(20px, 5vw, 76px);
+    box-sizing: border-box;
+}
+
+/* Alternate image and content positions */
+.customizer-page .custom-product--reverse {
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+}
+
+.customizer-page .custom-product--reverse .custom-product__image {
+    order: 2;
+}
+
+.customizer-page .custom-product--reverse .custom-product__content {
+    order: 1;
+}
+
+/* PRODUCT IMAGE */
+.customizer-page .custom-product__image {
+    position: sticky;
+    top: 110px;
+    align-self: start;
+    width: 100%;
+    height: clamp(300px, 34vw, 500px);
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #f1f1ef;
+    isolation: isolate;
+}
+
+.customizer-page .custom-product__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: clamp(10px, 1.8vw, 24px);
+    box-sizing: border-box;
+    transition: transform 0.55s ease;
+}
+
+.customizer-page .custom-product__image:hover img {
+    transform: scale(1.035);
+}
+
+.customizer-page .custom-product__image .product-index {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    z-index: 2;
+}
+
+/* CONTENT */
+.customizer-page .custom-product__content {
+    min-width: 0;
+    width: 100%;
+}
+
+.customizer-page .section-heading {
+    margin-bottom: clamp(22px, 3vw, 38px);
+}
+
+/* FORM FIELDS */
+.customizer-page .custom-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.customizer-page .custom-field {
+    min-width: 0;
+    margin-bottom: 20px;
+}
+
+.customizer-page .custom-field input,
+.customizer-page .custom-field select,
+.customizer-page .custom-field textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* COLORS AND OPTIONS */
+.customizer-page .color-grid,
+.customizer-page .option-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.customizer-page .color-grid button,
+.customizer-page .option-grid button {
+    max-width: 100%;
+}
+
+/* SELECTION SUMMARY */
+.customizer-page .selection-summary {
+    margin-top: 8px;
+    margin-bottom: 26px;
+    padding: 18px 20px;
+    box-sizing: border-box;
+}
+
+/* SEND YOUR SECTION */
+.customizer-page .section-whatsapp-box {
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    align-items: start;
+    gap: 22px;
+    margin-top: 0;
+    padding: clamp(20px, 2.6vw, 32px);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.customizer-page .section-whatsapp-heading {
+    min-width: 0;
+}
+
+.customizer-page .section-whatsapp-heading h3 {
+    margin-block: 10px 12px;
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+}
+
+.customizer-page .section-whatsapp-heading p {
+    max-width: 34ch;
+    margin-bottom: 0;
+}
+
+/* CONTACT FORM */
+.customizer-page .custom-contact__form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 0 14px;
+    min-width: 0;
+}
+
+.customizer-page .custom-contact__form .custom-field {
+    margin-bottom: 14px;
+}
+
+.customizer-page .custom-contact__form .custom-field:nth-of-type(3) {
+    grid-column: 1 / -1;
+}
+
+.customizer-page .custom-contact__form .custom-error,
+.customizer-page .custom-contact__form .whatsapp-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.customizer-page .whatsapp-button {
+    white-space: normal;
+    min-height: 52px;
+}
+
+/* TABLET */
+@media (max-width: 980px) {
+    .customizer-page .custom-product,
+    .customizer-page .custom-product--reverse {
+        grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+        gap: 24px;
+        padding: 36px 24px;
+    }
+
+    .customizer-page .custom-product__image {
+        top: 90px;
+        height: clamp(260px, 38vw, 390px);
+    }
+
+    .customizer-page .section-whatsapp-box {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .customizer-page .section-whatsapp-heading p {
+        max-width: 55ch;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+    .customizer-page .custom-product,
+    .customizer-page .custom-product--reverse {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 28px 16px 38px;
+    }
+
+    .customizer-page .custom-product--reverse .custom-product__image,
+    .customizer-page .custom-product--reverse .custom-product__content {
+        order: initial;
+    }
+
+    .customizer-page .custom-product__image {
+        position: relative;
+        top: auto;
+        width: 100%;
+        height: min(82vw, 360px);
+        max-height: 360px;
+    }
+
+    .customizer-page .custom-product__image img {
+        padding: 12px;
+    }
+
+    .customizer-page .custom-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .customizer-page .section-whatsapp-box {
+        padding: 20px 16px;
+        gap: 18px;
+    }
+
+    .customizer-page .custom-contact__form {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .customizer-page .custom-contact__form .custom-field:nth-of-type(3),
+    .customizer-page .custom-contact__form .custom-error,
+    .customizer-page .custom-contact__form .whatsapp-button {
+        grid-column: auto;
+    }
+}

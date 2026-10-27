@@ -139,36 +139,50 @@
     </div>
 
 </section>
-
-
 {{-- =========================================================
-    TEAM
+    TEAM — PREMIUM EDITORIAL REDESIGN
 ========================================================= --}}
 <section class="about-team" id="our-team">
 
     <div class="about-wrap">
 
+        {{-- SECTION HEADER --}}
         <div class="about-team__heading">
 
             <div class="about-label">
                 <span>03</span>
-                <span>THE PEOPLE</span>
+                <span>THE PEOPLE BEHIND FA SPORTS</span>
             </div>
 
-            <h2>
-                MEET THE<br>
-                <em>TEAM.</em>
-            </h2>
+            <div class="about-team__intro">
 
-            <p>
-                Behind every product is a team of people bringing
-                experience, creativity and purpose together.
-            </p>
+                <div class="about-team__title">
+                    <span class="about-team__eyebrow">
+                        BUILT BY PEOPLE. DRIVEN BY PURPOSE.
+                    </span>
+
+                    <h2>
+                        MEET THE
+                        <em>TEAM.</em>
+                    </h2>
+                </div>
+
+                <p>
+                    Great products begin with great people.
+                    Meet the team bringing ideas, craftsmanship
+                    and performance together at FA SPORTS.
+                </p>
+
+            </div>
+
+            <div class="about-team__rule">
+                <span>OUR PEOPLE</span>
+                <span>ONE SHARED PURPOSE</span>
+            </div>
 
         </div>
 
-
-        {{-- MEMBERS --}}
+        {{-- TEAM MEMBERS --}}
         <div class="about-members">
 
             @forelse($members as $index => $member)
@@ -177,7 +191,6 @@
                     class="about-member {{ $index % 2 !== 0 ? 'about-member--reverse' : '' }}"
                 >
 
-                    {{-- IMAGE --}}
                     <div class="about-member__visual">
 
                         <div class="about-member__image-wrap">
@@ -198,6 +211,10 @@
 
                             @endif
 
+                            <span class="about-member__image-label">
+                                FA SPORTS / TEAM
+                            </span>
+
                         </div>
 
                         <div class="about-member__index">
@@ -206,38 +223,25 @@
 
                     </div>
 
-
-                    {{-- CONTENT --}}
                     <div class="about-member__content">
 
                         <div class="about-member__topline">
-
                             <span>
                                 {{ strtoupper($member->department ?? 'FA SPORTS') }}
                             </span>
-
                             <i></i>
-
                         </div>
 
-                        <h3>
-                            {{ $member->name }}
-                        </h3>
+                        <h3>{{ $member->name }}</h3>
 
-                        <h4>
-                            {{ $member->position }}
-                        </h4>
+                        <h4>{{ $member->position }}</h4>
 
                         @if($member->bio)
-
-                            <p>
-                                {{ $member->bio }}
-                            </p>
-
+                            <p>{{ $member->bio }}</p>
                         @endif
 
                         <div class="about-member__signature">
-                            FA SPORTS
+                            <span>FA</span> SPORTS
                         </div>
 
                     </div>
@@ -247,9 +251,7 @@
             @empty
 
                 <div class="about-empty">
-                    <p>
-                        Team information will be available soon.
-                    </p>
+                    <p>Our team introduction is coming soon.</p>
                 </div>
 
             @endforelse
@@ -259,6 +261,8 @@
     </div>
 
 </section>
+
+
 
 
 {{-- =========================================================

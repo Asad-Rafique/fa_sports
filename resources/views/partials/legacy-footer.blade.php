@@ -25,7 +25,7 @@
         </div>
         <div class="fa-footer__col">
             <h3 class="fa-footer__title">BUILD</h3>
-            <a href="{{ route('legacy') }}#legacy">The Heritage</a>
+            <a href="{{ route('craft') }}#legacy">The Heritage</a>
             <a href="{{ route('home') }}#playbook">The Playbook</a>
             <a href="{{ route('home') }}#craft">The Craft</a>
         </div>

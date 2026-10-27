@@ -2,102 +2,143 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CustomizeRequest;
+use App\Models\CustomizationRequest;
 use Illuminate\Http\Request;
 
 class CustomizeController extends Controller
 {
     public function index()
     {
-        $sports = [
-            'Football',
-            'Cricket',
-            'Basketball',
-            'Volleyball',
-            'Hockey',
-            'Running',
-            'Rugby',
-            'Other',
-        ];
-
-        $kitTypes = [
-            'Match Kit',
-            'Training Kit',
-            'Full Teamwear',
-            'Tracksuit',
-            'Jacket',
-            'Shorts',
-            'Custom Set',
-        ];
-
-        $fabrics = [
-            'Performance Dry',
-            'Ultra Light',
-            '4-Way Stretch',
-            'Premium Teamwear',
-            'Not Sure — Recommend For Me',
-        ];
-
-        return view('customize', compact(
-            'sports',
-            'kitTypes',
-            'fabrics'
-        ));
+        return view('customize');
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'sport' => 'required|string|max:100',
-            'kit_type' => 'required|string|max:100',
+            'name' => ['required', 'string', 'max:100'],
+            'email' => ['required', 'email', 'max:150'],
+            'phone' => ['required', 'string', 'max:30'],
 
-            'team_name' => 'required|string|max:150',
-            'contact_name' => 'required|string|max:150',
-            'email' => 'required|email|max:150',
-            'phone' => 'required|string|max:50',
+            'selected_sections' => ['required', 'array', 'min:1'],
+            'selected_sections.*' => ['in:uniform,shoes,bags,gloves'],
 
-            'primary_color' => 'nullable|string|max:30',
-            'secondary_color' => 'nullable|string|max:30',
-            'accent_color' => 'nullable|string|max:30',
-
-            'player_name' => 'nullable|string|max:100',
-            'player_number' => 'nullable|string|max:20',
-
-            'logo_required' => 'nullable|boolean',
-            'player_names' => 'nullable|boolean',
-            'player_numbers' => 'nullable|boolean',
-
-            'quantity' => 'required|integer|min:1|max:10000',
-
-            'fabric' => 'nullable|string|max:100',
-            'performance_requirements' => 'nullable|string|max:2000',
-
-            'logo' => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:5120',
-
-            'additional_requirements' => 'nullable|string|max:5000',
+            'customizations' => ['required', 'array'],
         ]);
 
-        $validated['logo_required'] = $request->boolean('logo_required');
-        $validated['player_names'] = $request->boolean('player_names');
-        $validated['player_numbers'] = $request->boolean('player_numbers');
+        $selectedSections = $validated['selected_sections'];
 
-        if ($request->hasFile('logo')) {
-            $validated['logo_path'] = $request
-                ->file('logo')
-                ->store('customize/logos', 'public');
+        $customizations = $validated['customizations'];
+
+        $requestRecord = CustomizationRequest::create([
+            'selected_sections' => $selectedSections,
+            'customizations' => $customizations,
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'status' => 'new',
+        ]);
+
+        $message = $this->buildWhatsappMessage(
+            $selectedSections,
+            $customizations,
+            $validated['name'],
+            $validated['email'],
+            $validated['phone']
+        );
+
+        $businessNumber = '923128564850';
+
+        $whatsappUrl =
+            'whatsapp://send?phone=' .
+            $businessNumber .
+            '&text=' .
+            urlencode($message);
+
+        return response()->json([
+            'success' => true,
+            'request_id' => $requestRecord->id,
+            'whatsapp_url' => $whatsappUrl,
+        ]);
+    }
+
+    private function buildWhatsappMessage(
+        array $selectedSections,
+        array $customizations,
+        string $name,
+        string $email,
+        string $phone
+    ): string {
+        $message = "FA SPORTS CUSTOMIZATION\n";
+        $message .= "========================\n\n";
+
+        foreach ($selectedSections as $section) {
+
+            if ($section === 'uniform' && isset($customizations['uniform'])) {
+                $data = $customizations['uniform'];
+
+                $message .= "UNIFORM CUSTOMIZATION\n";
+                $message .= "--------------------\n";
+                $message .= "Category: " . ($data['category'] ?? '') . "\n";
+                $message .= "Shirt Color: " . ($data['shirtColor'] ?? '') . "\n";
+                $message .= "Trouser Color: " . ($data['trouserColor'] ?? '') . "\n";
+                $message .= "Text on Shirt: " . ($data['shirtText'] ?? '') . "\n";
+                $message .= "Number: " . ($data['number'] ?? '') . "\n";
+                $message .= "Shirt Size: " . ($data['shirtSize'] ?? '') . "\n";
+                $message .= "Height: " . ($data['height'] ?? '') . "\n";
+                $message .= "Width: " . ($data['width'] ?? '') . "\n";
+                $message .= "Sleeve: " . ($data['sleeve'] ?? '') . "\n";
+                $message .= "Collar: " . ($data['collar'] ?? '') . "\n";
+                $message .= "Trouser Size: " . ($data['trouserSize'] ?? '') . "\n";
+                $message .= "Trouser Length: " . ($data['trouserLength'] ?? '') . "\n";
+                $message .= "Trouser Width: " . ($data['trouserWidth'] ?? '') . "\n\n";
+            }
+
+            if ($section === 'shoes' && isset($customizations['shoes'])) {
+                $data = $customizations['shoes'];
+
+                $message .= "SHOES CUSTOMIZATION\n";
+                $message .= "------------------\n";
+                $message .= "Category: " . ($data['category'] ?? '') . "\n";
+                $message .= "Size: " . ($data['size'] ?? '') . "\n";
+                $message .= "Color: " . ($data['color'] ?? '') . "\n";
+                $message .= "Name / Text: " . ($data['text'] ?? '') . "\n";
+                $message .= "Sole Type: " . ($data['sole'] ?? '') . "\n";
+                $message .= "Width: " . ($data['width'] ?? '') . "\n\n";
+            }
+
+            if ($section === 'bags' && isset($customizations['bags'])) {
+                $data = $customizations['bags'];
+
+                $message .= "BAG CUSTOMIZATION\n";
+                $message .= "-----------------\n";
+                $message .= "Category: " . ($data['category'] ?? '') . "\n";
+                $message .= "Size: " . ($data['size'] ?? '') . "\n";
+                $message .= "Color: " . ($data['color'] ?? '') . "\n";
+                $message .= "Name / Text: " . ($data['text'] ?? '') . "\n";
+                $message .= "Compartments: " . ($data['compartments'] ?? '') . "\n";
+                $message .= "Strap Style: " . ($data['strap'] ?? '') . "\n\n";
+            }
+
+            if ($section === 'gloves' && isset($customizations['gloves'])) {
+                $data = $customizations['gloves'];
+
+                $message .= "GLOVE CUSTOMIZATION\n";
+                $message .= "------------------\n";
+                $message .= "Category: " . ($data['category'] ?? '') . "\n";
+                $message .= "Hand: " . ($data['hand'] ?? '') . "\n";
+                $message .= "Size: " . ($data['size'] ?? '') . "\n";
+                $message .= "Color: " . ($data['color'] ?? '') . "\n";
+                $message .= "Wrist Style: " . ($data['wrist'] ?? '') . "\n";
+                $message .= "Name / Text: " . ($data['text'] ?? '') . "\n\n";
+            }
         }
 
-        unset($validated['logo']);
+        $message .= "CUSTOMER DETAILS\n";
+        $message .= "----------------\n";
+        $message .= "Name: " . $name . "\n";
+        $message .= "Email: " . $email . "\n";
+        $message .= "Phone / WhatsApp: " . $phone . "\n";
 
-        $validated['status'] = 'new';
-
-        CustomizeRequest::create($validated);
-
-        return redirect()
-            ->route('customize')
-            ->with(
-                'success',
-                'Your customization request has been received. FA SPORTS will contact you shortly.'
-            );
+        return $message;
     }
 }

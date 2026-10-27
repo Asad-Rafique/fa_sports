@@ -37,32 +37,56 @@
     </div>
 </div>
 
-{{-- ============ BUILT FOR YOUR GAME ============ --}}
+{{-- =========================================================
+     BUILT FOR YOUR GAME — CINEMATIC DISCIPLINE ARCHIVE
+========================================================= --}}
+<section class="fa-pg-disciplines" id="disciplines">
 
-<section class="fa-pg-game" id="disciplines">
+    <div class="fa-pg-disciplines__header">
 
-    <div class="fa-section-head fa-section-head--light">
-        <span class="fa-section-head__index">01</span>
+        <div class="fa-pg-disciplines__meta">
+            <span> DISCIPLINE SYSTEM</span>
+            <span>FA SPORTS / PERFORMANCE INDEX</span>
+        </div>
 
-        <h2 class="fa-section-head__title">
-            BUILT FOR<br>YOUR GAME.
-        </h2>
+        <div class="fa-pg-disciplines__heading">
+
+            <div>
+                <span class="fa-pg-disciplines__eyebrow">
+                    ENGINEERED FOR EVERY GAME
+                </span>
+
+                <h2>
+                    OUR CRAFT
+                    <span>UNLIMITED PERFORMANCE</span>
+                    
+                </h2>
+            </div>
+
+        </div>
+
+        <p class="fa-pg-disciplines__intro">
+            Every sport demands a different kind of preparation.
+            Every movement demands equipment that can keep up.
+        </p>
+
     </div>
 
-    <p class="fa-pg-game__intro">
-        Every sport demands a different kind of preparation — the gear should meet it there.
-    </p>
 
-    <div class="fa-pg-game__grid">
+    <div class="fa-pg-disciplines__archive">
 
-        @foreach ($disciplines as $discipline)
+        @foreach ($disciplines as $index => $discipline)
 
-            <a href="#collection" class="fa-pg-game__panel">
+            <a
+                href="#collection"
+                class="fa-discipline-card {{ $index % 2 !== 0 ? 'fa-discipline-card--offset' : '' }}"
+            >
 
-                <div class="fa-pg-game__img">
+                {{-- VIDEO --}}
+                <div class="fa-discipline-card__visual">
 
                     <video
-                        class="fa-pg-game__video"
+                        class="fa-discipline-card__video"
                         autoplay
                         muted
                         loop
@@ -75,23 +99,79 @@
                         >
                     </video>
 
-                </div>
 
-                <div class="fa-pg-game__sweep"></div>
+                    {{-- DARK CINEMATIC OVERLAY --}}
+                    <div class="fa-discipline-card__shade"></div>
 
-                <div class="fa-pg-game__body">
 
-                    <h3 class="fa-pg-game__name">
-                        {{ $discipline->name }}
-                    </h3>
+                    {{-- RED LIGHT --}}
+                    <div class="fa-discipline-card__red-line"></div>
 
-                    <p class="fa-pg-game__copy">
-                        {{ $discipline->tagline }}
-                    </p>
 
-                    <span class="fa-pg-game__arrow">
-                        &rarr;
-                    </span>
+                    {{-- TOP TECHNICAL INFO --}}
+                    <div class="fa-discipline-card__top">
+
+                        <span>
+                            FA SPORTS
+                        </span>
+
+                        <span>
+                            DISCIPLINE / {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                        </span>
+
+                    </div>
+
+
+                    {{-- BIG NUMBER --}}
+                    <div class="fa-discipline-card__number">
+                        {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                    </div>
+
+
+                    {{-- SIDE LABEL --}}
+                    <div class="fa-discipline-card__side-label">
+                        PERFORMANCE / MOTION / CONTROL
+                    </div>
+
+
+                    {{-- CORNER FRAME --}}
+                    <span class="fa-discipline-card__corner fa-discipline-card__corner--tl"></span>
+                    <span class="fa-discipline-card__corner fa-discipline-card__corner--tr"></span>
+                    <span class="fa-discipline-card__corner fa-discipline-card__corner--bl"></span>
+                    <span class="fa-discipline-card__corner fa-discipline-card__corner--br"></span>
+
+
+                    {{-- CENTER PLAY MARK --}}
+                    <div class="fa-discipline-card__play">
+                        <span>VIEW</span>
+                        <b>↗</b>
+                    </div>
+
+
+                    {{-- BOTTOM CONTENT --}}
+                    <div class="fa-discipline-card__bottom">
+
+                        <div class="fa-discipline-card__title-wrap">
+
+                            <span class="fa-discipline-card__category">
+                                FA SPORTS / DISCIPLINE
+                            </span>
+
+                            <h3>
+                                {{ $discipline->name }}
+                            </h3>
+
+                            <p>
+                                {{ $discipline->tagline }}
+                            </p>
+
+                        </div>
+
+                        <span class="fa-discipline-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -101,401 +181,638 @@
 
     </div>
 
-</section>
 
-{{-- ============ THE PERFORMANCE SYSTEM ============ --}}
+    {{-- SECTION FOOTER --}}
+    <div class="fa-pg-disciplines__footer">
 
-<section class="fa-pg-system">
+        <span>
+            {{ str_pad($disciplines->count(), 2, '0', STR_PAD_LEFT) }} DISCIPLINES
+        </span>
 
-    <div class="fa-section-head fa-section-head--light">
-        <span class="fa-section-head__index">02</span>
+        <strong>
+            EVERY GAME.
+            <em>ONE STANDARD.</em>
+        </strong>
 
-        <h2 class="fa-section-head__title">
-            THE PERFORMANCE<br>SYSTEM.
-        </h2>
+        <span>
+            FA SPORTS / 2026
+        </span>
+
     </div>
+
+</section>
+{{-- ============ THE PERFORMANCE SYSTEM ============ --}}
+<section class="fa-pg-system fa-pg-system--premium" id="performance-system">
+
+    <div class="fa-pg-system__header">
+
+        <div class="fa-pg-system__header-meta">
+            <span> PERFORMANCE SYSTEM</span>
+            <span>FA SPORTS / EQUIPMENT INDEX</span>
+        </div>
+
+        <div class="fa-pg-system__header-main">
+
+            <div class="fa-pg-system__index">
+                02
+            </div>
+
+            <div>
+                <span class="fa-pg-system__eyebrow">
+                    ENGINEERED FOR EVERY MOVEMENT
+                </span>
+
+                <h2>
+                    THE
+                    <span>PERFORMANCE SYSTEM.</span>
+                </h2>
+            </div>
+
+        </div>
+
+        <p class="fa-pg-system__intro">
+            One athlete. Every movement. One complete equipment system —
+            engineered from apparel to protection for the moments that matter.
+        </p>
+
+    </div>
+
 
     <div class="fa-pg-system__grid">
 
-        {{-- PERFORMANCE APPAREL --}}
-        <a href="#collection"
-           class="fa-pg-system__cell fa-pg-system__cell--tall">
 
-            <div class="fa-pg-system__img">
+        {{-- =====================================================
+             01 — PERFORMANCE APPAREL
+        ====================================================== --}}
+        <a href="#collection"
+           class="fa-pg-system__card fa-pg-system__card--featured">
+
+            <div class="fa-pg-system__media">
+
                 <img
                     src="{{ asset('images/legacy/product-100.jpg') }}"
                     alt="FA SPORTS Performance Apparel"
                     loading="lazy"
                 >
+
+                <div class="fa-pg-system__media-shade"></div>
+
+                <div class="fa-pg-system__technical">
+                    <span>FA / SYSTEM 01</span>
+                    <span>APPAREL</span>
+                </div>
+
+                <div class="fa-pg-system__number">
+                    01
+                </div>
+
+                <div class="fa-pg-system__vertical">
+                    PERFORMANCE / MOTION / CONTROL
+                </div>
+
+                <div class="fa-pg-system__corner fa-pg-system__corner--tl"></div>
+                <div class="fa-pg-system__corner fa-pg-system__corner--br"></div>
+
+                <span class="fa-pg-system__plus">+</span>
+
             </div>
 
-            <div class="fa-pg-system__overlay"></div>
+            <div class="fa-pg-system__card-info">
 
-            <div class="fa-pg-system__content">
-                <span class="fa-pg-system__number">01</span>
+                <div>
+                    <span class="fa-pg-system__card-label">
+                        PERFORMANCE APPAREL
+                    </span>
 
-                <span class="fa-pg-system__label">
-                    PERFORMANCE APPAREL
-                </span>
+                    <h3>
+                        MOVE
+                        <em>WITHOUT LIMITS.</em>
+                    </h3>
+                </div>
 
-                <span class="fa-pg-system__arrow">
-                    &rarr;
-                </span>
+                <span class="fa-pg-system__arrow">↗</span>
+
             </div>
 
         </a>
 
 
-        {{-- FOOTWEAR --}}
+        {{-- =====================================================
+             02 — FOOTWEAR
+        ====================================================== --}}
         <a href="#collection"
-           class="fa-pg-system__cell">
+           class="fa-pg-system__card">
 
-            <div class="fa-pg-system__img">
+            <div class="fa-pg-system__media">
+
                 <img
                     src="{{ asset('images/legacy/product-049.jpg') }}"
                     alt="FA SPORTS Footwear"
                     loading="lazy"
                 >
+
+                <div class="fa-pg-system__media-shade"></div>
+
+                <div class="fa-pg-system__technical">
+                    <span>FA / SYSTEM 02</span>
+                    <span>FOOTWEAR</span>
+                </div>
+
+                <div class="fa-pg-system__number">
+                    02
+                </div>
+
+                <div class="fa-pg-system__vertical">
+                    SPEED / GRIP / RESPONSE
+                </div>
+
+                <div class="fa-pg-system__corner fa-pg-system__corner--tl"></div>
+                <div class="fa-pg-system__corner fa-pg-system__corner--br"></div>
+
+                <span class="fa-pg-system__plus">+</span>
+
             </div>
 
-            <div class="fa-pg-system__overlay"></div>
+            <div class="fa-pg-system__card-info">
 
-            <div class="fa-pg-system__content">
-                <span class="fa-pg-system__number">02</span>
+                <div>
+                    <span class="fa-pg-system__card-label">
+                        FOOTWEAR
+                    </span>
 
-                <span class="fa-pg-system__label">
-                    FOOTWEAR
-                </span>
+                    <h3>
+                        FIND
+                        <em>YOUR GRIP.</em>
+                    </h3>
+                </div>
 
-                <span class="fa-pg-system__arrow">
-                    &rarr;
-                </span>
+                <span class="fa-pg-system__arrow">↗</span>
+
             </div>
 
         </a>
 
 
-        {{-- GLOVES & PROTECTION --}}
+        {{-- =====================================================
+             03 — GLOVES & PROTECTION
+        ====================================================== --}}
         <a href="#collection"
-           class="fa-pg-system__cell">
+           class="fa-pg-system__card">
 
-            <div class="fa-pg-system__img">
+            <div class="fa-pg-system__media">
+
                 <img
                     src="{{ asset('images/legacy/product-059.jpg') }}"
                     alt="FA SPORTS Gloves and Protection"
                     loading="lazy"
                 >
+
+                <div class="fa-pg-system__media-shade"></div>
+
+                <div class="fa-pg-system__technical">
+                    <span>FA / SYSTEM 03</span>
+                    <span>PROTECTION</span>
+                </div>
+
+                <div class="fa-pg-system__number">
+                    03
+                </div>
+
+                <div class="fa-pg-system__vertical">
+                    GRIP / PROTECTION / CONFIDENCE
+                </div>
+
+                <div class="fa-pg-system__corner fa-pg-system__corner--tl"></div>
+                <div class="fa-pg-system__corner fa-pg-system__corner--br"></div>
+
+                <span class="fa-pg-system__plus">+</span>
+
             </div>
 
-            <div class="fa-pg-system__overlay"></div>
+            <div class="fa-pg-system__card-info">
 
-            <div class="fa-pg-system__content">
-                <span class="fa-pg-system__number">03</span>
+                <div>
+                    <span class="fa-pg-system__card-label">
+                        GLOVES &amp; PROTECTION
+                    </span>
 
-                <span class="fa-pg-system__label">
-                    GLOVES &amp; PROTECTION
-                </span>
+                    <h3>
+                        CONTROL
+                        <em>THE MOMENT.</em>
+                    </h3>
+                </div>
 
-                <span class="fa-pg-system__arrow">
-                    &rarr;
-                </span>
+                <span class="fa-pg-system__arrow">↗</span>
+
             </div>
 
         </a>
 
 
-        {{-- TRAINING GEAR & ACCESSORIES --}}
+        {{-- =====================================================
+             04 — TRAINING GEAR & ACCESSORIES
+        ====================================================== --}}
         <a href="#collection"
-           class="fa-pg-system__cell fa-pg-system__cell--wide">
+           class="fa-pg-system__card fa-pg-system__card--wide">
 
-            <div class="fa-pg-system__img">
+            <div class="fa-pg-system__media">
+
                 <img
                     src="{{ asset('images/legacy/product-069.jpg') }}"
                     alt="FA SPORTS Training Gear and Accessories"
                     loading="lazy"
                 >
+
+                <div class="fa-pg-system__media-shade"></div>
+
+                <div class="fa-pg-system__technical">
+                    <span>FA / SYSTEM 04</span>
+                    <span>TRAINING</span>
+                </div>
+
+                <div class="fa-pg-system__number">
+                    04
+                </div>
+
+                <div class="fa-pg-system__vertical">
+                    TRAIN / PREPARE / PERFORM
+                </div>
+
+                <div class="fa-pg-system__corner fa-pg-system__corner--tl"></div>
+                <div class="fa-pg-system__corner fa-pg-system__corner--br"></div>
+
+                <span class="fa-pg-system__plus">+</span>
+
             </div>
 
-            <div class="fa-pg-system__overlay"></div>
+            <div class="fa-pg-system__card-info">
 
-            <div class="fa-pg-system__content">
-                <span class="fa-pg-system__number">04</span>
+                <div>
+                    <span class="fa-pg-system__card-label">
+                        TRAINING GEAR &amp; ACCESSORIES
+                    </span>
 
-                <span class="fa-pg-system__label">
-                    TRAINING GEAR &amp; ACCESSORIES
-                </span>
+                    <h3>
+                        PREPARE
+                        <em>FOR MORE.</em>
+                    </h3>
+                </div>
 
-                <span class="fa-pg-system__arrow">
-                    &rarr;
-                </span>
+                <span class="fa-pg-system__arrow">↗</span>
+
             </div>
 
         </a>
 
     </div>
 
-</section>
 
-{{-- ============ FEATURED GEAR ============ --}}
-<section class="fa-pg-story fa-featured-gear">
+    <div class="fa-pg-system__footer">
 
-    <div class="fa-section-head fa-section-head--light">
-        <span class="fa-section-head__index">03</span>
-        <h2 class="fa-section-head__title">FEATURED GEAR.</h2>
+        <span>
+            04 SYSTEMS
+        </span>
+
+        <strong>
+            ONE SYSTEM.
+            <em>EVERY MOMENT.</em>
+        </strong>
+
+        <span>
+            FA SPORTS / 2026
+        </span>
+
     </div>
 
-    <div class="fa-pg-story__list">
+</section>
 
-        {{-- FEATURE 01 --}}
-        <article class="fa-pg-story__item">
 
-            <div class="fa-pg-story__media">
+{{-- =========================================================
+     FEATURED GEAR — PREMIUM PRODUCT EDITORIAL
+========================================================= --}}
+<section class="fa-featured-gear" id="featured-gear">
 
-                <div class="fa-pg-story__img fa-featured-gear__image"
-                     style="background-image: url('{{ asset('images/playbook/academies-building-identity.jpg') }}');">
+    <div class="fa-featured-gear__header">
 
-                    <div class="fa-featured-gear__frame">
+        <div class="fa-featured-gear__header-left">
+            <span class="fa-featured-gear__eyebrow">
+                FA SPORTS / SELECTED EQUIPMENT
+            </span>
 
-                        <span class="fa-featured-gear__micro">
-                            FA SPORTS / TEAM SYSTEM 01
-                        </span>
+            <h2>
+                FEATURED
+                <span>GEAR.</span>
+            </h2>
+        </div>
 
-                        <div class="fa-featured-gear__mark">
-                            FA
-                        </div>
+        <p class="fa-featured-gear__intro">
+            A selection of performance systems built around movement,
+            identity and the demands of the game.
+        </p>
 
-                        <span class="fa-featured-gear__vertical">
-                            PERFORMANCE / IDENTITY / TEAM
-                        </span>
+    </div>
 
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tr"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--bl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--br"></div>
 
-                        <div class="fa-featured-gear__number">
-                            01
-                        </div>
+    <div class="fa-featured-gear__list">
 
-                    </div>
 
+        {{-- =====================================================
+             FEATURE 01
+        ====================================================== --}}
+        <article class="fa-featured-item">
+
+            <div class="fa-featured-item__visual">
+
+                <div
+                    class="fa-featured-item__image"
+                    style="background-image:url('{{ asset('images/playbook/academies-building-identity.jpg') }}');"
+                ></div>
+
+                <div class="fa-featured-item__shade"></div>
+
+                <div class="fa-featured-item__red-line"></div>
+
+                <div class="fa-featured-item__technical">
+                    <span>FA SPORTS</span>
+                    <span>TEAM SYSTEM</span>
                 </div>
+
+                <div class="fa-featured-item__frame">
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tr"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--bl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--br"></span>
+                </div>
+
+                <div class="fa-featured-item__watermark">
+                    FA
+                </div>
+
+                <span class="fa-featured-item__vertical">
+                    PERFORMANCE / IDENTITY / TEAM
+                </span>
 
             </div>
 
-            <div class="fa-pg-story__info">
 
-                <span class="fa-gear__series">
+            <div class="fa-featured-item__content">
+
+                <span class="fa-featured-item__category">
                     TEAM IDENTITY
                 </span>
 
-                <h3 class="fa-gear__name">
-                    ACADEMIES / BUILDING IDENTITY
+                <h3>
+                    ACADEMIES /
+                    <em>BUILDING IDENTITY</em>
                 </h3>
 
-                <ul class="fa-gear__specs">
-                    <li>TEAM READY SYSTEM</li>
-                    <li>CUSTOM IDENTITY</li>
-                    <li>PERFORMANCE FOCUSED</li>
-                </ul>
+                <p class="fa-featured-item__description">
+                    Teamwear designed to give academies and squads
+                    a consistent identity while keeping performance
+                    at the centre of every session.
+                </p>
 
-                <div class="fa-pg-story__actions">
-                    <a href="{{ route('gear-index') }}" class="fa-btn fa-btn--outline fa-btn--sm">
-                        EXPLORE GEAR
-                    </a>
+                <div class="fa-featured-item__specs">
+                    <span>TEAM READY SYSTEM</span>
+                    <span>CUSTOM IDENTITY</span>
+                    <span>PERFORMANCE FOCUSED</span>
                 </div>
+
+                <a
+                    href="{{ route('gear-index') }}"
+                    class="fa-featured-item__link"
+                >
+                    <span>EXPLORE GEAR</span>
+                    <b>↗</b>
+                </a>
 
             </div>
 
         </article>
 
 
-        {{-- FEATURE 02 --}}
-        <article class="fa-pg-story__item is-reversed">
 
-            <div class="fa-pg-story__media">
+        {{-- =====================================================
+             FEATURE 02
+        ====================================================== --}}
+        <article class="fa-featured-item fa-featured-item--reverse">
 
-                <div class="fa-pg-story__img fa-featured-gear__image"
-                     style="background-image: url('{{ asset('images/legacy/product-043.jpg') }}');">
+            <div class="fa-featured-item__visual">
 
-                    <div class="fa-featured-gear__frame">
+                <div
+                    class="fa-featured-item__image"
+                    style="background-image:url('{{ asset('images/legacy/product-043.jpg') }}');"
+                ></div>
 
-                        <span class="fa-featured-gear__micro">
-                            FA SPORTS / FOOTWEAR 02
-                        </span>
+                <div class="fa-featured-item__shade"></div>
 
-                        <div class="fa-featured-gear__mark">
-                            FA
-                        </div>
+                <div class="fa-featured-item__red-line"></div>
 
-                        <span class="fa-featured-gear__vertical">
-                            SPEED / GRIP / CONTROL
-                        </span>
-
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tr"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--bl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--br"></div>
-
-                        <div class="fa-featured-gear__number">
-                            02
-                        </div>
-
-                    </div>
-
+                <div class="fa-featured-item__technical">
+                    <span>FA SPORTS</span>
+                    <span>FOOTWEAR SYSTEM</span>
                 </div>
+
+                <div class="fa-featured-item__frame">
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tr"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--bl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--br"></span>
+                </div>
+
+                <div class="fa-featured-item__watermark">
+                    FA
+                </div>
+
+                <span class="fa-featured-item__vertical">
+                    SPEED / GRIP / RESPONSE
+                </span>
 
             </div>
 
-            <div class="fa-pg-story__info">
 
-                <span class="fa-gear__series">
+            <div class="fa-featured-item__content">
+
+                <span class="fa-featured-item__category">
                     FOOTWEAR
                 </span>
 
-                <h3 class="fa-gear__name">
-                    FA CARBON RUN
+                <h3>
+                    FA
+                    <em>CARBON RUN</em>
                 </h3>
 
-                <ul class="fa-gear__specs">
-                    <li>LIGHTWEIGHT CONSTRUCTION</li>
-                    <li>RESPONSIVE FOAM</li>
-                    <li>ATHLETIC PERFORMANCE</li>
-                </ul>
+                <p class="fa-featured-item__description">
+                    Lightweight performance footwear designed for
+                    responsive movement, controlled transitions
+                    and confident acceleration.
+                </p>
 
-                <div class="fa-pg-story__actions">
-                    <a href="#" class="fa-btn fa-btn--outline fa-btn--sm">
-                        EXPLORE GEAR
-                    </a>
+                <div class="fa-featured-item__specs">
+                    <span>LIGHTWEIGHT CONSTRUCTION</span>
+                    <span>RESPONSIVE FOAM</span>
+                    <span>ATHLETIC PERFORMANCE</span>
                 </div>
+
+                <a
+                    href="{{ route('gear-index') }}"
+                    class="fa-featured-item__link"
+                >
+                    <span>EXPLORE GEAR</span>
+                    <b>↗</b>
+                </a>
 
             </div>
 
         </article>
 
 
-        {{-- FEATURE 03 --}}
-        <article class="fa-pg-story__item">
 
-            <div class="fa-pg-story__media">
+        {{-- =====================================================
+             FEATURE 03
+        ====================================================== --}}
+        <article class="fa-featured-item">
 
-                <div class="fa-pg-story__img fa-featured-gear__image"
-                     style="background-image: url('{{ asset('images/legacy/product-055.jpg') }}');">
+            <div class="fa-featured-item__visual">
 
-                    <div class="fa-featured-gear__frame">
+                <div
+                    class="fa-featured-item__image"
+                    style="background-image:url('{{ asset('images/legacy/product-055.jpg') }}');"
+                ></div>
 
-                        <span class="fa-featured-gear__micro">
-                            FA SPORTS / PROTECTION 03
-                        </span>
+                <div class="fa-featured-item__shade"></div>
 
-                        <div class="fa-featured-gear__mark">
-                            FA
-                        </div>
+                <div class="fa-featured-item__red-line"></div>
 
-                        <span class="fa-featured-gear__vertical">
-                            CONTROL / GRIP / CONFIDENCE
-                        </span>
-
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tr"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--bl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--br"></div>
-
-                        <div class="fa-featured-gear__number">
-                            03
-                        </div>
-
-                    </div>
-
+                <div class="fa-featured-item__technical">
+                    <span>FA SPORTS</span>
+                    <span>PROTECTION SYSTEM</span>
                 </div>
+
+                <div class="fa-featured-item__frame">
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tr"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--bl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--br"></span>
+                </div>
+
+                <div class="fa-featured-item__watermark">
+                    FA
+                </div>
+
+                <span class="fa-featured-item__vertical">
+                    CONTROL / GRIP / CONFIDENCE
+                </span>
 
             </div>
 
-            <div class="fa-pg-story__info">
 
-                <span class="fa-gear__series">
+            <div class="fa-featured-item__content">
+
+                <span class="fa-featured-item__category">
                     GLOVES
                 </span>
 
-                <h3 class="fa-gear__name">
-                    FA GRIP GLOVE EFFECT
+                <h3>
+                    FA GRIP
+                    <em>GLOVE EFFECT</em>
                 </h3>
 
-                <ul class="fa-gear__specs">
-                    <li>HIGH GRIP PALM</li>
-                    <li>SECURE WRIST FIT</li>
-                    <li>GAME READY CONTROL</li>
-                </ul>
+                <p class="fa-featured-item__description">
+                    Secure grip and controlled handling built for
+                    athletes who need confidence when the pressure
+                    rises.
+                </p>
 
-                <div class="fa-pg-story__actions">
-                    <a href="#" class="fa-btn fa-btn--outline fa-btn--sm">
-                        EXPLORE GEAR
-                    </a>
+                <div class="fa-featured-item__specs">
+                    <span>HIGH GRIP PALM</span>
+                    <span>SECURE WRIST FIT</span>
+                    <span>GAME READY CONTROL</span>
                 </div>
+
+                <a
+                    href="{{ route('gear-index') }}"
+                    class="fa-featured-item__link"
+                >
+                    <span>EXPLORE GEAR</span>
+                    <b>↗</b>
+                </a>
 
             </div>
 
         </article>
 
 
-        {{-- FEATURE 04 --}}
-        <article class="fa-pg-story__item is-reversed">
 
-            <div class="fa-pg-story__media">
+        {{-- =====================================================
+             FEATURE 04
+        ====================================================== --}}
+        <article class="fa-featured-item fa-featured-item--reverse">
 
-                <div class="fa-pg-story__img fa-featured-gear__image"
-                     style="background-image: url('{{ asset('images/legacy/uniform5.jpg') }}');">
+            <div class="fa-featured-item__visual">
 
-                    <div class="fa-featured-gear__frame">
+                <div
+                    class="fa-featured-item__image"
+                    style="background-image:url('{{ asset('images/legacy/uniform5.jpg') }}');"
+                ></div>
 
-                        <span class="fa-featured-gear__micro">
-                            FA SPORTS / TRAINING 04
-                        </span>
+                <div class="fa-featured-item__shade"></div>
 
-                        <div class="fa-featured-gear__mark">
-                            FA
-                        </div>
+                <div class="fa-featured-item__red-line"></div>
 
-                        <span class="fa-featured-gear__vertical">
-                            TRAIN / MOVE / PERFORM
-                        </span>
-
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--tr"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--bl"></div>
-                        <div class="fa-featured-gear__corner fa-featured-gear__corner--br"></div>
-
-                        <div class="fa-featured-gear__number">
-                            04
-                        </div>
-
-                    </div>
-
+                <div class="fa-featured-item__technical">
+                    <span>FA SPORTS</span>
+                    <span>TRAINING SYSTEM</span>
                 </div>
+
+                <div class="fa-featured-item__frame">
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--tr"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--bl"></span>
+                    <span class="fa-featured-item__corner fa-featured-item__corner--br"></span>
+                </div>
+
+                <div class="fa-featured-item__watermark">
+                    FA
+                </div>
+
+                <span class="fa-featured-item__vertical">
+                    TRAIN / MOVE / PERFORM
+                </span>
 
             </div>
 
-            <div class="fa-pg-story__info">
 
-                <span class="fa-gear__series">
+            <div class="fa-featured-item__content">
+
+                <span class="fa-featured-item__category">
                     TRAINING SYSTEM
                 </span>
 
-                <h3 class="fa-gear__name">
-                    FA SQUAD TRAINING TRACKSUIT
+                <h3>
+                    FA SQUAD
+                    <em>TRAINING TRACKSUIT</em>
                 </h3>
 
-                <ul class="fa-gear__specs">
-                    <li>TEAM TRAINING FIT</li>
-                    <li>LIGHTWEIGHT LAYERING</li>
-                    <li>ALL SESSION COMFORT</li>
-                </ul>
+                <p class="fa-featured-item__description">
+                    A lightweight training layer created for team
+                    sessions, warm-ups and the preparation that
+                    happens before match day.
+                </p>
 
-                <div class="fa-pg-story__actions">
-                    <a href="#" class="fa-btn fa-btn--outline fa-btn--sm">
-                        EXPLORE GEAR
-                    </a>
+                <div class="fa-featured-item__specs">
+                    <span>TEAM TRAINING FIT</span>
+                    <span>LIGHTWEIGHT LAYERING</span>
+                    <span>ALL SESSION COMFORT</span>
                 </div>
+
+                <a
+                    href="{{ route('gear-index') }}"
+                    class="fa-featured-item__link"
+                >
+                    <span>EXPLORE GEAR</span>
+                    <b>↗</b>
+                </a>
 
             </div>
 
@@ -503,7 +820,28 @@
 
     </div>
 
+
+    {{-- SECTION FOOTER --}}
+    <div class="fa-featured-gear__footer">
+
+        <span>
+            SELECTED PERFORMANCE EQUIPMENT
+        </span>
+
+        <strong>
+            GEAR THAT
+            <em>KEEPS UP.</em>
+        </strong>
+
+        <span>
+            FA SPORTS / 2026
+        </span>
+
+    </div>
+
 </section>
+
+                
 
 {{-- ============ PERFORMANCE LAB — WHITE EDITORIAL ============ --}}
 <section class="fa-performance-lab">
