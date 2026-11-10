@@ -1,23 +1,34 @@
-// FA SPORTS — front-end interactions
-// Minimal front-end interactions
 
-document.addEventListener('DOMContentLoaded', () => {
+/* =========================================================
+   FA SPORTS — COMPLETE FRONT-END JAVASCRIPT
+   Responsive Navigation + Existing Website Interactions
+========================================================= */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* =====================================================
+       00. REDUCED MOTION
+    ===================================================== */
 
     const prefersReducedMotion =
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 
-    /* ---------- Floating nav: compact on scroll ---------- */
+    /* =====================================================
+       01. FLOATING NAV — COMPACT ON SCROLL
+    ===================================================== */
 
     const nav = document.getElementById('faNav');
 
     if (nav) {
 
-        const onScroll = () => {
+        const onScroll = function () {
+
             nav.classList.toggle(
                 'is-scrolled',
                 window.scrollY > 60
             );
+
         };
 
         window.addEventListener(
@@ -27,54 +38,193 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
         onScroll();
+
     }
 
 
-    /* ---------- Fullscreen menu ---------- */
+    /* =====================================================
+       02. PREMIUM RESPONSIVE HAMBURGER MENU
+    ===================================================== */
 
     const menuToggle = document.getElementById('menuToggle');
     const fullMenu = document.getElementById('fullMenu');
 
     if (menuToggle && fullMenu) {
 
-        menuToggle.addEventListener('click', () => {
+        const menuLinks = fullMenu.querySelectorAll('a');
 
-            const isOpen =
-                fullMenu.classList.toggle('is-open');
+        /* CLOSE MENU */
+
+        const closeMenu = function (restoreFocus = false) {
+
+            fullMenu.classList.remove('is-open');
+
+            menuToggle.classList.remove('is-active');
 
             menuToggle.setAttribute(
                 'aria-expanded',
-                String(isOpen)
+                'false'
+            );
+
+            menuToggle.setAttribute(
+                'aria-label',
+                'Open menu'
             );
 
             fullMenu.setAttribute(
                 'aria-hidden',
-                String(!isOpen)
+                'true'
             );
 
-            document.body.style.overflow =
-                isOpen ? 'hidden' : '';
+            fullMenu.setAttribute('inert', '');
+
+            document.body.classList.remove('fa-menu-open');
+
+            if (restoreFocus) {
+                menuToggle.focus();
+            }
+
+        };
+
+
+        /* OPEN MENU */
+
+        const openMenu = function () {
+
+            fullMenu.removeAttribute('inert');
+
+            fullMenu.setAttribute(
+                'aria-hidden',
+                'false'
+            );
+
+            fullMenu.classList.add('is-open');
+
+            menuToggle.classList.add('is-active');
+
+            menuToggle.setAttribute(
+                'aria-expanded',
+                'true'
+            );
+
+            menuToggle.setAttribute(
+                'aria-label',
+                'Close menu'
+            );
+
+            document.body.classList.add('fa-menu-open');
+
+        };
+
+
+        /* INITIAL STATE */
+
+        closeMenu();
+
+
+        /* HAMBURGER CLICK */
+
+        menuToggle.addEventListener('click', function () {
+
+            const isOpen =
+                menuToggle.getAttribute('aria-expanded') === 'true';
+
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+
         });
 
 
-        fullMenu.querySelectorAll('a').forEach((link) => {
+        /* CLOSE AFTER CLICKING A PAGE LINK */
 
-            link.addEventListener('click', () => {
-                menuToggle.click();
+        menuLinks.forEach(function (link) {
+
+            link.addEventListener('click', function () {
+
+                closeMenu();
+
             });
 
         });
+
+
+        /* CLOSE WITH ESCAPE */
+
+        document.addEventListener('keydown', function (event) {
+
+            const isOpen =
+                menuToggle.getAttribute('aria-expanded') === 'true';
+
+            if (event.key === 'Escape' && isOpen) {
+
+                closeMenu(true);
+
+            }
+
+        });
+
+
+        /* CLOSE OUTSIDE MENU */
+
+        document.addEventListener('click', function (event) {
+
+            const isOpen =
+                menuToggle.getAttribute('aria-expanded') === 'true';
+
+            if (
+                isOpen &&
+                !fullMenu.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+
+                closeMenu();
+
+            }
+
+        });
+
+
+        /* CLOSE WHEN SCREEN RETURNS TO DESKTOP */
+
+        const desktopQuery =
+            window.matchMedia('(min-width: 1101px)');
+
+        const handleResize = function (event) {
+
+            if (event.matches) {
+                closeMenu();
+            }
+
+        };
+
+        if (desktopQuery.addEventListener) {
+
+            desktopQuery.addEventListener(
+                'change',
+                handleResize
+            );
+
+        } else {
+
+            desktopQuery.addListener(handleResize);
+
+        }
+
     }
 
 
-    /* ---------- Before The Whistle ---------- */
+    /* =====================================================
+       03. BEFORE THE WHISTLE — MAIN IMAGE SWITCHING
+    ===================================================== */
 
     const whistleList =
         document.getElementById('whistleList');
 
     const whistleStage =
         document.querySelector('.fa-whistle__stage');
-
 
     if (whistleList) {
 
@@ -84,24 +234,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const frames =
             document.querySelectorAll('.fa-whistle__frame');
 
+        const activate = function (key) {
 
-        const activate = (key) => {
+            items.forEach(function (item) {
 
-            items.forEach((el) => {
-
-                el.classList.toggle(
+                item.classList.toggle(
                     'is-active',
-                    el.dataset.frame === key
+                    item.dataset.frame === key
                 );
 
             });
 
+            frames.forEach(function (frame) {
 
-            frames.forEach((el) => {
-
-                el.classList.toggle(
+                frame.classList.toggle(
                     'is-active',
-                    el.dataset.frame === key
+                    frame.dataset.frame === key
                 );
 
             });
@@ -109,23 +257,22 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
 
-        /* ---------- First frame ---------- */
+        /* FIRST FRAME */
 
         activate('lace');
 
 
-        /* ---------- Click + hover ---------- */
+        /* CLICK AND HOVER */
 
-        items.forEach((item) => {
+        items.forEach(function (item) {
 
-            item.addEventListener('mouseenter', () => {
+            item.addEventListener('mouseenter', function () {
 
                 activate(item.dataset.frame);
 
             });
 
-
-            item.addEventListener('click', () => {
+            item.addEventListener('click', function () {
 
                 activate(item.dataset.frame);
 
@@ -134,31 +281,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
 
-        /* ---------- Auto sequence ---------- */
+        /* AUTO SEQUENCE */
 
-        if (!prefersReducedMotion && items.length > 0) {
+        if (
+            !prefersReducedMotion &&
+            items.length > 0
+        ) {
 
             let index = 0;
 
-            const order = Array.from(items).map(
-                (el) => el.dataset.frame
-            );
+            const order = Array.from(items).map(function (item) {
 
+                return item.dataset.frame;
 
-            let autoplay = setInterval(() => {
+            });
 
-                index = (index + 1) % order.length;
+            let autoplay = null;
 
-                activate(order[index]);
-
-            }, 3200);
-
-
-            const restartAutoplay = () => {
+            const startAutoplay = function () {
 
                 clearInterval(autoplay);
 
-                autoplay = setInterval(() => {
+                autoplay = setInterval(function () {
 
                     index = (index + 1) % order.length;
 
@@ -168,34 +312,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
             };
 
+            const stopAutoplay = function () {
 
-            /* Pause when mouse is over list */
+                clearInterval(autoplay);
+
+            };
+
+
+            startAutoplay();
+
+
+            /* PAUSE ON LIST HOVER */
 
             whistleList.addEventListener(
                 'mouseenter',
-                () => clearInterval(autoplay)
+                stopAutoplay
             );
-
 
             whistleList.addEventListener(
                 'mouseleave',
-                restartAutoplay
+                startAutoplay
             );
 
 
-            /* Pause when mouse is over image stage */
+            /* PAUSE ON IMAGE STAGE HOVER */
 
             if (whistleStage) {
 
                 whistleStage.addEventListener(
                     'mouseenter',
-                    () => clearInterval(autoplay)
+                    stopAutoplay
                 );
-
 
                 whistleStage.addEventListener(
                     'mouseleave',
-                    restartAutoplay
+                    startAutoplay
                 );
 
             }
@@ -204,12 +355,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-});
-/* =========================================================
-   FA SPORTS — SCROLL REVEAL
-   ========================================================= */
 
-document.addEventListener('DOMContentLoaded', () => {
+    /* =====================================================
+       04. SCROLL REVEAL — EXISTING SECTIONS
+    ===================================================== */
 
     const revealElements = document.querySelectorAll(
         '.fa-whistle, ' +
@@ -232,12 +381,11 @@ document.addEventListener('DOMContentLoaded', () => {
         '.fa-editorial__card'
     );
 
-    revealElements.forEach((element, index) => {
+
+    revealElements.forEach(function (element, index) {
+
         element.classList.add('scroll-reveal');
 
-        /*
-         * Cards ko halka stagger effect
-         */
         if (
             element.classList.contains('fa-edge__card') ||
             element.classList.contains('fa-standard__card') ||
@@ -246,52 +394,71 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.contains('fa-playbook__card') ||
             element.classList.contains('fa-editorial__card')
         ) {
+
             const delay = (index % 6) + 1;
-            element.classList.add(`scroll-reveal-delay-${delay}`);
+
+            element.classList.add(
+                'scroll-reveal-delay-' + delay
+            );
+
         }
+
     });
 
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
 
-            entries.forEach(entry => {
+    /* REVEAL FALLBACK */
 
-                if (entry.isIntersecting) {
+    if (
+        prefersReducedMotion ||
+        !('IntersectionObserver' in window)
+    ) {
 
-                    entry.target.classList.add('is-visible');
+        revealElements.forEach(function (element) {
 
-                    /*
-                     * Ek dafa show hone ke baad observer hata do
-                     * taake animation dobara repeat na ho.
-                     */
-                    observer.unobserve(entry.target);
-                }
+            element.classList.add('is-visible');
 
-            });
+        });
 
-        },
-        {
-            threshold: 0.12,
-            rootMargin: '0px 0px -70px 0px'
-        }
-    );
+    } else {
 
-    revealElements.forEach(element => {
-        observer.observe(element);
-    });
+        const observer = new IntersectionObserver(
+            function (entries, observerInstance) {
 
-});
-/* =========================================================
-   FA SPORTS — PREMIUM CINEMATIC SCROLL ENGINE
-   ========================================================= */
+                entries.forEach(function (entry) {
 
-document.addEventListener('DOMContentLoaded', () => {
+                    if (entry.isIntersecting) {
 
-    /*
-     * ---------------------------------------------------------
-     * 1. MAIN SECTION REVEALS
-     * ---------------------------------------------------------
-     */
+                        entry.target.classList.add('is-visible');
+
+                        observerInstance.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12,
+                rootMargin: '0px 0px -70px 0px'
+            }
+        );
+
+
+        revealElements.forEach(function (element) {
+
+            observer.observe(element);
+
+        });
+
+    }
+
+
+    /* =====================================================
+       05. PREMIUM CINEMATIC SCROLL ENGINE
+    ===================================================== */
+
+
+    /* ---------- MAIN SECTIONS ---------- */
 
     const sections = document.querySelectorAll(
         '.fa-whistle, ' +
@@ -306,21 +473,21 @@ document.addEventListener('DOMContentLoaded', () => {
         '.fa-drive'
     );
 
-    sections.forEach((section, index) => {
+
+    sections.forEach(function (section, index) {
 
         section.classList.add('fa-scroll-reveal');
 
         if (index % 2 === 0) {
+
             section.classList.add('fa-section-enter');
+
         }
+
     });
 
 
-    /*
-     * ---------------------------------------------------------
-     * 2. SECTION HEADINGS
-     * ---------------------------------------------------------
-     */
+    /* ---------- SECTION HEADINGS ---------- */
 
     const headings = document.querySelectorAll(
         '.fa-section-head, ' +
@@ -331,16 +498,15 @@ document.addEventListener('DOMContentLoaded', () => {
         '.fa-drive__headline'
     );
 
-    headings.forEach(heading => {
+
+    headings.forEach(function (heading) {
+
         heading.classList.add('fa-heading-reveal');
+
     });
 
 
-    /*
-     * ---------------------------------------------------------
-     * 3. CARDS — STAGGERED
-     * ---------------------------------------------------------
-     */
+    /* ---------- STAGGERED CARDS ---------- */
 
     const cards = document.querySelectorAll(
         '.fa-discipline-panel, ' +
@@ -353,21 +519,19 @@ document.addEventListener('DOMContentLoaded', () => {
         '.fa-playbook__card'
     );
 
-    cards.forEach((card, index) => {
+
+    cards.forEach(function (card, index) {
 
         card.classList.add('fa-card-reveal');
 
         const delay = (index % 6) + 1;
 
-        card.classList.add(`fa-delay-${delay}`);
+        card.classList.add('fa-delay-' + delay);
+
     });
 
 
-    /*
-     * ---------------------------------------------------------
-     * 4. IMPORTANT IMAGES
-     * ---------------------------------------------------------
-     */
+    /* ---------- IMPORTANT IMAGES ---------- */
 
     const images = document.querySelectorAll(
         '.fa-whistle__stage, ' +
@@ -378,18 +542,15 @@ document.addEventListener('DOMContentLoaded', () => {
         '.fa-playbook__card-visual'
     );
 
-    images.forEach(image => {
+
+    images.forEach(function (image) {
 
         image.classList.add('fa-cinematic-image');
 
     });
 
 
-    /*
-     * ---------------------------------------------------------
-     * 5. OBSERVER
-     * ---------------------------------------------------------
-     */
+    /* ---------- OBSERVER ---------- */
 
     const animatedElements = document.querySelectorAll(
         '.fa-scroll-reveal, ' +
@@ -402,43 +563,71 @@ document.addEventListener('DOMContentLoaded', () => {
         '.fa-section-enter'
     );
 
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
 
-            entries.forEach(entry => {
+    if (
+        prefersReducedMotion ||
+        !('IntersectionObserver' in window)
+    ) {
 
-                if (!entry.isIntersecting) {
-                    return;
-                }
+        animatedElements.forEach(function (element) {
 
-                entry.target.classList.add('is-visible');
+            element.classList.add('is-visible');
 
-if (entry.target.classList.contains('fa-heading-reveal')) {
-    entry.target.classList.add('is-animated');
-}
+            if (element.classList.contains('fa-heading-reveal')) {
 
-                observer.unobserve(entry.target);
+                element.classList.add('is-animated');
 
-            });
+            }
 
-        },
-        {
-            threshold: 0.14,
-            rootMargin: '0px 0px -80px 0px'
-        }
-    );
+        });
+
+    } else {
+
+        const revealObserver = new IntersectionObserver(
+            function (entries, observerInstance) {
+
+                entries.forEach(function (entry) {
+
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    entry.target.classList.add('is-visible');
+
+                    if (
+                        entry.target.classList.contains(
+                            'fa-heading-reveal'
+                        )
+                    ) {
+
+                        entry.target.classList.add('is-animated');
+
+                    }
+
+                    observerInstance.unobserve(entry.target);
+
+                });
+
+            },
+            {
+                threshold: 0.14,
+                rootMargin: '0px 0px -80px 0px'
+            }
+        );
 
 
-    animatedElements.forEach(element => {
-        revealObserver.observe(element);
-    });
+        animatedElements.forEach(function (element) {
+
+            revealObserver.observe(element);
+
+        });
+
+    }
 
 
-    /*
-     * ---------------------------------------------------------
-     * 6. PARALLAX IMAGE EFFECT
-     * ---------------------------------------------------------
-     */
+    /* =====================================================
+       06. PARALLAX IMAGE EFFECT
+    ===================================================== */
 
     const parallaxElements = document.querySelectorAll(
         '.fa-gear__image, ' +
@@ -448,69 +637,72 @@ if (entry.target.classList.contains('fa-heading-reveal')) {
         '.fa-playbook__card-img'
     );
 
-    let ticking = false;
 
-    function updateParallax() {
+    if (!prefersReducedMotion && parallaxElements.length > 0) {
 
-        const viewportHeight = window.innerHeight;
+        let ticking = false;
 
-        parallaxElements.forEach(image => {
+        function updateParallax() {
 
-            const rect = image.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
 
-            if (
-                rect.bottom < 0 ||
-                rect.top > viewportHeight
-            ) {
-                return;
-            }
+            parallaxElements.forEach(function (image) {
 
-            const center =
-                rect.top + (rect.height / 2);
+                const rect = image.getBoundingClientRect();
 
-            const distance =
-                (center - viewportHeight / 2) / viewportHeight;
+                if (
+                    rect.bottom < 0 ||
+                    rect.top > viewportHeight
+                ) {
 
-            const movement =
-                distance * -22;
+                    return;
 
-            image.style.setProperty(
-                '--parallax-y',
-                `${movement}px`
-            );
+                }
 
-        });
+                const center = rect.top + (rect.height / 2);
 
-        ticking = false;
+                const distance =
+                    (center - viewportHeight / 2) / viewportHeight;
+
+                const movement = distance * -22;
+
+                image.style.setProperty(
+                    '--parallax-y',
+                    movement + 'px'
+                );
+
+            });
+
+            ticking = false;
+
+        }
+
+
+        window.addEventListener(
+            'scroll',
+            function () {
+
+                if (!ticking) {
+
+                    window.requestAnimationFrame(updateParallax);
+
+                    ticking = true;
+
+                }
+
+            },
+            { passive: true }
+        );
+
+
+        updateParallax();
+
     }
 
 
-    window.addEventListener(
-        'scroll',
-        () => {
-
-            if (!ticking) {
-
-                window.requestAnimationFrame(
-                    updateParallax
-                );
-
-                ticking = true;
-            }
-
-        },
-        { passive: true }
-    );
-
-
-    updateParallax();
-
-
-    /*
-     * ---------------------------------------------------------
-     * 7. RED LINE ANIMATION
-     * ---------------------------------------------------------
-     */
+    /* =====================================================
+       07. RED LINE ANIMATION
+    ===================================================== */
 
     const lines = document.querySelectorAll(
         '.fa-edge__line, ' +
@@ -518,51 +710,177 @@ if (entry.target.classList.contains('fa-heading-reveal')) {
         '.fa-hero__line'
     );
 
-    lines.forEach(line => {
+
+    lines.forEach(function (line) {
 
         line.classList.add('fa-line-reveal');
 
     });
 
 
-    /*
-     * ---------------------------------------------------------
-     * 8. SMOOTH ANCHOR SCROLL
-     * ---------------------------------------------------------
-     */
+    /* =====================================================
+       08. SMOOTH ANCHOR SCROLL
+    ===================================================== */
 
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach(link => {
+    document.querySelectorAll('a[href^="#"]').forEach(
+        function (link) {
 
-        link.addEventListener('click', event => {
+            link.addEventListener('click', function (event) {
 
-            const targetId =
-                link.getAttribute('href');
+                const targetId = link.getAttribute('href');
 
-            if (
-                !targetId ||
-                targetId === '#'
-            ) {
-                return;
-            }
+                if (!targetId || targetId === '#') {
+                    return;
+                }
 
-            const target =
-                document.querySelector(targetId);
+                let target = null;
 
-            if (!target) {
-                return;
-            }
+                try {
 
-            event.preventDefault();
+                    target = document.querySelector(targetId);
 
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                } catch (error) {
+
+                    return;
+
+                }
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+
+                    block: 'start'
+
+                });
+
+            });
+
+        }
+    );
+
+
+    /* =====================================================
+       09. BEFORE THE WHISTLE — MOBILE IMAGE SWITCHING
+    ===================================================== */
+
+    const mobileWhistleSection =
+        document.querySelector('.fa-whistle-mobile');
+
+    if (mobileWhistleSection) {
+
+        const mobileItems =
+            mobileWhistleSection.querySelectorAll(
+                '.fa-whistle-mobile__item'
+            );
+
+        const mobileFrames =
+            mobileWhistleSection.querySelectorAll(
+                '.fa-whistle-mobile__frame'
+            );
+
+
+        mobileItems.forEach(function (item) {
+
+            item.addEventListener('click', function () {
+
+                const target = item.dataset.frame;
+
+                mobileItems.forEach(function (element) {
+
+                    element.classList.remove('is-active');
+
+                });
+
+                mobileFrames.forEach(function (frame) {
+
+                    frame.classList.remove('is-active');
+
+                });
+
+                item.classList.add('is-active');
+
+                const activeFrame =
+                    mobileWhistleSection.querySelector(
+                        '.fa-whistle-mobile__frame[data-frame="' +
+                        target +
+                        '"]'
+                    );
+
+                if (activeFrame) {
+
+                    activeFrame.classList.add('is-active');
+
+                }
+
             });
 
         });
 
+    }
+
+
+    /* =====================================================
+       10. PAGE INITIALIZATION COMPLETE
+    ===================================================== */
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('fullMenu');
+
+    if (!toggle || !menu) return;
+
+    function openMenu() {
+        menu.classList.add('is-open');
+        toggle.classList.add('is-active');
+
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close navigation menu');
+
+        menu.setAttribute('aria-hidden', 'false');
+        menu.removeAttribute('inert');
+
+        document.body.classList.add('fa-menu-open');
+    }
+
+    function closeMenu() {
+        menu.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+
+        menu.setAttribute('aria-hidden', 'true');
+        menu.setAttribute('inert', '');
+
+        document.body.classList.remove('fa-menu-open');
+    }
+
+    toggle.addEventListener('click', function () {
+        if (menu.classList.contains('is-open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeMenu();
+        }
     });
 
 });
+

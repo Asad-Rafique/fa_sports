@@ -1648,3 +1648,744 @@
     }
 
 }
+
+/* =========================================
+   FA SPORTS — FOOTER WORDMARK MOBILE FIX
+========================================= */
+
+.fa-footer--pg .fa-footer__wordmark {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .fa-footer--pg .fa-footer__wordmark {
+        font-size: clamp(42px, 13.5vw, 100px) !important;
+        letter-spacing: -0.055em !important;
+        line-height: 0.95 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 5px !important;
+        margin: 0 auto !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    .fa-footer--pg {
+        overflow-x: clip;
+    }
+}
+
+@media (max-width: 380px) {
+    .fa-footer--pg .fa-footer__wordmark {
+        font-size: 12.5vw !important;
+        letter-spacing: -0.065em !important;
+    }
+}
+
+/* =========================================================
+   DISCIPLINE IN FIVE MOVEMENTS — MOBILE IMAGE FIX
+========================================================= */
+
+.dp-movements {
+    width: 100%;
+    overflow: hidden;
+}
+
+.dp-movement-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.dp-movement {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dp-movement__image {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+}
+
+.dp-movement__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .dp-movement-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dp-movement__image {
+        aspect-ratio: 4 / 5;
+    }
+
+    .dp-movement--featured {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .dp-movements {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .dp-movement-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+    }
+
+    .dp-movement {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .dp-movement__image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+        border-radius: 0;
+    }
+
+    .dp-movement__image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .dp-movement--featured {
+        grid-column: span 2;
+    }
+
+    .dp-movement--featured .dp-movement__image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .dp-movement__content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dp-movement__content strong {
+        font-size: clamp(17px, 5vw, 23px);
+    }
+
+    .dp-movement__content small {
+        font-size: 10px;
+    }
+
+    .dp-movements__footer {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .dp-movements__line {
+        flex: 1;
+        min-width: 25px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+
+    .dp-movement-gallery {
+        gap: 8px;
+    }
+
+    .dp-movement__image {
+        aspect-ratio: 3 / 4;
+    }
+
+    .dp-movement--featured .dp-movement__image {
+        aspect-ratio: 16 / 10;
+    }
+
+}
+
+/* =====================================================
+   FOURTH MOVEMENT IMAGE — MOVE.jpg
+   DESKTOP + MOBILE FIX
+===================================================== */
+
+/* Fourth movement card */
+.dp-movement-gallery > .dp-movement:nth-child(4) {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Fourth image container */
+.dp-movement-gallery > .dp-movement:nth-child(4) .dp-movement__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Fourth image */
+.dp-movement-gallery > .dp-movement:nth-child(4) .dp-movement__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .dp-movement-gallery > .dp-movement:nth-child(4) {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dp-movement-gallery > .dp-movement:nth-child(4) .dp-movement__image {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        height: auto;
+    }
+
+    .dp-movement-gallery > .dp-movement:nth-child(4) .dp-movement__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+/* =====================================================
+   MOVE — FOURTH IMAGE FINAL OVERRIDE
+===================================================== */
+
+.fa-disciplines-page .dp-movements .dp-movement-gallery > .dp-movement:nth-child(4) {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: hidden !important;
+}
+
+.fa-disciplines-page .dp-movements .dp-movement-gallery > .dp-movement:nth-child(4) .dp-movement__image {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 3 / 4 !important;
+    overflow: hidden !important;
+    background: #111 !important;
+}
+
+.fa-disciplines-page .dp-movements .dp-movement-gallery > .dp-movement:nth-child(4) .dp-movement__image img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .fa-disciplines-page .dp-movements .dp-movement-gallery > .dp-movement:nth-child(4) .dp-movement__image {
+        aspect-ratio: 4 / 5 !important;
+    }
+}
+
+/* =========================================================
+   FA SPORTS — FIVE MOVEMENTS
+   RESPONSIVE EDITORIAL GALLERY
+========================================================= */
+
+.fa-movements {
+    --movement-red: #e10600;
+    --movement-black: #0b0b0b;
+    --movement-white: #f5f5f3;
+
+    position: relative;
+    width: 100%;
+    padding: 110px 6%;
+    background: var(--movement-white);
+    color: var(--movement-black);
+    overflow: hidden;
+}
+
+
+/* HEADER */
+
+.fa-movements__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 35px;
+    margin-bottom: 55px;
+}
+
+.fa-movements__heading {
+    max-width: 750px;
+}
+
+.fa-movements__eyebrow {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--movement-red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.fa-movements__heading h2 {
+    margin: 0;
+    font-size: clamp(36px, 5vw, 76px);
+    line-height: .94;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+.fa-movements__heading h2 strong {
+    font-weight: 900;
+}
+
+.fa-movements__description {
+    max-width: 270px;
+    margin: 0 0 5px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* IMAGE GRID */
+
+.fa-movements__grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+    align-items: start;
+}
+
+
+/* CARD */
+
+.fa-movement-card {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fa-movement-card__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #dededb;
+}
+
+.fa-movement-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .6s ease;
+}
+
+/* Individual image positioning */
+
+.fa-movement-card__image--lace img {
+    object-position: center;
+}
+
+.fa-movement-card__image--lock img {
+    object-position: center;
+}
+
+.fa-movement-card__image--focus img {
+    object-position: center;
+}
+
+.fa-movement-card__image--move img {
+    object-position: center;
+}
+
+.fa-movement-card__image--perform img {
+    object-position: center;
+}
+
+
+/* IMAGE HOVER */
+
+@media (hover: hover) {
+    .fa-movement-card:hover .fa-movement-card__image img {
+        transform: scale(1.055);
+    }
+}
+
+
+/* NUMBER */
+
+.fa-movement-card__index {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: var(--movement-red);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* CARD INFO */
+
+.fa-movement-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 17px 0 12px;
+    border-bottom: 1px solid #c9c9c6;
+}
+
+.fa-movement-card__info div {
+    min-width: 0;
+}
+
+.fa-movement-card__info div > span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--movement-red);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.fa-movement-card__info h3 {
+    margin: 0;
+    font-size: clamp(17px, 1.7vw, 25px);
+    font-weight: 900;
+    letter-spacing: -.8px;
+    line-height: 1;
+}
+
+.fa-movement-card__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+
+/* FEATURED FIFTH CARD */
+
+.fa-movement-card--featured .fa-movement-card__image {
+    border-bottom: 3px solid var(--movement-red);
+}
+
+
+/* FOOTER */
+
+.fa-movements__footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 55px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.fa-movements__footer div {
+    flex: 1;
+    height: 1px;
+    background: #c9c9c6;
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+    .fa-movements__grid {
+        gap: 18px;
+    }
+
+    .fa-movement-card__image {
+        aspect-ratio: 3 / 4;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .fa-movements {
+        padding: 80px 5%;
+    }
+
+    .fa-movements__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .fa-movement-card--featured {
+        grid-column: auto;
+    }
+
+    .fa-movement-card__image {
+        aspect-ratio: 4 / 5;
+    }
+
+    .fa-movements__heading h2 {
+        font-size: clamp(38px, 6vw, 58px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .fa-movements {
+        padding: 65px 18px;
+    }
+
+    .fa-movements__header {
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    .fa-movements__eyebrow {
+        margin-bottom: 17px;
+        font-size: 10px;
+    }
+
+    .fa-movements__heading h2 {
+        font-size: clamp(34px, 9vw, 47px);
+        letter-spacing: -1.8px;
+        line-height: .98;
+    }
+
+    .fa-movements__description {
+        max-width: 320px;
+        margin-top: 20px;
+        font-size: 13px;
+    }
+
+    .fa-movements__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 11px;
+    }
+
+    .fa-movement-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .fa-movement-card__image {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+    }
+
+    .fa-movement-card__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fa-movement-card--featured {
+        grid-column: 1 / -1;
+    }
+
+    .fa-movement-card--featured .fa-movement-card__image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .fa-movement-card__index {
+        top: 9px;
+        left: 9px;
+        width: 29px;
+        height: 29px;
+        font-size: 10px;
+    }
+
+    .fa-movement-card__info {
+        padding: 12px 0 10px;
+    }
+
+    .fa-movement-card__info div > span {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .fa-movement-card__info h3 {
+        font-size: clamp(16px, 4.5vw, 21px);
+    }
+
+    .fa-movement-card__arrow {
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+    }
+
+    .fa-movements__footer {
+        margin-top: 35px;
+        gap: 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .fa-movements {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .fa-movements__grid {
+        gap: 18px 9px;
+    }
+
+    .fa-movement-card__info h3 {
+        font-size: 15px;
+    }
+
+    .fa-movement-card__arrow {
+        display: none;
+    }
+
+}
+
+/* MOVE IMAGE — FACE VISIBILITY FIX */
+
+.fa-movement-card__image--move img {
+    object-fit: cover !important;
+    object-position: center 5% !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .fa-movement-card__image--move img {
+        object-position: center 12% !important;
+    }
+}
+
+/* =========================================
+   MOVE IMAGE — FULL FACE VISIBILITY
+========================================= */
+
+.fa-movement-card__image--move {
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    overflow: hidden !important;
+    background: #111 !important;
+}
+
+.fa-movement-card__image--move img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .fa-movement-card__image--move {
+        aspect-ratio: 4 / 5 !important;
+    }
+
+    .fa-movement-card__image--move img {
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+}
+
+/* MOVE — MATCH OTHER IMAGE SIZES */
+
+.fa-movement-card__image--move {
+    aspect-ratio: 3 / 4 !important;
+    overflow: hidden !important;
+    background: #111;
+}
+
+.fa-movement-card__image--move img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 15% !important;
+    transform: none !important;
+}
+
+@media (max-width: 600px) {
+    .fa-movement-card__image--move {
+        aspect-ratio: 4 / 5 !important;
+    }
+
+    .fa-movement-card__image--move img {
+        object-fit: cover !important;
+        object-position: center 10% !important;
+    }
+}
+
+
+
+
+
+
+
+

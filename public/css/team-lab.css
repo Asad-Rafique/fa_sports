@@ -2234,3 +2234,155 @@
         max-width: 330px;
     }
 }
+
+/* =====================================================
+   FA SPORTS — MOBILE TEXT FIT FIX
+   ONE TEAM / ONE IDENTITY / ONE PERFORMANCE
+===================================================== */
+
+@media screen and (max-width: 767px) {
+
+    .tl-brand-statement-large {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .tl-brand-statement-large span,
+    .tl-brand-statement-large strong,
+    .tl-brand-statement-large em {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: normal;
+        box-sizing: border-box;
+        line-height: 1.1;
+    }
+
+    .tl-brand-statement-large span {
+        font-size: clamp(13px, 4vw, 17px);
+        letter-spacing: 2px;
+    }
+
+    .tl-brand-statement-large strong,
+    .tl-brand-statement-large em {
+        font-size: clamp(25px, 7.5vw, 36px);
+        letter-spacing: -1px;
+    }
+
+}
+
+/* ============================================
+   FA SPORTS — FINAL CTA MOBILE RESPONSIVE
+   ONE TEAM / ONE IDENTITY / ONE PERFORMANCE
+============================================ */
+
+@media screen and (max-width: 767px) {
+
+    .fa-final-cta--triple {
+        width: 100%;
+        max-width: 100%;
+        padding: 65px 16px 55px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .fa-final-cta--triple .fa-final-cta__headline {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 35px;
+        padding: 0;
+        box-sizing: border-box;
+
+        font-size: clamp(25px, 7.5vw, 36px);
+        line-height: 1.35;
+        letter-spacing: -1px;
+
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .fa-final-cta--triple .fa-final-cta__headline span {
+        display: inline;
+        color: #e10600;
+    }
+
+    .fa-final-cta--triple .fa-final-cta__row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .fa-final-cta--triple .fa-btn {
+        width: 100%;
+        max-width: 290px;
+        min-height: 48px;
+        padding: 14px 12px;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media screen and (max-width: 380px) {
+
+    .fa-final-cta--triple .fa-final-cta__headline {
+        font-size: 25px;
+        letter-spacing: -0.8px;
+        line-height: 1.4;
+    }
+
+}
+
+/* =========================================
+   FA SPORTS — ALL FOOTERS MOBILE WORDMARK
+========================================= */
+
+.fa-footer__wordmark {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .fa-footer__wordmark {
+        font-size: clamp(42px, 13.5vw, 100px) !important;
+        letter-spacing: -0.055em !important;
+        line-height: 0.95 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 5px !important;
+        margin: 0 auto !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    .fa-footer {
+        overflow-x: clip;
+    }
+}
+
+@media (max-width: 380px) {
+    .fa-footer__wordmark {
+        font-size: 12.5vw !important;
+        letter-spacing: -0.065em !important;
+    }
+}
+

@@ -490,209 +490,187 @@
     </section>
 
 
+{{-- =========================================================
+     THE FIVE MOVEMENTS — NEW RESPONSIVE GALLERY
+========================================================= --}}
 
-    {{-- =========================================================
-         THE FIVE MOVEMENTS
-         THE ONLY SECTION WITH IMAGES
-    ========================================================== --}}
+<section class="fa-movements" id="five-movements">
 
-    <section class="dp-movements">
+    <div class="fa-movements__header">
 
-        <div class="dp-movements__header">
+        <div class="fa-movements__heading">
 
-            <div>
+            <span class="fa-movements__eyebrow">
+                05 / THE PREPARATION
+            </span>
 
-                <span class="dp-red-label">
-                    05 / THE PREPARATION
-                </span>
+            <h2>
+                THE DISCIPLINE
+                <br>
+                <strong>IN FIVE MOVEMENTS.</strong>
+            </h2>
 
-                <h2>
-                    THE DISCIPLINE
-                    <br>
-                    <strong>IN FIVE MOVEMENTS.</strong>
-                </h2>
+        </div>
+
+        <p class="fa-movements__description">
+            Before performance comes preparation.
+            Five moments. One mindset. One standard.
+        </p>
+
+    </div>
+
+
+    <div class="fa-movements__grid">
+
+        {{-- 01 LACE --}}
+        <article class="fa-movement-card">
+
+            <div class="fa-movement-card__image fa-movement-card__image--lace">
+
+                <img
+                    src="{{ asset('images/whistle/lace.jpg') }}"
+                    alt="Athlete preparing before performance"
+                    loading="lazy"
+                >
+
+                <span class="fa-movement-card__index">01</span>
 
             </div>
 
-
-            <p>
-                Before performance comes preparation.
-                Five moments. One mindset. One standard.
-            </p>
-
-        </div>
-
-
-        <div class="dp-movement-gallery">
-
-
-            {{-- LACE --}}
-
-            <article class="dp-movement">
-
-                <div class="dp-movement__image">
-
-                    <img
-                        src="{{ asset('images/whistle/lace.jpg') }}"
-                        alt="FA SPORTS preparation sportswear"
-                        loading="lazy"
-                    >
-
+            <div class="fa-movement-card__info">
+                <div>
+                    <span>LACE</span>
+                    <h3>PREPARE.</h3>
                 </div>
 
+                <span class="fa-movement-card__arrow">↗</span>
+            </div>
 
-                <div class="dp-movement__content">
+        </article>
 
-                    <span>01</span>
 
-                    <div>
-                        <small>LACE</small>
-                        <strong>PREPARE.</strong>
-                    </div>
+        {{-- 02 LOCK --}}
+        <article class="fa-movement-card">
 
+            <div class="fa-movement-card__image fa-movement-card__image--lock">
+
+                <img
+                    src="{{ asset('images/whistle/lock.jpg') }}"
+                    alt="Athlete getting ready for the game"
+                    loading="lazy"
+                >
+
+                <span class="fa-movement-card__index">02</span>
+
+            </div>
+
+            <div class="fa-movement-card__info">
+                <div>
+                    <span>LOCK</span>
+                    <h3>COMMIT.</h3>
                 </div>
 
-            </article>
+                <span class="fa-movement-card__arrow">↗</span>
+            </div>
+
+        </article>
 
 
+        {{-- 03 FOCUS --}}
+        <article class="fa-movement-card">
 
-            {{-- LOCK --}}
+            <div class="fa-movement-card__image fa-movement-card__image--focus">
 
-            <article class="dp-movement">
+                <img
+                    src="{{ asset('images/whistle/focus.jpg') }}"
+                    alt="Athlete focused before performance"
+                    loading="lazy"
+                >
 
-                <div class="dp-movement__image">
+                <span class="fa-movement-card__index">03</span>
 
-                    <img
-                        src="{{ asset('images/whistle/lock.jpg') }}"
-                        alt="FA SPORTS athlete preparation"
-                        loading="lazy"
-                    >
+            </div>
 
+            <div class="fa-movement-card__info">
+                <div>
+                    <span>FOCUS</span>
+                    <h3>BELIEVE.</h3>
                 </div>
 
+                <span class="fa-movement-card__arrow">↗</span>
+            </div>
 
-                <div class="dp-movement__content">
+        </article>
 
-                    <span>02</span>
 
-                    <div>
-                        <small>LOCK</small>
-                        <strong>COMMIT.</strong>
-                    </div>
+        {{-- 04 MOVE --}}
+        <article class="fa-movement-card">
 
+            <div class="fa-movement-card__image fa-movement-card__image--move">
+
+                <img
+                    src="{{ asset('images/whistle/react.png') }}"
+                    alt="Athlete in motion"
+                    loading="lazy"
+                >
+
+                <span class="fa-movement-card__index">04</span>
+
+            </div>
+
+            <div class="fa-movement-card__info">
+                <div>
+                    <span>MOVE</span>
+                    <h3>REACT.</h3>
                 </div>
 
-            </article>
+                <span class="fa-movement-card__arrow">↗</span>
+            </div>
+
+        </article>
 
 
+        {{-- 05 PERFORM --}}
+        <article class="fa-movement-card fa-movement-card--featured">
 
-            {{-- FOCUS --}}
+            <div class="fa-movement-card__image fa-movement-card__image--perform">
 
-            <article class="dp-movement">
+                <img
+                    src="{{ asset('images/whistle/perform.jpg') }}"
+                    alt="Athlete delivering performance"
+                    loading="lazy"
+                >
 
-                <div class="dp-movement__image">
+                <span class="fa-movement-card__index">05</span>
 
-                    <img
-                        src="{{ asset('images/whistle/focus.jpg') }}"
-                        alt="FA SPORTS focus and performance"
-                        loading="lazy"
-                    >
+            </div>
 
+            <div class="fa-movement-card__info">
+                <div>
+                    <span>PERFORM</span>
+                    <h3>DELIVER.</h3>
                 </div>
 
+                <span class="fa-movement-card__arrow">↗</span>
+            </div>
 
-                <div class="dp-movement__content">
+        </article>
 
-                    <span>03</span>
-
-                    <div>
-                        <small>FOCUS</small>
-                        <strong>BELIEVE.</strong>
-                    </div>
-
-                </div>
-
-            </article>
+    </div>
 
 
+    <div class="fa-movements__footer">
 
-            {{-- MOVE --}}
+        <span>FA SPORTS</span>
 
-            <article class="dp-movement">
+        <div></div>
 
-                <div class="dp-movement__image">
+        <span>THE GAME STARTS BEFORE THE GAME.</span>
 
-                    <img
-                        src="{{ asset('images/whistle/move.jpg') }}"
-                        alt="FA SPORTS movement and performance wear"
-                        loading="lazy"
-                    >
+    </div>
 
-                </div>
+</section>
 
-
-                <div class="dp-movement__content">
-
-                    <span>04</span>
-
-                    <div>
-                        <small>MOVE</small>
-                        <strong>REACT.</strong>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            {{-- PERFORM --}}
-
-            <article class="dp-movement dp-movement--featured">
-
-                <div class="dp-movement__image">
-
-                    <img
-                        src="{{ asset('images/whistle/perform.jpg') }}"
-                        alt="FA SPORTS performance sportswear"
-                        loading="lazy"
-                    >
-
-                </div>
-
-
-                <div class="dp-movement__content">
-
-                    <span>05</span>
-
-                    <div>
-                        <small>PERFORM</small>
-                        <strong>DELIVER.</strong>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-
-        <div class="dp-movements__footer">
-
-            <span>
-                FA SPORTS
-            </span>
-
-            <div class="dp-movements__line"></div>
-
-            <span>
-                THE GAME STARTS BEFORE THE GAME.
-            </span>
-
-        </div>
-
-    </section>
 
 
 

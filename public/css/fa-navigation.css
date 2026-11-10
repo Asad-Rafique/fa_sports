@@ -1,0 +1,784 @@
+
+/* =========================================================
+   FA SPORTS — RESPONSIVE NAVIGATION
+   Matches: resources/views/partials/nav.blade.php
+   Existing Logo Preserved
+========================================================= */
+
+/* 01. HEADER */
+
+.fa-header {
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    isolation: isolate;
+}
+
+.fa-header,
+.fa-header * {
+    box-sizing: border-box;
+}
+
+.fa-header__bar {
+    position: relative;
+    z-index: 10001;
+    width: 100%;
+    min-height: 82px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #0b0b0b;
+}
+
+/* 02. EXISTING LOGO */
+
+.fa-brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 9px;
+    text-decoration: none;
+}
+
+/* Logo mark and typography are intentionally preserved */
+
+/* 03. DESKTOP NAVIGATION */
+
+.fa-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 1.5vw, 23px);
+    flex: 1;
+    min-width: 0;
+}
+
+.fa-navigation__link {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    transition: color .25s ease;
+}
+
+.fa-navigation__link:hover {
+    color: #e10600;
+}
+
+/* 04. HEADER ACTIONS */
+
+.fa-header__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    gap: 15px;
+}
+
+.fa-header__contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: color .25s ease;
+}
+
+.fa-header__contact:hover {
+    color: #e10600;
+}
+
+.fa-header__contact span {
+    color: #e10600;
+    font-size: 17px;
+}
+
+/* 05. HAMBURGER BUTTON */
+
+.fa-menu-button {
+    display: none;
+    position: relative;
+    z-index: 10003;
+    width: 55px;
+    height: 48px;
+    padding: 7px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 4px;
+    background: #0b0b0b;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-direction: column;
+    transition: background .3s ease, border-color .3s ease;
+}
+
+.fa-menu-button:hover {
+    background: #e10600;
+    border-color: #e10600;
+}
+
+.fa-menu-button__icon {
+    width: 23px;
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fa-menu-button__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: #fff;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.fa-menu-button__text {
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Hamburger open animation */
+
+.fa-menu-button.is-active .fa-menu-button__line--one {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.fa-menu-button.is-active .fa-menu-button__line--two {
+    opacity: 0;
+}
+
+.fa-menu-button.is-active .fa-menu-button__line--three {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* 06. FULLSCREEN MENU */
+
+.fa-fullmenu {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: #080808;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity .35s ease,
+                visibility .35s ease,
+                transform .35s ease;
+}
+
+.fa-fullmenu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.fa-fullmenu__inner {
+    width: 100%;
+    min-height: 100%;
+    padding: 30px 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 07. MENU HEADER */
+
+.fa-fullmenu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.fa-fullmenu__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.fa-fullmenu__brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #e10600;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.fa-fullmenu__header-label {
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+/* 08. MENU CONTENT */
+
+.fa-fullmenu__content {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 45px;
+    align-items: center;
+    flex: 1;
+    padding: 28px 0;
+}
+
+.fa-fullmenu__navigation {
+    width: 100%;
+    min-width: 0;
+}
+
+.fa-fullmenu__eyebrow {
+    display: block;
+    margin-bottom: 14px;
+    color: #e10600;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.fa-fullmenu__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fa-fullmenu__list li {
+    border-bottom: 1px solid rgba(255,255,255,.13);
+}
+
+.fa-fullmenu__list li a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: color .25s ease, padding .25s ease;
+}
+
+.fa-fullmenu__number {
+    min-width: 24px;
+    color: #e10600;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.fa-fullmenu__link {
+    color: inherit;
+    font-size: clamp(16px, 1.6vw, 23px);
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+
+.fa-fullmenu__arrow {
+    margin-left: auto;
+    color: #e10600;
+    font-size: 19px;
+    transition: transform .25s ease;
+}
+
+.fa-fullmenu__list li a:hover {
+    color: #e10600;
+    padding-left: 13px;
+}
+
+.fa-fullmenu__list li a:hover .fa-fullmenu__arrow {
+    transform: translate(4px, -4px);
+}
+
+/* 09. MENU VIDEO */
+
+.fa-fullmenu__visual {
+    position: relative;
+    width: 100%;
+    height: 490px;
+    overflow: hidden;
+    background: #171717;
+}
+
+.fa-fullmenu__visual video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fa-fullmenu__visual-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    background: linear-gradient(
+        to bottom,
+        transparent 15%,
+        rgba(0,0,0,.85) 100%
+    );
+}
+
+.fa-fullmenu__visual-label {
+    color: #e10600;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.fa-fullmenu__visual-overlay h2 {
+    margin: 15px 0;
+    color: #fff;
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: 900;
+    line-height: .98;
+}
+
+.fa-fullmenu__visual-overlay h2 span {
+    color: #e10600;
+}
+
+.fa-fullmenu__visual-bottom {
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* 10. MENU FOOTER */
+
+.fa-fullmenu__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.fa-fullmenu__footer strong {
+    color: #e10600;
+}
+
+/* 11. TABLET */
+
+@media (max-width: 1100px) {
+
+    .fa-header__bar {
+        min-height: 75px;
+        gap: 15px;
+    }
+
+    .fa-navigation {
+        display: none !important;
+    }
+
+    .fa-menu-button {
+        display: flex;
+    }
+
+    .fa-header__actions {
+        margin-left: auto;
+    }
+
+    .fa-fullmenu__content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fa-fullmenu__visual {
+        display: none;
+    }
+
+    .fa-fullmenu__inner {
+        padding: 25px 5%;
+    }
+
+}
+
+/* 12. MOBILE */
+
+@media (max-width: 600px) {
+
+    .fa-header__bar {
+        min-height: 66px;
+        padding: 10px 16px;
+        gap: 8px;
+    }
+
+    .fa-header__actions {
+        gap: 10px;
+    }
+
+    .fa-header__contact {
+        display: none;
+    }
+
+    .fa-menu-button {
+        width: 49px;
+        height: 45px;
+    }
+
+    .fa-fullmenu__inner {
+        padding: 18px 18px;
+    }
+
+    .fa-fullmenu__header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 15px;
+    }
+
+    .fa-fullmenu__header-label {
+        text-align: left;
+        font-size: 9px;
+    }
+
+    .fa-fullmenu__content {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .fa-fullmenu__eyebrow {
+        font-size: 10px;
+    }
+
+    .fa-fullmenu__list li a {
+        min-height: 44px;
+        padding: 9px 3px;
+        gap: 12px;
+    }
+
+    .fa-fullmenu__number {
+        min-width: 22px;
+        font-size: 10px;
+    }
+
+    .fa-fullmenu__link {
+        font-size: clamp(14px, 4.3vw, 18px);
+        letter-spacing: .3px;
+    }
+
+    .fa-fullmenu__arrow {
+        font-size: 17px;
+    }
+
+    .fa-fullmenu__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-top: 14px;
+        font-size: 9px;
+    }
+
+}
+
+/* 13. SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+    .fa-header__bar {
+        min-height: 60px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .fa-menu-button {
+        width: 44px;
+        height: 42px;
+    }
+
+    .fa-fullmenu__inner {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .fa-fullmenu__list li a {
+        gap: 9px;
+        min-height: 42px;
+    }
+
+    .fa-fullmenu__link {
+        font-size: 14px;
+    }
+
+}
+
+/* 14. BODY SCROLL LOCK */
+
+body.fa-menu-open {
+    overflow: hidden;
+}
+
+/* 15. ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fa-fullmenu,
+    .fa-menu-button,
+    .fa-menu-button__line,
+    .fa-fullmenu__list li a,
+    .fa-fullmenu__arrow {
+        transition: none !important;
+    }
+
+}
+/* =========================================
+   FA SPORTS — LOGO & HEADER RESPONSIVE
+========================================= */
+
+/* LOGO */
+.fa-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+/* BLACK BOX WITH RED OUTLINE */
+.fa-brand__mark {
+    width: 48px;
+    height: 43px;
+    background: #080808;
+    border: 1.5px solid #e10600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(225, 6, 0, 0.12);
+}
+
+/* F RED */
+.fa-brand__f {
+    color: #e10600;
+    font-size: 31px;
+    font-weight: 950;
+    font-style: italic;
+    line-height: 1;
+    margin-right: -2px;
+}
+
+/* A WHITE */
+.fa-brand__a {
+    color: #ffffff;
+    font-size: 31px;
+    font-weight: 950;
+    font-style: italic;
+    line-height: 1;
+}
+
+/* A UNDERLINE */
+.fa-brand__mark::after {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 1px;
+    right: 4px;
+    bottom: 6px;
+    background: rgba(180, 180, 180, 0.5);
+}
+
+/* SPORTS OUTSIDE BOX */
+.fa-brand__name {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    white-space: nowrap;
+}
+
+/* HEADER ACTIONS */
+.fa-header__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+    flex-shrink: 0;
+}
+
+/* CONTACT US */
+.fa-header__contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.fa-header__contact span {
+    color: #e10600;
+    font-size: 16px;
+}
+
+/* MENU BUTTON */
+.fa-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+/* HAMBURGER */
+.fa-menu-button__icon {
+    width: 27px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fa-menu-button__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.fa-menu-button__line--two {
+    width: 70%;
+    margin-left: auto;
+}
+
+/* MENU TEXT */
+.fa-menu-button__text {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .fa-header__actions {
+        gap: 15px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .fa-brand {
+        gap: 7px;
+    }
+
+    .fa-brand__mark {
+        width: 39px;
+        height: 36px;
+    }
+
+    .fa-brand__f,
+    .fa-brand__a {
+        font-size: 26px;
+    }
+
+    .fa-brand__name {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    .fa-header__actions {
+        gap: 12px;
+    }
+
+    .fa-header__contact {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        gap: 4px;
+    }
+
+    .fa-header__contact span {
+        font-size: 13px;
+    }
+
+    /* MOBILE MENU TEXT ONLY */
+    .fa-menu-button {
+        gap: 0;
+    }
+
+    .fa-menu-button__icon {
+        display: none;
+    }
+
+    .fa-menu-button__text {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+
+    .fa-brand__mark {
+        width: 35px;
+        height: 34px;
+    }
+
+    .fa-brand__f,
+    .fa-brand__a {
+        font-size: 23px;
+    }
+
+    .fa-brand__name {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .fa-header__actions {
+        gap: 9px;
+    }
+
+    .fa-header__contact {
+        font-size: 9px;
+    }
+
+    .fa-menu-button__text {
+        font-size: 9px;
+    }
+}

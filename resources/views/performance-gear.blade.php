@@ -1231,22 +1231,6 @@
                 alt="FA SPORTS Custom Team Kit"
                 loading="lazy"
             >
-
-            <div class="fa-uniform-card__wide-overlay">
-
-                <div>
-                    <span>FA SPORTS / CUSTOM TEAM SYSTEM</span>
-
-                    <strong>
-                        BUILT FOR<br>
-                        YOUR<br>
-                        IDENTITY.
-                    </strong>
-                </div>
-
-                <b>06</b>
-
-            </div>
         </div>
 
         <div class="fa-uniform-card__info">

@@ -101,143 +101,163 @@
     </div>
 
 </section>
+
 {{-- ============ BEFORE THE WHISTLE ============ --}}
-<section class="fa-whistle">
+<section class="fa-whistle-mobile" id="before-whistle">
 
-    {{-- LEFT WALL HEADLINE --}}
-    <div class="fa-whistle__headline-wrap">
-        <span class="fa-whistle__eyebrow">FA SPORTS / PREPARATION</span>
+    <div class="fa-whistle-mobile__heading">
+        <span class="fa-whistle-mobile__eyebrow">
+            FA SPORTS / PREPARATION
+        </span>
 
-        <h2 class="fa-whistle__headline">
+        <h2 class="fa-whistle-mobile__title">
             BEFORE THE<br>
             <span>WHISTLE.</span>
         </h2>
     </div>
 
+    <div class="fa-whistle-mobile__main">
 
-    {{-- IMAGE + STEPS --}}
-    <div class="fa-whistle__main">
+        <div class="fa-whistle-mobile__stage">
 
-        {{-- IMAGE STAGE --}}
-        <div class="fa-whistle__stage">
+            <img class="fa-whistle-mobile__frame is-active"
+                 data-frame="lace"
+                 src="{{ asset('images/whistle/lace.jpg') }}"
+                 alt="Lacing boots before the match">
 
-            <img
-                class="fa-whistle__frame is-active"
-                data-frame="lace"
-                src="{{ asset('images/whistle/lace.jpg') }}"
-                alt="Lacing boots before the match"
-            >
+            <img class="fa-whistle-mobile__frame"
+                 data-frame="lock"
+                 src="{{ asset('images/whistle/lock.jpg') }}"
+                 alt="Preparing sports equipment">
 
-            <img
-                class="fa-whistle__frame"
-                data-frame="lock"
-                src="{{ asset('images/whistle/lock.jpg') }}"
-                alt="Locking in shin guards and gloves"
-            >
+            <img class="fa-whistle-mobile__frame"
+                 data-frame="focus"
+                 src="{{ asset('images/whistle/focus.jpg') }}"
+                 alt="Athlete focused">
 
-            <img
-                class="fa-whistle__frame"
-                data-frame="focus"
-                src="{{ asset('images/whistle/focus.jpg') }}"
-                alt="Athlete focused in the tunnel"
-            >
+            <img class="fa-whistle-mobile__frame"
+                 data-frame="move"
+                 src="{{ asset('images/whistle/move.jpg') }}"
+                 alt="Athlete movement">
 
-            <img
-                class="fa-whistle__frame"
-                data-frame="move"
-                src="{{ asset('images/whistle/move.jpg') }}"
-                alt="First movement on the pitch"
-            >
+            <img class="fa-whistle-mobile__frame"
+                 data-frame="perform"
+                 src="{{ asset('images/whistle/perform.jpg') }}"
+                 alt="Athlete performing">
 
-            <img
-                class="fa-whistle__frame"
-                data-frame="perform"
-                src="{{ asset('images/whistle/perform.jpg') }}"
-                alt="Athlete performing under lights"
-            >
-
-            {{-- IMAGE OVERLAY INFO --}}
-            <div class="fa-whistle__overlay">
-
-                <span class="fa-whistle__overlay-label">
-                    FA SPORTS / PERFORMANCE SYSTEM
-                </span>
-
-                <span class="fa-whistle__overlay-title">
-                    PREPARATION
-                </span>
-
+            <div class="fa-whistle-mobile__overlay">
+                <span>FA SPORTS / PERFORMANCE SYSTEM</span>
+                <strong>PREPARATION</strong>
             </div>
 
         </div>
 
+        <ol class="fa-whistle-mobile__list" id="whistleList">
 
-        {{-- STEPS NEXT TO IMAGE --}}
-        <ol class="fa-whistle__list" id="whistleList">
+            @foreach ([
+                'lace' => 'LACE',
+                'lock' => 'LOCK',
+                'focus' => 'FOCUS',
+                'move' => 'MOVE',
+                'perform' => 'PERFORM'
+            ] as $key => $label)
 
-            <li class="fa-whistle__item is-active" data-frame="lace">
-                <span class="fa-whistle__item-number">01</span>
-                <span class="fa-whistle__item-name">LACE</span>
-                <span class="fa-whistle__item-arrow">↗</span>
-            </li>
+                <li class="fa-whistle-mobile__item {{ $loop->first ? 'is-active' : '' }}"
+                    data-frame="{{ $key }}">
 
-            <li class="fa-whistle__item" data-frame="lock">
-                <span class="fa-whistle__item-number">02</span>
-                <span class="fa-whistle__item-name">LOCK</span>
-                <span class="fa-whistle__item-arrow">↗</span>
-            </li>
+                    <span class="fa-whistle-mobile__number">
+                        0{{ $loop->iteration }}
+                    </span>
 
-            <li class="fa-whistle__item" data-frame="focus">
-                <span class="fa-whistle__item-number">03</span>
-                <span class="fa-whistle__item-name">FOCUS</span>
-                <span class="fa-whistle__item-arrow">↗</span>
-            </li>
+                    <span class="fa-whistle-mobile__name">
+                        {{ $label }}
+                    </span>
 
-            <li class="fa-whistle__item" data-frame="move">
-                <span class="fa-whistle__item-number">04</span>
-                <span class="fa-whistle__item-name">MOVE</span>
-                <span class="fa-whistle__item-arrow">↗</span>
-            </li>
+                    <span class="fa-whistle-mobile__arrow">↗</span>
 
-            <li class="fa-whistle__item" data-frame="perform">
-                <span class="fa-whistle__item-number">05</span>
-                <span class="fa-whistle__item-name">PERFORM</span>
-                <span class="fa-whistle__item-arrow">↗</span>
-            </li>
+                </li>
+
+            @endforeach
 
         </ol>
 
     </div>
 
-
-    {{-- BOTTOM LABEL --}}
-    <div class="fa-whistle__bottom">
+    <div class="fa-whistle-mobile__bottom">
         <span>FA SPORTS / 2004 — PRESENT</span>
         <strong>THE MOMENT STARTS BEFORE THE GAME.</strong>
     </div>
 
 </section>
 
+{{-- ============ SPORTS WE BUILD FOR ============ --}}
+<section class="fa-sports-showcase" id="disciplines">
 
+    <div class="fa-sports-showcase__heading">
+        <div class="fa-sports-showcase__heading-left">
+            <span class="fa-sports-showcase__index">01 / OUR DISCIPLINES</span>
+            <h2>SPORTS WE <span>BUILD FOR.</span></h2>
+        </div>
 
-{{-- ============ DISCIPLINES ============ --}}
-<section class="fa-disciplines" id="disciplines">
-    <div class="fa-section-head">
-        <span class="fa-section-head__index">01</span>
-        <h2 class="fa-section-head__title">SPORTS WE BUILD FOR</h2>
+        <span class="fa-sports-showcase__count">
+            {{ str_pad($disciplines->count(), 2, '0', STR_PAD_LEFT) }} DISCIPLINES
+        </span>
     </div>
 
-    <div class="fa-disciplines__grid">
+    <div class="fa-sports-showcase__grid">
+
         @foreach ($disciplines as $discipline)
-            <a href="#" class="fa-discipline-panel">
-                <img src="{{ asset($discipline->cover_image) }}" alt="{{ $discipline->name }}" class="fa-discipline-panel__img">
-                <div class="fa-discipline-panel__body">
-                    <h3 class="fa-discipline-panel__name">{{ $discipline->name }}</h3>
-                    <p class="fa-discipline-panel__tag">{{ $discipline->tagline }}</p>
-                </div>
-            </a>
+
+            <article class="fa-sports-card">
+
+                <a href="{{ url('/disciplines') }}"
+                   class="fa-sports-card__link">
+
+                    <div class="fa-sports-card__image">
+
+                        <img
+                            src="{{ asset($discipline->cover_image) }}"
+                            alt="{{ $discipline->name }}"
+                            loading="lazy"
+                        >
+
+                        <span class="fa-sports-card__number">
+                            {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
+                        </span>
+
+                        <span class="fa-sports-card__arrow">↗</span>
+
+                        <div class="fa-sports-card__overlay"></div>
+
+                    </div>
+
+                    <div class="fa-sports-card__content">
+
+                        <div>
+                            <h3>{{ $discipline->name }}</h3>
+
+                            <p>{{ $discipline->tagline }}</p>
+                        </div>
+
+                        <span class="fa-sports-card__explore">
+                            EXPLORE <span>↗</span>
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </article>
+
         @endforeach
+
     </div>
+
+    <div class="fa-sports-showcase__bottom">
+        <span>FA SPORTS / PERFORMANCE SYSTEM</span>
+        <strong>ONE STANDARD. EVERY DISCIPLINE.</strong>
+    </div>
+
 </section>
 
 {{-- ============ PERFORMANCE GEAR (dark, editorial) ============ --}}
@@ -517,8 +537,6 @@
         </strong>
 
     </div>
-
-</section>
 </section>{{-- ============ THE FA STANDARD ============ --}}
 <section class="fa-standard" id="fa-standard">
 
@@ -808,47 +826,48 @@
 {{-- FEATURED STORY --}}
 @if ($featuredStory)
 
-    <article class="fa-playbook__featured">
+    <article class="fa-playbook-main">
 
-        <div class="fa-playbook__featured-visual">
+        {{-- FEATURED IMAGE --}}
+        <div class="fa-playbook-main__image">
 
-            <span class="fa-playbook__featured-number">01</span>
+            <span class="fa-playbook-main__number">01</span>
 
-            <span class="fa-playbook__featured-tag">
+            <span class="fa-playbook-main__tag">
                 FEATURED / THE PLAYBOOK
             </span>
 
-            <span class="fa-playbook__corner fa-playbook__corner--tl"></span>
-            <span class="fa-playbook__corner fa-playbook__corner--br"></span>
+            <span class="fa-playbook-main__corner fa-playbook-main__corner--tl"></span>
+            <span class="fa-playbook-main__corner fa-playbook-main__corner--br"></span>
 
-            <div class="fa-playbook__featured-scan"></div>
+            <div class="fa-playbook-main__scan"></div>
 
             <img
                 src="{{ asset($featuredStory->cover_image) }}"
                 alt="{{ $featuredStory->title }}"
-                class="fa-playbook__featured-img"
+                class="fa-playbook-main__photo"
             >
 
-            <div class="fa-playbook__featured-overlay"></div>
+            <div class="fa-playbook-main__overlay"></div>
 
         </div>
 
+        {{-- FEATURED CONTENT --}}
+        <div class="fa-playbook-main__content">
 
-        <div class="fa-playbook__featured-body">
-
-            <span class="fa-playbook__cat">
+            <span class="fa-playbook-main__category">
                 {{ $featuredStory->category }}
             </span>
 
-            <h3 class="fa-playbook__featured-title">
+            <h3 class="fa-playbook-main__title">
                 {{ $featuredStory->title }}
             </h3>
 
-            <p class="fa-playbook__excerpt">
+            <p class="fa-playbook-main__description">
                 {{ $featuredStory->excerpt }}
             </p>
 
-            <span class="fa-playbook__read">
+            <span class="fa-playbook-main__read">
                 READ STORY <span>↗</span>
             </span>
 

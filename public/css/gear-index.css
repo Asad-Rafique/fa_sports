@@ -4726,3 +4726,42 @@ a {
 .fa-gear-final-stage::after {
     border-color: rgba(0, 0, 0, 0.12) !important;
 }
+
+/* =========================================
+   FA SPORTS — FOOTER WORDMARK MOBILE FIX
+   ========================================= */
+
+.fa-footer__wordmark {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .fa-footer__wordmark {
+        font-size: clamp(42px, 13.5vw, 100px) !important;
+        letter-spacing: -0.055em !important;
+        line-height: 0.95 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 5px !important;
+        margin: 0 auto !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    .fa-footer {
+        overflow-x: clip;
+    }
+}
+
+@media (max-width: 380px) {
+    .fa-footer__wordmark {
+        font-size: 12.5vw !important;
+        letter-spacing: -0.065em !important;
+    }
+}

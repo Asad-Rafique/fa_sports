@@ -5097,3 +5097,1974 @@ css
         max-width: 280px;
     }
 }
+
+/* =========================================================
+   FA SPORTS — COMPLETE RESPONSIVE NAVIGATION
+   DESKTOP / TABLET / MOBILE
+========================================================= */
+
+/* Navigation base */
+.fa-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 110;
+    width: 100%;
+}
+
+.fa-nav,
+.fa-nav__row,
+.fa-nav__actions {
+    min-width: 0;
+}
+
+.fa-nav__logo {
+    flex-shrink: 0;
+}
+
+.fa-nav__links {
+    min-width: 0;
+}
+
+/* Hamburger hidden on desktop */
+.fa-nav__menu-toggle {
+    display: none;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 120;
+    cursor: pointer;
+}
+
+/* Full menu — closed by default */
+.fa-fullmenu {
+    position: fixed;
+    inset: 0;
+    z-index: 105;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    transform: translateY(-101%);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        transform 0.55s var(--ease),
+        visibility 0s linear 0.55s;
+}
+
+/* Full menu — open */
+.fa-fullmenu.is-open {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+        transform 0.55s var(--ease),
+        visibility 0s;
+}
+
+/* Menu layout */
+.fa-fullmenu__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+.fa-fullmenu__list {
+    align-self: center;
+    padding-left: var(--gutter);
+}
+
+.fa-fullmenu__media {
+    position: relative;
+    overflow: hidden;
+}
+
+.fa-fullmenu__media video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hamburger animation */
+.fa-nav__menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.fa-nav__menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.fa-nav__menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1100px) {
+
+    .fa-nav__row {
+        gap: 14px;
+    }
+
+    .fa-nav__links {
+        display: none !important;
+    }
+
+    .fa-nav__menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .fa-nav__actions {
+        margin-left: auto;
+        gap: 14px;
+    }
+
+    .fa-fullmenu__grid {
+        grid-template-columns: 1fr 0.8fr;
+        min-height: 100%;
+        height: auto;
+    }
+
+    .fa-fullmenu__list {
+        padding: 110px 30px 50px;
+    }
+
+    .fa-fullmenu__list li a {
+        display: block;
+        font-size: clamp(28px, 4vw, 52px);
+        padding: 9px 0;
+    }
+
+    .fa-fullmenu__media {
+        min-height: 100%;
+    }
+
+    .fa-fullmenu__media video {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        height: 100dvh;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .fa-nav {
+        padding: 14px 16px;
+    }
+
+    .fa-nav.is-scrolled {
+        padding: 10px 16px;
+    }
+
+    .fa-nav__row {
+        gap: 10px;
+    }
+
+    .fa-nav__brand-mark {
+        flex-shrink: 0;
+    }
+
+    .fa-nav__brand-name {
+        font-size: 14px;
+    }
+
+    .fa-nav__actions {
+        gap: 12px;
+    }
+
+    .fa-nav__icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .fa-nav__cta {
+        display: none !important;
+    }
+
+    .fa-nav__menu-toggle {
+        width: 28px;
+        height: 21px;
+    }
+
+    .fa-fullmenu__grid {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        height: auto;
+    }
+
+    .fa-fullmenu__list {
+        padding: 100px 24px 35px;
+    }
+
+    .fa-fullmenu__list li a {
+        display: block;
+        font-size: clamp(27px, 8vw, 40px);
+        line-height: 1.1;
+        padding: 10px 0;
+    }
+
+    /* Keep menu video visible on mobile */
+    .fa-fullmenu__media {
+        display: block;
+        width: 100%;
+        height: 180px;
+        min-height: 180px;
+        flex-shrink: 0;
+    }
+
+    .fa-fullmenu__media video {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+
+    .fa-nav {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .fa-nav__actions {
+        gap: 9px;
+    }
+
+    .fa-nav__brand-name {
+        font-size: 12px;
+    }
+
+    .fa-fullmenu__list {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .fa-fullmenu,
+    .fa-nav__menu-toggle span {
+        transition: none !important;
+    }
+}
+
+/* =========================================================
+   FA SPORTS — PREMIUM NAVIGATION MENU
+   HAMBURGER + FULLSCREEN MENU
+   RED / BLACK / WHITE
+   RESPONSIVE ALL DEVICES
+========================================================= */
+
+:root {
+    --fa-menu-red: #e10600;
+    --fa-menu-black: #090909;
+    --fa-menu-white: #ffffff;
+    --fa-menu-grey: #888888;
+}
+
+/* =========================================================
+   01. HAMBURGER BUTTON
+========================================================= */
+
+.fa-nav__menu-toggle {
+    position: relative;
+    z-index: 1100;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    background: #111111;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        background .35s ease,
+        border-color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.fa-nav__menu-toggle:hover {
+    background: var(--fa-menu-red);
+    border-color: var(--fa-menu-red);
+    box-shadow: 0 5px 25px rgba(225,6,0,.3);
+}
+
+.fa-nav__menu-toggle > span:not(.fa-nav__menu-label) {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 5px;
+
+    transition:
+        transform .35s ease,
+        width .35s ease,
+        opacity .25s ease;
+}
+
+.fa-nav__menu-toggle > span:nth-child(2) {
+    width: 15px;
+    margin-left: 7px;
+}
+
+.fa-nav__menu-label {
+    display: none !important;
+}
+
+/* HAMBURGER OPEN */
+
+.fa-nav__menu-toggle.active > span:first-child {
+    transform: translateY(4.5px) rotate(45deg);
+}
+
+.fa-nav__menu-toggle.active > span:nth-child(2) {
+    width: 22px;
+    margin-left: 0;
+    transform: translateY(-4.5px) rotate(-45deg);
+}
+
+/* =========================================================
+   02. FULLSCREEN MENU
+========================================================= */
+
+.fa-fullmenu {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1050;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: var(--fa-menu-black);
+    color: #ffffff;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    clip-path: inset(0 0 100% 0);
+
+    transition:
+        clip-path .65s cubic-bezier(.77,0,.18,1),
+        opacity .4s ease,
+        visibility .65s ease;
+}
+
+/* OPEN MENU */
+
+.fa-fullmenu.active,
+.fa-fullmenu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    clip-path: inset(0 0 0 0);
+}
+
+/* =========================================================
+   03. MENU INNER
+========================================================= */
+
+.fa-fullmenu__inner {
+    width: 100%;
+    min-height: 100%;
+
+    padding: 115px 7% 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   04. MENU TOP HEADER
+========================================================= */
+
+.fa-fullmenu__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid rgba(255,255,255,.16);
+}
+
+.fa-fullmenu__eyebrow {
+    color: var(--fa-menu-red);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.fa-fullmenu__index {
+    color: #777777;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   05. MENU GRID
+========================================================= */
+
+.fa-fullmenu__grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+
+    gap: 55px;
+
+    align-items: stretch;
+    flex: 1;
+}
+
+.fa-fullmenu__navigation {
+    width: 100%;
+    min-width: 0;
+}
+
+/* =========================================================
+   06. NAVIGATION LIST
+========================================================= */
+
+.fa-fullmenu__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.fa-fullmenu__list li {
+    width: 100%;
+    margin: 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.13);
+}
+
+.fa-fullmenu__list li a {
+    position: relative;
+
+    width: 100%;
+    min-height: 58px;
+
+    display: grid;
+    grid-template-columns: 38px minmax(0,1fr) 25px;
+
+    align-items: center;
+    gap: 12px;
+
+    padding: 8px 12px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        background .3s ease,
+        padding .3s ease;
+}
+
+/* NUMBER */
+
+.fa-fullmenu__number {
+    color: var(--fa-menu-red);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    transition: color .3s ease;
+}
+
+/* LINK TEXT */
+
+.fa-fullmenu__link-text {
+    color: #ffffff;
+
+    font-size: clamp(15px, 1.5vw, 21px);
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+/* ARROW */
+
+.fa-fullmenu__arrow {
+    color: #777777;
+
+    font-size: 19px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(-7px, 7px);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        color .3s ease;
+}
+
+/* HOVER */
+
+.fa-fullmenu__list li a:hover {
+    padding-left: 22px;
+    background: rgba(225,6,0,.09);
+}
+
+.fa-fullmenu__list li a:hover .fa-fullmenu__link-text {
+    color: var(--fa-menu-red);
+    transform: translateX(5px);
+}
+
+.fa-fullmenu__list li a:hover .fa-fullmenu__arrow {
+    opacity: 1;
+    transform: translate(0,0);
+    color: var(--fa-menu-red);
+}
+
+/* =========================================================
+   07. CONTACT US LINK
+========================================================= */
+
+.fa-fullmenu__list li:last-child a {
+    margin-top: 15px;
+
+    background: var(--fa-menu-red);
+    border: 1px solid var(--fa-menu-red);
+    border-radius: 3px;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease;
+}
+
+.fa-fullmenu__list li:last-child .fa-fullmenu__number,
+.fa-fullmenu__list li:last-child .fa-fullmenu__link-text,
+.fa-fullmenu__list li:last-child .fa-fullmenu__arrow {
+    color: #ffffff;
+}
+
+.fa-fullmenu__list li:last-child .fa-fullmenu__arrow {
+    opacity: 1;
+    transform: none;
+}
+
+.fa-fullmenu__list li:last-child a:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.fa-fullmenu__list li:last-child a:hover .fa-fullmenu__number,
+.fa-fullmenu__list li:last-child a:hover .fa-fullmenu__link-text,
+.fa-fullmenu__list li:last-child a:hover .fa-fullmenu__arrow {
+    color: var(--fa-menu-red);
+}
+
+/* =========================================================
+   08. MENU VIDEO
+========================================================= */
+
+.fa-fullmenu__media {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 480px;
+
+    overflow: hidden;
+
+    background: #171717;
+    border-radius: 4px;
+}
+
+.fa-fullmenu__media video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.fa-fullmenu__media::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,.05) 0%,
+        rgba(0,0,0,.25) 40%,
+        rgba(0,0,0,.9) 100%
+    );
+
+    pointer-events: none;
+}
+
+/* VIDEO TEXT */
+
+.fa-fullmenu__media-overlay {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.fa-fullmenu__media-overlay > span:first-child {
+    color: var(--fa-menu-red);
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.fa-fullmenu__media-overlay h3 {
+    color: #ffffff;
+
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: 900;
+    line-height: .98;
+
+    margin: 15px 0 25px;
+}
+
+.fa-fullmenu__media-bottom {
+    color: #cccccc;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   09. MENU FOOTER
+========================================================= */
+
+.fa-fullmenu__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 25px;
+    margin-top: 30px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.fa-fullmenu__footer span {
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   10. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .fa-fullmenu__inner {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .fa-fullmenu__grid {
+        grid-template-columns: 1fr .8fr;
+        gap: 30px;
+    }
+
+    .fa-fullmenu__media {
+        min-height: 420px;
+    }
+
+    .fa-fullmenu__list li a {
+        min-height: 54px;
+    }
+
+}
+
+/* =========================================================
+   11. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .fa-nav__menu-toggle {
+        width: 46px;
+        height: 46px;
+    }
+
+    .fa-fullmenu__inner {
+        padding: 100px 22px 25px;
+    }
+
+    .fa-fullmenu__top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+
+        margin-bottom: 20px;
+    }
+
+    .fa-fullmenu__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .fa-fullmenu__list li a {
+        min-height: 54px;
+
+        grid-template-columns: 30px minmax(0,1fr) 20px;
+        gap: 10px;
+
+        padding: 8px 5px;
+    }
+
+    .fa-fullmenu__link-text {
+        font-size: clamp(14px, 4vw, 18px);
+        letter-spacing: .7px;
+    }
+
+    .fa-fullmenu__arrow {
+        opacity: 1;
+        transform: none;
+        font-size: 16px;
+    }
+
+    .fa-fullmenu__media {
+        height: 300px;
+        min-height: 300px;
+    }
+
+    .fa-fullmenu__media-overlay {
+        padding: 25px;
+    }
+
+    .fa-fullmenu__media-overlay h3 {
+        font-size: 38px;
+    }
+
+    .fa-fullmenu__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
+
+/* =========================================================
+   12. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .fa-nav__menu-toggle {
+        width: 43px;
+        height: 43px;
+    }
+
+    .fa-fullmenu__inner {
+        padding: 90px 17px 20px;
+    }
+
+    .fa-fullmenu__top {
+        padding-bottom: 18px;
+    }
+
+    .fa-fullmenu__list li a {
+        min-height: 50px;
+        grid-template-columns: 27px minmax(0,1fr) 18px;
+    }
+
+    .fa-fullmenu__number {
+        font-size: 9px;
+    }
+
+    .fa-fullmenu__link-text {
+        font-size: 13px;
+        letter-spacing: .5px;
+    }
+
+    .fa-fullmenu__media {
+        height: 240px;
+        min-height: 240px;
+    }
+
+    .fa-fullmenu__media-overlay {
+        padding: 20px;
+    }
+
+    .fa-fullmenu__media-overlay h3 {
+        font-size: 32px;
+    }
+
+    .fa-fullmenu__footer span {
+        font-size: 8px;
+    }
+
+}
+
+/* =========================================================
+   13. EXTRA SMALL SCREENS
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .fa-fullmenu__inner {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .fa-fullmenu__link-text {
+        font-size: 12px;
+    }
+
+    .fa-fullmenu__list li a {
+        min-height: 46px;
+    }
+
+    .fa-fullmenu__media {
+        height: 210px;
+        min-height: 210px;
+    }
+
+}
+
+/* =========================================================
+   14. ACCESSIBILITY & REDUCED MOTION
+========================================================= */
+
+.fa-nav__menu-toggle:focus-visible,
+.fa-fullmenu a:focus-visible {
+    outline: 2px solid var(--fa-menu-red);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fa-fullmenu,
+    .fa-nav__menu-toggle,
+    .fa-nav__menu-toggle span,
+    .fa-fullmenu__list li a,
+    .fa-fullmenu__link-text,
+    .fa-fullmenu__arrow {
+        transition: none !important;
+    }
+
+}
+.fa-cinematic-image,
+.fa-image-reveal,
+.fa-scroll-reveal,
+.fa-scroll-reveal.is-visible,
+.fa-cinematic-image.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fa-cinematic-image img,
+.fa-image-reveal img {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==========================================
+   FA SPORTS — BEFORE THE WHISTLE
+   ISOLATED RESPONSIVE DESIGN
+========================================== */
+
+.fa-whistle-mobile {
+    width: 100%;
+    max-width: 100%;
+    padding: 100px 6%;
+    background: #f5f5f3;
+    color: #0b0b0b;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.fa-whistle-mobile *,
+.fa-whistle-mobile *::before,
+.fa-whistle-mobile *::after {
+    box-sizing: border-box;
+}
+
+.fa-whistle-mobile__heading {
+    margin-bottom: 55px;
+}
+
+.fa-whistle-mobile__eyebrow {
+    display: block;
+    color: #e10600;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.fa-whistle-mobile__title {
+    margin: 0;
+    font-size: clamp(42px, 7vw, 90px);
+    line-height: .88;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.fa-whistle-mobile__title span {
+    color: #e10600;
+}
+
+.fa-whistle-mobile__main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 35px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.fa-whistle-mobile__stage {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+    background: #111;
+}
+
+.fa-whistle-mobile__frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.fa-whistle-mobile__frame.is-active {
+    opacity: 1;
+}
+
+.fa-whistle-mobile__overlay {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    background: linear-gradient(transparent, rgba(0,0,0,.8));
+}
+
+.fa-whistle-mobile__overlay span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.fa-whistle-mobile__overlay strong {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.fa-whistle-mobile__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.fa-whistle-mobile__item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 23px 5px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.fa-whistle-mobile__number {
+    font-size: 11px;
+    color: #999;
+}
+
+.fa-whistle-mobile__name {
+    font-size: 23px;
+    font-weight: 900;
+    flex: 1;
+}
+
+.fa-whistle-mobile__arrow {
+    color: #e10600;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.fa-whistle-mobile__item.is-active .fa-whistle-mobile__name,
+.fa-whistle-mobile__item:hover .fa-whistle-mobile__name {
+    color: #e10600;
+}
+
+.fa-whistle-mobile__item.is-active .fa-whistle-mobile__arrow,
+.fa-whistle-mobile__item:hover .fa-whistle-mobile__arrow {
+    opacity: 1;
+}
+
+.fa-whistle-mobile__bottom {
+    margin-top: 45px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.fa-whistle-mobile__bottom strong {
+    text-align: right;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .fa-whistle-mobile {
+        padding: 75px 5%;
+    }
+
+    .fa-whistle-mobile__main {
+        grid-template-columns: minmax(0, 1fr) 190px;
+        gap: 20px;
+    }
+
+    .fa-whistle-mobile__stage {
+        height: 460px;
+    }
+
+    .fa-whistle-mobile__name {
+        font-size: 19px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .fa-whistle-mobile {
+        padding: 48px 18px 35px;
+    }
+
+    .fa-whistle-mobile__heading {
+        margin-bottom: 25px;
+    }
+
+    .fa-whistle-mobile__eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        margin-bottom: 13px;
+    }
+
+    .fa-whistle-mobile__title {
+        font-size: clamp(38px, 10vw, 54px);
+        line-height: .95;
+        letter-spacing: -2px;
+    }
+
+    .fa-whistle-mobile__main {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .fa-whistle-mobile__stage {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        min-height: 0;
+    }
+
+    .fa-whistle-mobile__frame {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fa-whistle-mobile__overlay {
+        padding: 22px 16px;
+    }
+
+    .fa-whistle-mobile__overlay span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .fa-whistle-mobile__overlay strong {
+        font-size: 19px;
+    }
+
+    .fa-whistle-mobile__list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 12px;
+        margin-top: 18px;
+    }
+
+    .fa-whistle-mobile__item {
+        padding: 15px 2px;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .fa-whistle-mobile__number {
+        font-size: 9px;
+    }
+
+    .fa-whistle-mobile__name {
+        font-size: clamp(13px, 4vw, 16px);
+    }
+
+    .fa-whistle-mobile__arrow {
+        font-size: 13px;
+    }
+
+    .fa-whistle-mobile__bottom {
+        margin-top: 25px;
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .fa-whistle-mobile__bottom strong {
+        text-align: left;
+        font-size: 9px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 360px) {
+
+    .fa-whistle-mobile {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .fa-whistle-mobile__title {
+        font-size: 37px;
+    }
+
+    .fa-whistle-mobile__stage {
+        aspect-ratio: 4 / 5;
+    }
+
+    .fa-whistle-mobile__name {
+        font-size: 13px;
+    }
+}
+
+/* BEFORE THE WHISTLE — SMALLER MOBILE IMAGE */
+
+@media (max-width: 600px) {
+
+    .fa-whistle-mobile__stage {
+        width: 82%;
+        margin: 0 auto;
+        aspect-ratio: 4 / 5;
+        height: auto;
+        min-height: 0;
+    }
+
+    .fa-whistle-mobile__frame {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+/* BEFORE THE WHISTLE — SMALLER MOBILE IMAGE */
+
+@media (max-width: 600px) {
+
+    .fa-whistle-mobile__stage {
+        width: 88%;
+        margin: 0 auto;
+        aspect-ratio: 4 / 5;
+        height: auto;
+        min-height: 0;
+    }
+
+    .fa-whistle-mobile__frame {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+/* FORCE FIX — BEFORE THE WHISTLE MOBILE IMAGE */
+
+@media screen and (max-width: 600px) {
+
+    section.fa-whistle-mobile .fa-whistle-mobile__stage {
+        display: block !important;
+        width: 100% !important;
+        height: 240px !important;
+        min-height: 240px !important;
+        max-height: 240px !important;
+        aspect-ratio: unset !important;
+        overflow: hidden !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+
+    section.fa-whistle-mobile .fa-whistle-mobile__frame {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
+    }
+
+}
+/* SPORTS WE BUILD FOR — COMPACT IMAGES */
+
+.fa-disciplines__grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+}
+
+.fa-discipline-panel {
+    height: 280px !important;
+    min-height: 280px !important;
+    overflow: hidden !important;
+}
+
+.fa-discipline-panel__img {
+    width: 65% !important;
+    height: 160px !important;
+    max-height: 160px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 15px auto 0 !important;
+}
+
+.fa-discipline-panel__body {
+    padding: 12px !important;
+}
+
+@media(max-width: 600px) {
+    .fa-disciplines__grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .fa-discipline-panel {
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+
+    .fa-discipline-panel__img {
+        width: 75% !important;
+        height: 125px !important;
+        max-height: 125px !important;
+    }
+}
+/* FIX: SPORTS WE BUILD FOR VISIBILITY */
+.fa-disciplines,
+.fa-disciplines *,
+.fa-disciplines.is-hidden,
+.fa-disciplines[data-aos],
+.fa-disciplines [data-aos] {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.fa-disciplines {
+    display: block !important;
+    height: auto !important;
+    min-height: 300px !important;
+    transform: none !important;
+}
+/* ==========================================
+   PLAYBOOK — MOBILE FEATURED STORY FIX
+========================================== */
+
+@media (max-width: 768px) {
+
+    .fa-playbook {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .fa-playbook__featured {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 24px 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    /* THE ANATOMY OF PREPARATION IMAGE */
+
+    .fa-playbook__featured-visual {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .fa-playbook__featured-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .fa-playbook__featured-number {
+        top: 12px;
+        left: 12px;
+        font-size: 12px;
+    }
+
+    .fa-playbook__featured-tag {
+        left: 12px;
+        right: 12px;
+        max-width: calc(100% - 24px);
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    /* FEATURED STORY TEXT */
+
+    .fa-playbook__featured-body {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 20px 4px;
+        box-sizing: border-box;
+    }
+
+    .fa-playbook__featured-title {
+        max-width: 100%;
+        font-size: clamp(25px, 7vw, 34px);
+        line-height: 1.1;
+        overflow-wrap: break-word;
+    }
+
+    .fa-playbook__excerpt {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+    .fa-playbook__cat,
+    .fa-playbook__read {
+        max-width: 100%;
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .fa-playbook {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .fa-playbook__featured-visual {
+        aspect-ratio: 1 / 1;
+    }
+
+    .fa-playbook__featured-title {
+        font-size: 25px;
+    }
+
+}
+/* ==========================================
+   FA SPORTS — FEATURED PLAYBOOK STORY
+   Desktop + Mobile Responsive
+========================================== */
+
+.fa-playbook-main {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 35px 0 55px;
+    background: #f5f5f3;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* IMAGE AREA */
+
+.fa-playbook-main__image {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 420px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #111;
+    box-sizing: border-box;
+}
+
+.fa-playbook-main__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+
+.fa-playbook-main:hover .fa-playbook-main__photo {
+    transform: scale(1.04);
+}
+
+/* IMAGE OVERLAY */
+
+.fa-playbook-main__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.25),
+        transparent 35%,
+        rgba(0,0,0,0.25)
+    );
+    pointer-events: none;
+}
+
+.fa-playbook-main__number {
+    position: absolute;
+    z-index: 3;
+    top: 22px;
+    left: 22px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.fa-playbook-main__tag {
+    position: absolute;
+    z-index: 3;
+    top: 24px;
+    right: 22px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.fa-playbook-main__corner {
+    position: absolute;
+    z-index: 3;
+    width: 28px;
+    height: 28px;
+    border-color: #e10600;
+    border-style: solid;
+    pointer-events: none;
+}
+
+.fa-playbook-main__corner--tl {
+    top: 12px;
+    left: 12px;
+    border-width: 2px 0 0 2px;
+}
+
+.fa-playbook-main__corner--br {
+    right: 12px;
+    bottom: 12px;
+    border-width: 0 2px 2px 0;
+}
+
+.fa-playbook-main__scan {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background: linear-gradient(
+        110deg,
+        transparent 40%,
+        rgba(255,255,255,0.08) 50%,
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+/* CONTENT AREA */
+
+.fa-playbook-main__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 0;
+    width: 100%;
+    padding: 45px;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+.fa-playbook-main__category {
+    color: #e10600;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.fa-playbook-main__title {
+    width: 100%;
+    margin: 0 0 20px;
+    color: #0b0b0b;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+.fa-playbook-main__description {
+    width: 100%;
+    margin: 0 0 28px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.fa-playbook-main__read {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #0b0b0b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.fa-playbook-main__read span {
+    color: #e10600;
+    font-size: 19px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .fa-playbook-main {
+        grid-template-columns: 1fr 0.85fr;
+    }
+
+    .fa-playbook-main__image {
+        min-height: 320px;
+    }
+
+    .fa-playbook-main__content {
+        padding: 25px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .fa-playbook-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 22px 0 35px;
+        overflow: hidden;
+    }
+
+    .fa-playbook-main__image {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+    }
+
+    .fa-playbook-main__photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .fa-playbook-main__number {
+        top: 14px;
+        left: 14px;
+        font-size: 11px;
+    }
+
+    .fa-playbook-main__tag {
+        top: 16px;
+        right: 14px;
+        max-width: calc(100% - 75px);
+        font-size: 8px;
+        letter-spacing: 1px;
+        text-align: right;
+    }
+
+    .fa-playbook-main__corner {
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-playbook-main__content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 23px 18px 25px;
+        box-sizing: border-box;
+    }
+
+    .fa-playbook-main__category {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-bottom: 13px;
+    }
+
+    .fa-playbook-main__title {
+        width: 100%;
+        font-size: clamp(25px, 7vw, 34px);
+        line-height: 1.08;
+        margin-bottom: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .fa-playbook-main__description {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .fa-playbook-main__read {
+        font-size: 10px;
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .fa-playbook-main__content {
+        padding: 20px 14px;
+    }
+
+    .fa-playbook-main__image {
+        aspect-ratio: 1 / 1;
+    }
+
+    .fa-playbook-main__title {
+        font-size: 25px;
+    }
+
+}
+/* =========================================
+   FA SPORTS — PLAYBOOK MOBILE IMAGE FIX
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .fa-playbook__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .fa-playbook__card {
+        min-width: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .fa-playbook__card-visual {
+        width: 100%;
+        height: 190px;
+        min-height: 190px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .fa-playbook__card-img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+        transform: scale(0.88);
+    }
+
+    .fa-playbook__card-body {
+        min-width: 0;
+        padding: 12px 8px;
+    }
+
+    .fa-playbook__card-title {
+        font-size: 12px;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+
+    .fa-playbook__card-tag {
+        font-size: 8px;
+    }
+}
+
+
+/* SMALL MOBILE SCREENS */
+
+@media screen and (max-width: 480px) {
+
+    .fa-playbook__grid {
+        gap: 9px;
+    }
+
+    .fa-playbook__card-visual {
+        height: 165px;
+        min-height: 165px;
+    }
+
+    .fa-playbook__card-img {
+        transform: scale(0.82);
+    }
+
+    .fa-playbook__card-body {
+        padding: 10px 6px;
+    }
+
+}
+
+/* =====================================================
+   FA SPORTS — THE ESSENTIALS
+   MOBILE CARD & IMAGE FIX
+   Desktop design remains unchanged
+===================================================== */
+
+@media screen and (max-width: 767px) {
+
+    .fa-editorial {
+        width: 100%;
+        padding: 45px 16px 50px;
+        overflow: hidden;
+    }
+
+    .fa-editorial .fa-section-head {
+        margin-bottom: 24px;
+    }
+
+    .fa-editorial__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .fa-editorial__card {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .fa-editorial__visual {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        min-height: 260px;
+        max-height: 260px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fa-editorial__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+    .fa-editorial__meta {
+        width: 100%;
+        min-height: 65px;
+        padding: 13px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .fa-editorial__name {
+        margin: 5px 0 0;
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .fa-editorial__number,
+    .fa-editorial__category {
+        font-size: 9px;
+    }
+
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media screen and (max-width: 380px) {
+
+    .fa-editorial {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .fa-editorial__visual {
+        height: 225px;
+        min-height: 225px;
+        max-height: 225px;
+    }
+
+    .fa-editorial__meta {
+        min-height: 58px;
+        padding: 11px;
+    }
+
+}
+
+/* =========================================
+   FA SPORTS FOOTER WORDMARK - MOBILE FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+    .fa-footer__wordmark {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: clamp(42px, 13.5vw, 76px) !important;
+        line-height: 0.95 !important;
+
+        letter-spacing: -0.07em !important;
+        white-space: nowrap !important;
+
+        text-align: center !important;
+        overflow: visible !important;
+
+        padding: 15px 5px !important;
+        margin: 20px auto !important;
+
+        box-sizing: border-box !important;
+    }
+
+}
+
+
+
+
+
+
+
+
