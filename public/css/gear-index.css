@@ -4765,3 +4765,311 @@ a {
         letter-spacing: -0.065em !important;
     }
 }
+.fa-gi-gear-wall__overlay {
+    pointer-events: none;
+}
+
+.fa-gi-gear-wall__image > a {
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+
+.fa-gi-gear-wall__image > a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* FIX: GEAR INDEX IMAGE OVERLAY TEXT */
+
+.fa-gi-gear-wall__image {
+    position: relative;
+    overflow: hidden;
+}
+
+.fa-gi-gear-wall__label {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 5;
+    width: auto;
+    max-width: calc(100% - 48px);
+}
+
+.fa-gi-gear-wall__label h3,
+.fa-gi-gear-wall__label small {
+    display: block;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+}
+
+.fa-gi-gear-wall__number,
+.fa-gi-gear-wall__code {
+    z-index: 6;
+}
+/* FIX: GEAR INDEX SIDE IMAGE FULL DISPLAY */
+
+.fa-gi-gear-wall__image > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fa-gi-gear-wall__image > a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =====================================================
+   FA SPORTS — FOOTWEAR LAB CLICK FIX
+   MAKE PRODUCT IMAGES FULLY CLICKABLE
+===================================================== */
+
+.fa-gi-footwear-lab__hero > a,
+.fa-gi-footwear-card__image > a {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 20 !important;
+    cursor: pointer !important;
+}
+
+.fa-gi-footwear-lab__hero > a img,
+.fa-gi-footwear-card__image > a img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    pointer-events: none !important;
+}
+
+/* Decorative layers must not block clicks */
+
+.fa-gi-footwear-lab__hero-grid,
+.fa-gi-footwear-lab__hero-gradient,
+.fa-gi-footwear-lab__hero-crosshair,
+.fa-gi-footwear-card__corner {
+    pointer-events: none !important;
+}
+
+/* Keep image containers positioned */
+
+.fa-gi-footwear-lab__hero,
+.fa-gi-footwear-card__image {
+    position: relative !important;
+}
+/* =========================================
+   FA SPORTS — GLOVE IMAGE LINK FIX
+========================================= */
+
+.fa-gi-glove-card__image {
+    position: relative !important;
+}
+
+.fa-gi-glove-card__image > a {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 50 !important;
+    cursor: pointer !important;
+}
+
+.fa-gi-glove-card__image > a img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    pointer-events: none !important;
+}
+
+.fa-gi-glove-card__image > span,
+.fa-gi-glove-card__image > div {
+    pointer-events: none !important;
+}
+/* FA SPORTS — BAG IMAGE LINK FIX */
+
+.fa-gi-bag-card__image {
+    position: relative !important;
+}
+
+.fa-gi-bag-card__image > a {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 50 !important;
+    cursor: pointer !important;
+}
+
+.fa-gi-bag-card__image > a img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    pointer-events: none !important;
+}
+
+.fa-gi-bag-card__image > span,
+.fa-gi-bag-card__image > div {
+    pointer-events: none !important;
+}
+
+/* FA SPORTS — FOOTWEAR, GLOVES & BAGS CLICK FIX */
+
+
+/* =====================================================
+   FA SPORTS — GEAR IMAGE LINK FIX
+   FOOTWEAR / GLOVES / BAGS
+===================================================== */
+
+/* Main gear wall */
+.fa-gi-gear-wall__image > a {
+    position: relative !important;
+    display: block !important;
+    z-index: 10 !important;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto !important;
+}
+
+.fa-gi-gear-wall__image > a img {
+    pointer-events: none !important;
+}
+
+/* Overlay must not block links */
+.fa-gi-gear-wall__overlay {
+    pointer-events: none !important;
+}
+
+/* Footwear */
+.fa-gi-footwear-lab__hero > a,
+.fa-gi-footwear-card__image > a {
+    position: relative !important;
+    display: block !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.fa-gi-footwear-lab__hero > a img,
+.fa-gi-footwear-card__image > a img {
+    pointer-events: none !important;
+}
+
+/* Gloves */
+.fa-gi-glove-card__image > a {
+    position: relative !important;
+    display: block !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.fa-gi-glove-card__image > a img {
+    pointer-events: none !important;
+}
+
+.fa-gi-glove-card__shade {
+    pointer-events: none !important;
+}
+
+/* Bags */
+.fa-gi-bag-room__feature-image > a {
+    position: relative !important;
+    display: block !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.fa-gi-bag-room__feature-image > a img {
+    pointer-events: none !important;
+}
+
+.fa-gi-bag-room__feature-overlay {
+    pointer-events: none !important;
+}
+/* BUILD TO PROTECT — CLICK FIX */
+.fa-gi-protection-card__image > a,
+.fa-gi-protection-card__image a {
+    position: relative !important;
+    z-index: 20 !important;
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+.fa-gi-protection-card__image > a img {
+    pointer-events: none !important;
+}
+
+.fa-gi-protection-card__overlay,
+.fa-gi-protection-card__shade {
+    pointer-events: none !important;
+}
+/* HELMET IMAGE LINK CLICK FIX */
+
+.fa-gi-protection__image {
+    position: relative;
+}
+
+.fa-gi-protection__image > a {
+    position: absolute;
+    inset: 0;
+    display: block;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.fa-gi-protection__image > a img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.fa-gi-protection__image-grid {
+    pointer-events: none;
+}
+
+.fa-gi-protection__hero-title {
+    pointer-events: none;
+}
+/* GEAR INDEX — IMAGE SIZE FIX */
+
+.fa-gi-product-index__image {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.fa-gi-product-index__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fa-gi-protection__image {
+    width: 100%;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.fa-gi-protection__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+

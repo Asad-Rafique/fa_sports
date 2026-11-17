@@ -400,7 +400,20 @@
                         </p>
                     </div>
 
-                    <span class="fa-editorial__arrow">↗</span>
+                    
+
+@php
+    $essentialSlugs = [
+        0 => 'cap',
+        1 => 'bag',
+        2 => 'boxing-gloves',
+    ];
+@endphp
+
+<a href="{{ route('essentials.show', ['product' => $essentialSlugs[$i]]) }}"
+   class="fa-system__arrow">↗</a>
+
+
 
                 </div>
 
@@ -711,7 +724,8 @@
                 <h3>PERFORMANCE<br>APPAREL.</h3>
             </div>
 
-            <span class="fa-system__arrow">↗</span>
+            <a href="{{ url('/gear-index#match-kit-archive') }}"
+   class="fa-system__arrow">↗</a>
 
         </div>
 
@@ -750,7 +764,8 @@
                 <h3>MOVE<br><span>FASTER.</span></h3>
             </div>
 
-            <span class="fa-system__arrow">↗</span>
+            <a href="{{ url('/gear-index#footwear-lab') }}"
+   class="fa-system__arrow">↗</a>
 
         </div>
 
@@ -789,7 +804,8 @@
                 <h3>READY<br><span>FOR MORE.</span></h3>
             </div>
 
-            <span class="fa-system__arrow">↗</span>
+            <a href="{{ url('/gear-index#glove-archive') }}"
+   class="fa-system__arrow">↗</a>
 
         </div>
 
@@ -878,7 +894,9 @@
 @endif
 
 
-{{-- FOUR VISUAL STORIES --}}
+
+{{-- FOUR INTERACTIVE VISUAL STORIES --}}
+
 @php
     $playbookImages = [
         0 => 'images/legacy/fa-crest-cap.jpg',
@@ -900,20 +918,26 @@
         2 => 'BUILT TO MOVE.',
         3 => 'ONE SQUAD. ONE IDENTITY.',
     ];
-@endphp
 
+    $playbookDescriptions = [
+        0 => 'The smallest details make a lasting impression. FA SPORTS essentials combine practical design, everyday comfort and a distinctive sporting identity. Every element is designed to complement the athlete on and off the field.',
+
+        1 => 'Confidence starts with control. FA SPORTS performance gloves are designed around grip, comfort and a secure feel. Built to support athletes through demanding training sessions and competitive moments.',
+
+        2 => 'Every movement demands the right foundation. FA SPORTS footwear focuses on comfort, support and movement-driven construction, helping athletes stay ready for every step, sprint and change of direction.',
+
+        3 => 'A team is more than a collection of players. It is one identity. FA SPORTS teamwear brings coordinated colours, custom designs and performance-focused apparel together to create a unified squad.',
+    ];
+@endphp
 
 <div class="fa-playbook__grid">
 
     @foreach ($playbookImages as $i => $image)
 
-        <article class="fa-playbook__card">
+        <article class="fa-playbook__card"
+                 data-playbook-card>
 
             <div class="fa-playbook__card-visual">
-
-                <span class="fa-playbook__card-number">
-                    0{{ $i + 2 }}
-                </span>
 
                 <span class="fa-playbook__card-tag">
                     {{ $playbookLabels[$i] }}
@@ -928,23 +952,50 @@
                     src="{{ asset($image) }}"
                     alt="{{ $playbookTitles[$i] }}"
                     class="fa-playbook__card-img"
+                    loading="lazy"
                 >
 
             </div>
 
-
             <div class="fa-playbook__card-body">
 
-                <span class="fa-playbook__card-category">
-                    {{ $playbookLabels[$i] }}
-                </span>
+                <div>
+                    <span class="fa-playbook__card-category">
+                        {{ $playbookLabels[$i] }}
+                    </span>
 
-                <h4 class="fa-playbook__card-title">
-                    {{ $playbookTitles[$i] }}
-                </h4>
+                    <h4 class="fa-playbook__card-title">
+                        {{ $playbookTitles[$i] }}
+                    </h4>
+                </div>
 
-                <span class="fa-playbook__card-arrow">
+                <button
+                    type="button"
+                    class="fa-playbook__card-arrow"
+                    data-playbook-toggle
+                    aria-expanded="false"
+                    aria-label="Read more about {{ $playbookLabels[$i] }}"
+                >
                     ↗
+                </button>
+
+            </div>
+
+            {{-- EXPANDABLE INFORMATION --}}
+
+            <div class="fa-playbook__details"
+                 hidden>
+
+                <h5>
+                    {{ $playbookTitles[$i] }}
+                </h5>
+
+                <p>
+                    {{ $playbookDescriptions[$i] }}
+                </p>
+
+                <span class="fa-playbook__details-footer">
+                    FA SPORTS / THE PLAYBOOK
                 </span>
 
             </div>
@@ -954,6 +1005,7 @@
     @endforeach
 
 </div>
+
 
 
 {{-- TRENDING TICKER --}}

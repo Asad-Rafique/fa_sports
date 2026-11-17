@@ -7130,6 +7130,583 @@
     }
 }
 
+/* =====================================================
+   FA SPORTS — COLLECTION CAMPAIGN TAKEOVER
+===================================================== */
+
+.fa-campaign {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease, visibility .4s ease;
+    font-family: inherit;
+}
+
+.fa-campaign.is-active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fa-campaign__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.94);
+    backdrop-filter: blur(16px);
+}
+
+.fa-campaign__screen {
+    --campaign-accent: #e10600;
+    position: absolute;
+    inset: 2.5%;
+    overflow: hidden;
+    background: #f5f5f3;
+    color: #0b0b0b;
+    padding: 28px 4%;
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    transform: translateY(35px) scale(.97);
+    transition: transform .55s cubic-bezier(.2,.8,.2,1);
+}
+
+.fa-campaign.is-active .fa-campaign__screen {
+    transform: translateY(0) scale(1);
+}
+
+.fa-campaign__screen[data-theme="men"] {
+    --campaign-accent: #e10600;
+    background: #111;
+    color: #fff;
+}
+
+.fa-campaign__screen[data-theme="kids"] {
+    --campaign-accent: #e10600;
+    background: #f0eee8;
+    color: #101010;
+}
+
+.fa-campaign__close {
+    position: absolute;
+    z-index: 10;
+    top: 24px;
+    right: 4%;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    width: 74px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fa-campaign__close span {
+    font-size: 20px;
+}
+
+.fa-campaign__close small {
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.fa-campaign__close:hover {
+    background: var(--campaign-accent);
+    color: white;
+    border-color: var(--campaign-accent);
+}
+
+.fa-campaign__top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 105px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.fa-campaign__watermark {
+    position: absolute;
+    z-index: -1;
+    top: 12%;
+    right: -2%;
+    font-size: clamp(100px, 19vw, 270px);
+    line-height: .8;
+    font-weight: 950;
+    letter-spacing: -13px;
+    opacity: .045;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.fa-campaign__layout {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 6%;
+    align-items: center;
+    padding: 30px 0 22px;
+}
+
+.fa-campaign__visual {
+    height: 100%;
+    min-height: 350px;
+    max-height: 650px;
+    position: relative;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.fa-campaign__visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s cubic-bezier(.2,.8,.2,1);
+}
+
+.fa-campaign.is-active .fa-campaign__visual img {
+    animation: faCampaignImage .9s ease both;
+}
+
+@keyframes faCampaignImage {
+    from { transform: scale(1.09); opacity: .5; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.fa-campaign__image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,.65),
+        transparent 35%,
+        transparent 70%,
+        rgba(0,0,0,.12)
+    );
+    pointer-events: none;
+}
+
+.fa-campaign__image-number {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: white;
+    font-size: 65px;
+    line-height: 1;
+    font-weight: 900;
+    opacity: .9;
+}
+
+.fa-campaign__image-caption {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.fa-campaign__details {
+    max-width: 560px;
+    padding: 25px 0;
+    animation: faCampaignText .65s ease both;
+}
+
+@keyframes faCampaignText {
+    from { opacity: 0; transform: translateX(25px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.fa-campaign__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--campaign-accent);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    margin-bottom: 25px;
+}
+
+.fa-campaign__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--campaign-accent);
+}
+
+.fa-campaign__details h2 {
+    font-size: clamp(35px, 5vw, 76px);
+    line-height: .95;
+    letter-spacing: -3px;
+    font-weight: 950;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.fa-campaign__divider {
+    width: 65px;
+    height: 4px;
+    background: var(--campaign-accent);
+    margin: 27px 0;
+}
+
+.fa-campaign__details p {
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 1.9;
+    opacity: .75;
+    margin: 0 0 27px;
+}
+
+.fa-campaign__features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: 28px;
+}
+
+.fa-campaign__features div {
+    padding: 15px 8px 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.fa-campaign__features div + div {
+    padding-left: 12px;
+    border-left: 1px solid currentColor;
+}
+
+.fa-campaign__features strong {
+    color: var(--campaign-accent);
+    font-size: 22px;
+}
+
+.fa-campaign__features span {
+    font-size: 8px;
+    line-height: 1.5;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+
+.fa-campaign__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 330px;
+    padding: 19px 22px;
+    background: var(--campaign-accent);
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition: .3s;
+}
+
+.fa-campaign__cta:hover {
+    background: #111;
+    transform: translateY(-3px);
+}
+
+.fa-campaign__cta b {
+    font-size: 20px;
+}
+
+.fa-campaign__signature {
+    margin-top: 28px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    opacity: .55;
+}
+
+.fa-campaign__bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid currentColor;
+    padding-top: 17px;
+}
+
+.fa-campaign__bottom-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.fa-campaign__navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fa-campaign__navigation button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid currentColor;
+    color: inherit;
+    background: transparent;
+    font-size: 19px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.fa-campaign__navigation button:hover {
+    background: var(--campaign-accent);
+    color: white;
+    border-color: var(--campaign-accent);
+}
+
+.fa-campaign__progress {
+    width: 110px;
+    height: 3px;
+    background: currentColor;
+    opacity: .2;
+}
+
+.fa-campaign__progress span {
+    display: block;
+    width: 14.28%;
+    height: 100%;
+    background: var(--campaign-accent);
+    opacity: 1;
+    transition: width .3s;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .fa-campaign__screen {
+        inset: 0;
+        padding: 20px 18px;
+        overflow-y: auto;
+    }
+
+    .fa-campaign__top {
+        padding-right: 75px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .fa-campaign__close {
+        top: 13px;
+        right: 18px;
+        width: 58px;
+        height: 42px;
+    }
+
+    .fa-campaign__close small {
+        display: none;
+    }
+
+    .fa-campaign__layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 25px 0 20px;
+    }
+
+    .fa-campaign__visual {
+        height: 42vh;
+        min-height: 260px;
+        max-height: 430px;
+        flex: none;
+    }
+
+    .fa-campaign__image-number {
+        font-size: 45px;
+    }
+
+    .fa-campaign__image-caption {
+        font-size: 7px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .fa-campaign__details {
+        padding: 25px 0 15px;
+    }
+
+    .fa-campaign__eyebrow {
+        margin-bottom: 15px;
+        font-size: 9px;
+    }
+
+    .fa-campaign__details h2 {
+        font-size: clamp(36px, 11vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .fa-campaign__divider {
+        margin: 18px 0;
+    }
+
+    .fa-campaign__details p {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .fa-campaign__features {
+        margin-bottom: 20px;
+    }
+
+    .fa-campaign__features strong {
+        font-size: 18px;
+    }
+
+    .fa-campaign__features span {
+        font-size: 7px;
+    }
+
+    .fa-campaign__cta {
+        max-width: none;
+        padding: 16px;
+    }
+
+    .fa-campaign__signature {
+        margin-top: 18px;
+        font-size: 8px;
+    }
+
+    .fa-campaign__bottom {
+        padding-bottom: 5px;
+    }
+
+    .fa-campaign__bottom-label {
+        font-size: 8px;
+    }
+
+    .fa-campaign__progress {
+        width: 55px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fa-campaign,
+    .fa-campaign *,
+    .fa-campaign *::before,
+    .fa-campaign *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* =========================================
+   FA CAMPAIGN — IMAGE SIZE & MOBILE FIT
+========================================= */
+
+.fa-campaign__screen {
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+}
+
+.fa-campaign__visual {
+    height: min(58vh, 540px);
+    min-height: 0;
+    overflow: hidden;
+}
+
+.fa-campaign__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .fa-campaign__visual {
+        height: 42vh;
+        max-height: 390px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .fa-campaign__screen {
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100dvh;
+        max-height: 100vh;
+        max-height: 100dvh;
+        overflow-y: auto;
+        padding-bottom: 18px;
+    }
+
+    .fa-campaign__layout {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 12px 18px;
+    }
+
+    .fa-campaign__visual {
+        width: 100%;
+        height: 32vh;
+        height: min(32dvh, 260px);
+        min-height: 170px;
+        max-height: 260px;
+    }
+
+    .fa-campaign__visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .fa-campaign__details {
+        width: 100%;
+        padding: 0;
+    }
+
+    .fa-campaign__details h2 {
+        font-size: clamp(30px, 9vw, 44px);
+        line-height: 0.98;
+    }
+
+    .fa-campaign__features {
+        gap: 10px;
+    }
+
+    .fa-campaign__bottom {
+        padding: 12px 18px;
+    }
+
+    .fa-campaign__watermark {
+        font-size: 25vw;
+    }
+}
+
+
+
 
 
 

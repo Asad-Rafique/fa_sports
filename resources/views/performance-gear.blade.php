@@ -1323,6 +1323,114 @@
 
 </section>
 
+{{-- FA SPORTS — COLLECTION CAMPAIGN TAKEOVER --}}
+<div class="fa-campaign" id="faCampaign" aria-hidden="true">
+
+    <div class="fa-campaign__backdrop"></div>
+
+    <div class="fa-campaign__screen" data-theme="women">
+
+        <button class="fa-campaign__close" type="button" aria-label="Close">
+            <span>✕</span>
+            <small>CLOSE</small>
+        </button>
+
+        <div class="fa-campaign__top">
+            <span>FA SPORTS / COLLECTION</span>
+            <span id="campaignCounter">01 — 07</span>
+        </div>
+
+        <div class="fa-campaign__watermark" id="campaignWatermark">
+            WOMEN
+        </div>
+
+        <div class="fa-campaign__layout">
+
+            <div class="fa-campaign__visual">
+                <img id="campaignImage" src="" alt="FA SPORTS Collection">
+
+                <div class="fa-campaign__image-overlay"></div>
+
+                <div class="fa-campaign__image-number" id="campaignNumber">
+                    01
+                </div>
+
+                <div class="fa-campaign__image-caption">
+                    <span>FA SPORTS</span>
+                    <span>ENGINEERED FOR MOVEMENT</span>
+                </div>
+            </div>
+
+            <div class="fa-campaign__details">
+
+                <div class="fa-campaign__eyebrow">
+                    <span class="fa-campaign__dot"></span>
+                    <span id="campaignCategory">WOMEN'S SPORTSWEAR</span>
+                </div>
+
+                <h2 id="campaignTitle">
+                    PERFORMANCE<br>WITHOUT LIMITS.
+                </h2>
+
+                <div class="fa-campaign__divider"></div>
+
+                <p id="campaignDescription"></p>
+
+                <div class="fa-campaign__features">
+                    <div>
+                        <strong>01</strong>
+                        <span>DESIGNED TO MOVE</span>
+                    </div>
+                    <div>
+                        <strong>02</strong>
+                        <span>BUILT FOR COMFORT</span>
+                    </div>
+                    <div>
+                        <strong>03</strong>
+                        <span>MADE FOR PERFORMANCE</span>
+                    </div>
+                </div>
+
+                <a href="/request-a-quote"
+   class="fa-campaign__cta">
+                    <span>CREATE YOUR COLLECTION</span>
+                    <b>↗</b>
+                </a>
+
+                <div class="fa-campaign__signature">
+                    THE GAME STARTS BEFORE THE GAME.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="fa-campaign__bottom">
+
+            <div class="fa-campaign__bottom-label">
+                EXPLORE THE COLLECTION
+            </div>
+
+            <div class="fa-campaign__navigation">
+                <button type="button" id="campaignPrev" aria-label="Previous">
+                    ←
+                </button>
+
+                <div class="fa-campaign__progress">
+                    <span id="campaignProgress"></span>
+                </div>
+
+                <button type="button" id="campaignNext" aria-label="Next">
+                    →
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
 {{-- =========================================================
      PERFORMANCE NOTES — WHITE EDITORIAL CARDS
 ========================================================= --}}

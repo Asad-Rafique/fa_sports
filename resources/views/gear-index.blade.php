@@ -212,12 +212,14 @@
         <article class="fa-gi-gear-wall__card fa-gi-gear-wall__card--feature">
 
             <div class="fa-gi-gear-wall__image">
+                <a href="{{ route('essentials.show', ['product' => 'suit-uniform5']) }}">
 
                 <img
                     src="{{ asset('images/legacy/uniform5.jpg') }}"
                     alt="FA Sports Performance Apparel"
                     loading="eager"
                 >
+</a>
 
                 <div class="fa-gi-gear-wall__overlay"></div>
 
@@ -269,12 +271,14 @@
         <article class="fa-gi-gear-wall__card fa-gi-gear-wall__card--small">
 
             <div class="fa-gi-gear-wall__image">
+                <a href="{{ route('essentials.show', ['product' => 'footwear-049']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-049.jpg') }}"
                     alt="FA Sports Footwear"
                     loading="lazy"
                 >
+</a>
 
                 <div class="fa-gi-gear-wall__overlay"></div>
 
@@ -316,12 +320,13 @@
         <article class="fa-gi-gear-wall__card fa-gi-gear-wall__card--small">
 
             <div class="fa-gi-gear-wall__image">
-
+                <a href="{{ route('essentials.show', ['product' => 'glove-063']) }}">
                 <img
                     src="{{ asset('images/legacy/product-063.jpg') }}"
                     alt="FA Sports Gloves"
                     loading="lazy"
                 >
+                </a>
 
                 <div class="fa-gi-gear-wall__overlay"></div>
 
@@ -363,12 +368,14 @@
         <article class="fa-gi-gear-wall__card fa-gi-gear-wall__card--small">
 
             <div class="fa-gi-gear-wall__image">
+                <a href="{{ route('essentials.show', ['product' => 'bag-077']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-077.jpg') }}"
                     alt="FA Sports Equipment Bags"
                     loading="lazy"
                 >
+</a>
 
                 <div class="fa-gi-gear-wall__overlay"></div>
 
@@ -410,12 +417,14 @@
         <article class="fa-gi-gear-wall__card fa-gi-gear-wall__card--small">
 
             <div class="fa-gi-gear-wall__image">
+                <a href="{{ route('essentials.show', ['product' => 'protection-081']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-081.jpg') }}"
                     alt="FA Sports Protection Equipment"
                     loading="lazy"
                 >
+</a>
 
                 <div class="fa-gi-gear-wall__overlay"></div>
 
@@ -532,12 +541,15 @@ FA SPORTS — MATCH KIT ARCHIVE
     <div class="fa-gi-kit-archive__feature">
 
         <div class="fa-gi-kit-archive__feature-image">
+            <a href="{{ route('essentials.show', ['product' => 'match-kit-performance']) }}">
+
 
             <img
                 src="{{ asset('images/legacy/uniform7.jpg') }}"
                 alt="FA Sports Match Kit"
                 loading="lazy"
             >
+</a>
 
             <div class="fa-gi-kit-archive__feature-overlay"></div>
 
@@ -619,12 +631,18 @@ FA SPORTS — MATCH KIT ARCHIVE
         <article class="fa-gi-kit-archive__item is-highlight">
 
             <div class="fa-gi-kit-archive__item-image">
+                
+
+
+<a href="{{ route('essentials.show', ['product' => 'match-kit-identity']) }}">
+
 
                 <img
                     src="{{ asset('images/legacy/uniform9.jpg') }}"
                     alt="FA Sports Kit Archive"
                     loading="lazy"
                 >
+</a>
 
                 <span>02</span>
 
@@ -646,11 +664,15 @@ FA SPORTS — MATCH KIT ARCHIVE
 
             <div class="fa-gi-kit-archive__item-image">
 
+<a href="{{ route('essentials.show', ['product' => 'match-kit-field-ready']) }}">
+
+
                 <img
                     src="{{ asset('images/legacy/uniform10.jpg') }}"
                     alt="FA Sports Matchwear"
                     loading="lazy"
                 >
+</a>
 
                 <span>03</span>
 
@@ -672,11 +694,16 @@ FA SPORTS — MATCH KIT ARCHIVE
 
             <div class="fa-gi-kit-archive__item-image">
 
+                <a href="{{ route('essentials.show', ['product' => 'match-kit-details']) }}">
+
+
+
                 <img
                     src="{{ asset('images/legacy/uniform13.jpg') }}"
                     alt="FA Sports Team Kit"
                     loading="lazy"
                 >
+</a>
 
                 <span>04</span>
 
@@ -697,12 +724,15 @@ FA SPORTS — MATCH KIT ARCHIVE
         <article class="fa-gi-kit-archive__item">
 
             <div class="fa-gi-kit-archive__item-image">
+                <a href="{{ route('essentials.show', ['product' => 'match-kit-game-form']) }}">
+
+
 
                 <img
                     src="{{ asset('images/legacy/uniform12.jpg') }}"
                     alt="FA Sports Match Kit"
                     loading="lazy"
-                >
+                ></a>
 
                 <span>05</span>
 
@@ -815,12 +845,10 @@ FA SPORTS — FOOTWEAR LAB
 
 
         <div class="fa-gi-footwear-lab__hero">
-
-            <img
-                src="{{ asset('images/legacy/product-049.jpg') }}"
-                alt="FA Sports Performance Footwear"
-                loading="lazy"
-            >
+            <a href="{{ route('essentials.show', ['product' => 'footwear-049']) }}">
+    <img src="{{ asset('images/legacy/product-049.jpg') }}"
+         alt="Game Ready Footwear">
+</a>
 
             <div class="fa-gi-footwear-lab__hero-grid"></div>
             <div class="fa-gi-footwear-lab__hero-gradient"></div>
@@ -920,12 +948,14 @@ FA SPORTS — FOOTWEAR LAB
             <article class="fa-gi-footwear-card">
 
                 <div class="fa-gi-footwear-card__image">
+                    <a href="{{ route('essentials.show', ['product' => 'footwear-040']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-040.jpg') }}"
                         alt="FA Sports Footwear System"
                         loading="lazy"
                     >
+</a>
 
                     <span>FL / 040</span>
 
@@ -958,12 +988,14 @@ FA SPORTS — FOOTWEAR LAB
             <article class="fa-gi-footwear-card">
 
                 <div class="fa-gi-footwear-card__image">
+                    <a href="{{ route('essentials.show', ['product' => 'footwear-043']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-043.jpg') }}"
                         alt="FA Sports Performance Footwear"
                         loading="lazy"
                     >
+</a>
 
                     <span>FL / 043</span>
 
@@ -996,12 +1028,14 @@ FA SPORTS — FOOTWEAR LAB
             <article class="fa-gi-footwear-card">
 
                 <div class="fa-gi-footwear-card__image">
+                    <a href="{{ route('essentials.show', ['product' => 'footwear-049']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-049.jpg') }}"
                         alt="FA Sports Advanced Footwear"
                         loading="lazy"
                     >
+</a>
 
                     <span>FL / 049</span>
 
@@ -1095,12 +1129,14 @@ FA SPORTS — GLOVE ARCHIVE
         <article class="fa-gi-glove-card fa-gi-glove-card--large">
 
             <div class="fa-gi-glove-card__image">
+                <a href="{{ route('essentials.show', ['product' => 'glove-063']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-063.jpg') }}"
                     alt="FA Sports Glove Archive"
                     loading="lazy"
                 >
+</a>
 
                 <div class="fa-gi-glove-card__shade"></div>
 
@@ -1131,12 +1167,14 @@ FA SPORTS — GLOVE ARCHIVE
         <article class="fa-gi-glove-card">
 
             <div class="fa-gi-glove-card__image">
+                <a href="{{ route('essentials.show', ['product' => 'glove-064']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-064.jpg') }}"
                     alt="FA Sports Gloves"
                     loading="lazy"
                 >
+</a>
 
                 <span class="fa-gi-glove-card__number">
                     02
@@ -1171,12 +1209,13 @@ FA SPORTS — GLOVE ARCHIVE
         <article class="fa-gi-glove-card">
 
             <div class="fa-gi-glove-card__image">
-
+                <a href="{{ route('essentials.show', ['product' => 'glove-059']) }}">
                 <img
                     src="{{ asset('images/legacy/product-059.jpg') }}"
                     alt="FA Sports Glove Archive"
                     loading="lazy"
                 >
+</a>
 
                 <span class="fa-gi-glove-card__number">
                     03
@@ -1211,12 +1250,14 @@ FA SPORTS — GLOVE ARCHIVE
         <article class="fa-gi-glove-card">
 
             <div class="fa-gi-glove-card__image">
+                <a href="{{ route('essentials.show', ['product' => 'glove-054']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-054.jpg') }}"
                     alt="FA Sports Protective Gloves"
                     loading="lazy"
                 >
+</a>
 
                 <span class="fa-gi-glove-card__number">
                     04
@@ -1251,12 +1292,13 @@ FA SPORTS — GLOVE ARCHIVE
         <article class="fa-gi-glove-card">
 
             <div class="fa-gi-glove-card__image">
-
+                <a href="{{ route('essentials.show', ['product' => 'glove-055']) }}">
                 <img
                     src="{{ asset('images/legacy/product-055.jpg') }}"
                     alt="FA Sports Performance Gloves"
                     loading="lazy"
                 >
+</a>
 
                 <span class="fa-gi-glove-card__number">
                     05
@@ -1382,12 +1424,14 @@ FA SPORTS — THE BAG ROOM
         <article class="fa-gi-bag-room__feature">
 
             <div class="fa-gi-bag-room__feature-image">
+                <a href="{{ route('essentials.show', ['product' => 'bag-077']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-077.jpg') }}"
                     alt="FA Sports Equipment Bag"
                     loading="lazy"
                 >
+</a>
 
                 <div class="fa-gi-bag-room__feature-overlay"></div>
 
@@ -1443,12 +1487,14 @@ FA SPORTS — THE BAG ROOM
                 <div class="fa-gi-bag-item__number">02</div>
 
                 <div class="fa-gi-bag-item__image">
+                    <a href="{{ route('essentials.show', ['product' => 'bag-078']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-078.jpg') }}"
                         alt="FA Sports Bag"
                         loading="lazy"
                     >
+</a>
 
                 </div>
 
@@ -1477,12 +1523,14 @@ FA SPORTS — THE BAG ROOM
                 <div class="fa-gi-bag-item__number">03</div>
 
                 <div class="fa-gi-bag-item__image">
+                    <a href="{{ route('essentials.show', ['product' => 'bag-075']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-075.jpg') }}"
                         alt="FA Sports Team Bag"
                         loading="lazy"
                     >
+</a>
 
                 </div>
 
@@ -1511,12 +1559,14 @@ FA SPORTS — THE BAG ROOM
                 <div class="fa-gi-bag-item__number">04</div>
 
                 <div class="fa-gi-bag-item__image">
+                    <a href="{{ route('essentials.show', ['product' => 'bag-074']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-074.jpg') }}"
                         alt="FA Sports Equipment Bag"
                         loading="lazy"
                     >
+</a>
 
                 </div>
 
@@ -1545,12 +1595,14 @@ FA SPORTS — THE BAG ROOM
                 <div class="fa-gi-bag-item__number">05</div>
 
                 <div class="fa-gi-bag-item__image">
+                    <a href="{{ route('essentials.show', ['product' => 'bag-069']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-069.jpg') }}"
                         alt="FA Sports Sports Bag"
                         loading="lazy"
                     >
+</a>
 
                 </div>
 
@@ -1686,11 +1738,13 @@ FA SPORTS — PROTECTION SYSTEM
         <article class="fa-gi-protection__hero-card">
 
             <div class="fa-gi-protection__image">
+                <a href="{{ route('essentials.show', ['product' => 'protection-081']) }}">
 
                 <img
                     src="{{ asset('images/legacy/product-081.jpg') }}"
                     alt="FA Sports Protective Helmet"
                 >
+</a>
 
                 <div class="fa-gi-protection__image-grid"></div>
 
@@ -1744,11 +1798,13 @@ FA SPORTS — PROTECTION SYSTEM
             <article class="fa-gi-protection__card">
 
                 <div class="fa-gi-protection__card-image">
+                    <a href="{{ route('essentials.show', ['product' => 'protection-085']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-085.jpg') }}"
                         alt="FA Sports Protective Kit"
                     >
+</a>
 
                     <span>02</span>
 
@@ -1775,11 +1831,13 @@ FA SPORTS — PROTECTION SYSTEM
             <article class="fa-gi-protection__card">
 
                 <div class="fa-gi-protection__card-image">
+                    <a href="{{ route('essentials.show', ['product' => 'protection-089']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-089.jpg') }}"
                         alt="FA Sports Water Bottle"
                     >
+</a>
 
                     <span>03</span>
 
@@ -1807,11 +1865,13 @@ FA SPORTS — PROTECTION SYSTEM
             <article class="fa-gi-protection__card">
 
                 <div class="fa-gi-protection__card-image">
+                    <a href="{{ route('essentials.show', ['product' => 'protection-093']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-093.jpg') }}"
                         alt="FA Sports Protective Wire Equipment"
                     >
+</a>
 
                     <span>04</span>
 
@@ -1838,11 +1898,13 @@ FA SPORTS — PROTECTION SYSTEM
             <article class="fa-gi-protection__card">
 
                 <div class="fa-gi-protection__card-image">
+                    <a href="{{ route('essentials.show', ['product' => 'protection-095']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-095.jpg') }}"
                         alt="FA Sports Training Protection Mat"
                     >
+</a>
 
                     <span>05</span>
 
@@ -1869,11 +1931,13 @@ FA SPORTS — PROTECTION SYSTEM
             <article class="fa-gi-protection__card fa-gi-protection__card--violet">
 
                 <div class="fa-gi-protection__card-image">
+                    <a href="{{ route('essentials.show', ['product' => 'protection-097']) }}">
 
                     <img
                         src="{{ asset('images/legacy/product-097.jpg') }}"
                         alt="FA Sports Violet Carry Protection Equipment"
                     >
+</a>
 
                     <span>06</span>
 
@@ -1997,11 +2061,14 @@ THE FIVE / SPORTSWEAR SUIT EDIT
         <article class="fa-gi-product-index__product product-one">
 
             <div class="fa-gi-product-index__image">
+                <a href="{{ route('essentials.show', ['product' => 'suit-uniform7']) }}">
+
 
                 <img
                     src="{{ asset('images/legacy/uniform7.jpg') }}"
                     alt="FA Sports Performance Suit"
                 >
+</a>
 
                 <span class="fa-gi-product-index__number">01</span>
 
@@ -2061,11 +2128,13 @@ THE FIVE / SPORTSWEAR SUIT EDIT
         <article class="fa-gi-product-index__product product-two">
 
             <div class="fa-gi-product-index__image">
+                <a href="{{ route('essentials.show', ['product' => 'suit-uniform1']) }}">
 
                 <img
                     src="{{ asset('images/legacy/uniform1.jpg') }}"
                     alt="FA Sports Teamwear Suit"
                 >
+</a>
 
                 <span class="fa-gi-product-index__number">02</span>
 
@@ -2125,11 +2194,13 @@ THE FIVE / SPORTSWEAR SUIT EDIT
         <article class="fa-gi-product-index__product product-three">
 
             <div class="fa-gi-product-index__image">
+                <a href="{{ route('essentials.show', ['product' => 'suit-uniform4']) }}">
 
                 <img
                     src="{{ asset('images/legacy/uniform4.jpg') }}"
                     alt="FA Sports Match Suit"
                 >
+</a>
 
                 <span class="fa-gi-product-index__number">03</span>
 
@@ -2189,11 +2260,13 @@ THE FIVE / SPORTSWEAR SUIT EDIT
         <article class="fa-gi-product-index__product product-four">
 
             <div class="fa-gi-product-index__image">
+                <a href="{{ route('essentials.show', ['product' => 'suit-uniform5']) }}">
 
                 <img
                     src="{{ asset('images/legacy/uniform5.jpg') }}"
                     alt="FA Sports Training Suit"
                 >
+</a>
 
                 <span class="fa-gi-product-index__number">04</span>
 
@@ -2253,11 +2326,13 @@ THE FIVE / SPORTSWEAR SUIT EDIT
         <article class="fa-gi-product-index__product product-five">
 
             <div class="fa-gi-product-index__image">
+                <a href="{{ route('essentials.show', ['product' => 'suit-uniform6']) }}">
 
                 <img
                     src="{{ asset('images/legacy/uniform6.jpg') }}"
                     alt="FA Sports Elite Sportswear Suit"
                 >
+</a>
 
                 <span class="fa-gi-product-index__number">05</span>
 

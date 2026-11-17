@@ -837,3 +837,183 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+/* =====================================================
+   FA SPORTS — COLLECTION CAMPAIGN INTERACTION
+===================================================== */
+
+(() => {
+    function initFaCampaign() {
+
+        const modal = document.getElementById('faCampaign');
+        if (!modal) return;
+
+        const screen = modal.querySelector('.fa-campaign__screen');
+        const cards = Array.from(
+            document.querySelectorAll(
+                '.fa-collection-white .fa-uniform-card'
+            )
+        );
+
+        if (!cards.length) return;
+
+        const image = document.getElementById('campaignImage');
+        const title = document.getElementById('campaignTitle');
+        const description = document.getElementById('campaignDescription');
+        const category = document.getElementById('campaignCategory');
+        const watermark = document.getElementById('campaignWatermark');
+        const number = document.getElementById('campaignNumber');
+        const counter = document.getElementById('campaignCounter');
+        const progress = document.getElementById('campaignProgress');
+
+        const closeButton = modal.querySelector('.fa-campaign__close');
+        const prevButton = document.getElementById('campaignPrev');
+        const nextButton = document.getElementById('campaignNext');
+
+        let activeIndex = 0;
+        let previousOverflow = '';
+
+        function getAudience(index) {
+            if (index <= 2) {
+                return {
+                    theme: 'women',
+                    label: "WOMEN'S SPORTSWEAR",
+                    watermark: 'WOMEN'
+                };
+            }
+
+            if (index <= 5) {
+                return {
+                    theme: 'men',
+                    label: "MEN'S SPORTSWEAR",
+                    watermark: 'MEN'
+                };
+            }
+
+            return {
+                theme: 'kids',
+                label: "KIDS SPORTSWEAR",
+                watermark: 'JUNIOR'
+            };
+        }
+
+        function showCampaign(index) {
+            activeIndex = (index + cards.length) % cards.length;
+
+            const card = cards[activeIndex];
+            const img = card.querySelector('.fa-uniform-card__visual img');
+            const heading = card.querySelector('.fa-uniform-card__info h3');
+            const paragraph = card.querySelector('.fa-uniform-card__info p');
+
+            if (!img) return;
+
+            const audience = getAudience(activeIndex);
+
+            screen.dataset.theme = audience.theme;
+
+            image.src = img.currentSrc || img.src;
+            image.alt = img.alt || 'FA SPORTS Collection';
+
+            title.textContent = heading
+                ? heading.textContent.replace(/\s+/g, ' ').trim()
+                : 'FA SPORTS COLLECTION';
+
+            description.textContent = paragraph
+                ? paragraph.textContent.replace(/\s+/g, ' ').trim()
+                : 'Performance sportswear designed around movement, identity and comfort.';
+
+            category.textContent = audience.label;
+            watermark.textContent = audience.watermark;
+
+            const displayNumber = String(activeIndex + 1).padStart(2, '0');
+
+            number.textContent = displayNumber;
+            counter.textContent = displayNumber + ' — ' +
+                String(cards.length).padStart(2, '0');
+
+            progress.style.width =
+                ((activeIndex + 1) / cards.length * 100) + '%';
+
+            // Replay content animation
+            const details = modal.querySelector('.fa-campaign__details');
+            details.style.animation = 'none';
+            void details.offsetWidth;
+            details.style.animation = '';
+        }
+
+        function openCampaign(index) {
+            showCampaign(index);
+
+            previousOverflow = document.body.style.overflow;
+            document.body.style.overflow = 'hidden';
+
+            modal.classList.add('is-active');
+            modal.setAttribute('aria-hidden', 'false');
+
+            closeButton.focus();
+        }
+
+        function closeCampaign() {
+            modal.classList.remove('is-active');
+            modal.setAttribute('aria-hidden', 'true');
+
+            document.body.style.overflow = previousOverflow;
+        }
+
+        cards.forEach((card, index) => {
+            const visual = card.querySelector('.fa-uniform-card__visual');
+            if (!visual) return;
+
+            visual.style.cursor = 'pointer';
+            visual.setAttribute('role', 'button');
+            visual.setAttribute('tabindex', '0');
+            visual.setAttribute('aria-label', 'Explore collection ' + (index + 1));
+
+            visual.addEventListener('click', () => {
+                openCampaign(index);
+            });
+
+            visual.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openCampaign(index);
+                }
+            });
+        });
+
+        closeButton.addEventListener('click', closeCampaign);
+
+        modal.querySelector('.fa-campaign__backdrop')
+            .addEventListener('click', closeCampaign);
+
+        prevButton.addEventListener('click', () => {
+            showCampaign(activeIndex - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            showCampaign(activeIndex + 1);
+        });
+
+        document.addEventListener('keydown', event => {
+            if (!modal.classList.contains('is-active')) return;
+
+            if (event.key === 'Escape') {
+                closeCampaign();
+            }
+
+            if (event.key === 'ArrowRight') {
+                showCampaign(activeIndex + 1);
+            }
+
+            if (event.key === 'ArrowLeft') {
+                showCampaign(activeIndex - 1);
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFaCampaign);
+    } else {
+        initFaCampaign();
+    }
+})();

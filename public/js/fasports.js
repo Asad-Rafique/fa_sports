@@ -884,3 +884,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+/* =========================================
+   PLAYBOOK STORY EXPAND / COLLAPSE
+========================================= */
+
+document.addEventListener('click', function (event) {
+
+    const button = event.target.closest('[data-playbook-toggle]');
+
+    if (!button) return;
+
+    const currentCard = button.closest('[data-playbook-card]');
+
+    if (!currentCard) return;
+
+    const currentDetails = currentCard.querySelector('.fa-playbook__details');
+
+    const isAlreadyOpen = currentCard.classList.contains('is-open');
+
+    // Close all other cards
+    document.querySelectorAll('[data-playbook-card]').forEach(card => {
+
+        card.classList.remove('is-open');
+
+        const details = card.querySelector('.fa-playbook__details');
+        const toggle = card.querySelector('[data-playbook-toggle]');
+
+        if (details) details.hidden = true;
+
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+
+    });
+
+    // Open selected card
+    if (!isAlreadyOpen) {
+
+        currentCard.classList.add('is-open');
+
+        currentDetails.hidden = false;
+
+        button.setAttribute('aria-expanded', 'true');
+
+    }
+
+});
+
+

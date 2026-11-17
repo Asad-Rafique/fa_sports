@@ -183,6 +183,58 @@
 
 </section>
 
+{{-- ==========================================
+     FA SPORTS — COLLECTION INTRO
+     SEPARATE SECTION ABOVE BUILT OVER TIME
+========================================== --}}
+
+<section class="fa-legacy-collection-intro">
+
+    <div class="fa-legacy-collection-intro__inner">
+
+        <div class="fa-legacy-collection-intro__top">
+            <span>FA SPORTS / OUR COLLECTION</span>
+            <span>CRAFTED WITH PURPOSE</span>
+        </div>
+
+        <div class="fa-legacy-collection-intro__content">
+
+            <span class="fa-legacy-collection-intro__eyebrow">
+                BEHIND EVERY PERFORMANCE
+            </span>
+
+            <h2>
+                CRAFTED FOR<br>
+                <span>THE GAME.</span>
+            </h2>
+
+            <p>
+                Explore a collection shaped by experience,
+                attention to detail and a passion for sports.
+                From essential equipment to specialized protection,
+                every creation has a purpose.
+            </p>
+
+            <a href="{{ url('/request-a-quote') }}"
+               class="fa-legacy-collection-intro__button">
+
+                REQUEST A QUOTE
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+        <div class="fa-legacy-collection-intro__bottom">
+            <span>QUALITY IN EVERY DETAIL</span>
+            <span>01 — FA SPORTS</span>
+        </div>
+
+    </div>
+
+</section>
+
+
     
 
 {{-- =========================================================
@@ -334,71 +386,75 @@
             ];
         @endphp
 
-        @foreach ($legacyProducts as $index => $product)
+        
+@foreach ($legacyProducts as $index => $product)
 
-            @php
-                $isReverse = $index % 2 !== 0;
-            @endphp
+    @php
+        $isReverse = $index % 2 !== 0;
+    @endphp
 
-            <article
-                class="fa-lg-timeline__item {{ $isReverse ? 'is-reverse' : '' }}"
+    <article class="fa-lg-timeline__item {{ $isReverse ? 'is-reverse' : '' }}">
+
+        {{-- PRODUCT IMAGE --}}
+        <div class="fa-lg-timeline__image-wrap">
+
+            <a
+                href="{{ asset($product['image']) }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="fa-lg-timeline__image-link"
+                aria-label="View full size {{ $product['alt'] }}"
             >
+                <img
+                    src="{{ asset($product['image']) }}"
+                    alt="{{ $product['alt'] }}"
+                    class="fa-lg-timeline__image"
+                    loading="lazy"
+                >
+            </a>
 
-                {{-- IMAGE SIDE --}}
-                <div class="fa-lg-timeline__side fa-lg-timeline__side--image">
+            <span class="fa-lg-timeline__image-label">
+                FA SPORTS / {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+            </span>
 
-                    <div class="fa-lg-timeline__image-wrap">
+        </div>
 
-                        <img
-                            src="{{ asset($product['image']) }}"
-                            alt="{{ $product['alt'] }}"
-                            class="fa-lg-timeline__image"
-                            loading="lazy"
-                        >
+        {{-- CENTER MARKER --}}
+        <div class="fa-lg-timeline__marker">
+            <span></span>
+        </div>
 
-                        <span class="fa-lg-timeline__image-label">
-                            FA SPORTS / {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
-                        </span>
+        {{-- PRODUCT CONTENT --}}
+        <div class="fa-lg-timeline__side fa-lg-timeline__side--content">
 
-                    </div>
+            <div class="fa-lg-timeline__content">
 
+                <span class="fa-lg-timeline__chapter">
+                    PRODUCT {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                </span>
+
+                <h3 class="fa-lg-timeline__title">
+                    {{ $product['title'] }}
+                </h3>
+
+                <p class="fa-lg-timeline__description">
+                    {{ $product['description'] }}
+                </p>
+
+                <div class="fa-lg-timeline__tags">
+                    @foreach ($product['tags'] as $tag)
+                        <span>{{ $tag }}</span>
+                    @endforeach
                 </div>
 
-                {{-- CENTER MARKER --}}
-                <div class="fa-lg-timeline__marker">
-                    <span></span>
-                </div>
+            </div>
 
-                {{-- PRODUCT CONTENT --}}
-                <div class="fa-lg-timeline__side fa-lg-timeline__side--content">
+        </div>
 
-                    <div class="fa-lg-timeline__content">
+    </article>
 
-                        <span class="fa-lg-timeline__chapter">
-                            PRODUCT {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
-                        </span>
+@endforeach
 
-                        <h3 class="fa-lg-timeline__title">
-                            {{ $product['title'] }}
-                        </h3>
-
-                        <p class="fa-lg-timeline__description">
-                            {{ $product['description'] }}
-                        </p>
-
-                        <div class="fa-lg-timeline__tags">
-                            @foreach ($product['tags'] as $tag)
-                                <span>{{ $tag }}</span>
-                            @endforeach
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        @endforeach
 
     </div>
 
