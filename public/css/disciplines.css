@@ -2382,6 +2382,95 @@
     }
 }
 
+/* =========================================
+   PERFORMANCE PAGE FOOTER ALIGNMENT
+========================================= */
+
+.fa-footer--pg .fa-footer__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.3fr 1fr;
+    align-items: start;
+    gap: 35px;
+    width: 100%;
+}
+
+.fa-footer--pg .fa-footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.fa-footer--pg .fa-footer__col a {
+    overflow-wrap: anywhere;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+    .fa-footer--pg .fa-footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .fa-footer--pg .fa-footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 16px;
+    }
+
+    .fa-footer--pg .fa-footer__col {
+        min-width: 0;
+    }
+
+    .fa-footer--pg .fa-footer__col a {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+}
+
+/* ==================================
+   FA FOOTER - CLICKABLE LINKS FIX
+================================== */
+
+.fa-footer {
+    position: relative;
+    isolation: isolate;
+}
+
+.fa-footer__grid,
+.fa-footer__col {
+    position: relative;
+    z-index: 5;
+    pointer-events: auto !important;
+}
+
+.fa-footer__col a {
+    position: relative;
+    z-index: 6;
+    display: inline-block;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    text-decoration: none;
+}
+
+.fa-footer__col a:hover {
+    color: #E2141F !important;
+}
+
+.fa-footer__col a[href^="mailto:"],
+.fa-footer__col a[href^="https://mail.google.com"],
+.fa-footer__col a[href^="tel:"],
+.fa-footer__col a[href^="https://www.facebook.com"],
+.fa-footer__col a[href^="https://www.instagram.com"],
+.fa-footer__col a[href^="https://www.linkedin.com"] {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+
+
 
 
 

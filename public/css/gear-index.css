@@ -5072,4 +5072,47 @@ a {
     object-fit: cover;
 }
 
+/* FA SPORTS FOOTER GRID */
+
+.fa-footer:not(.fa-footer--pg) .fa-footer__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.3fr 1fr;
+    align-items: start;
+    gap: 35px;
+    width: 100%;
+}
+
+.fa-footer:not(.fa-footer--pg) .fa-footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.fa-footer:not(.fa-footer--pg) .fa-footer__col a {
+    overflow-wrap: anywhere;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+    .fa-footer:not(.fa-footer--pg) .fa-footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .fa-footer:not(.fa-footer--pg) .fa-footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 16px;
+    }
+
+    .fa-footer:not(.fa-footer--pg) .fa-footer__col a {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+}
+
+
 

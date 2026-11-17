@@ -7468,6 +7468,546 @@ css
     object-fit: cover;
 }
 
+/* =========================================================
+   FA SPORTS — PREMIUM FOOTER
+   BLACK / WHITE / RED
+========================================================= */
+
+.fa-final-cta {
+    width: 100%;
+    background: #e10600;
+    color: #fff;
+    padding: 100px 7%;
+    position: relative;
+    overflow: hidden;
+}
+
+.fa-final-cta__inner {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.fa-final-cta__eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    opacity: .85;
+}
+
+.fa-final-cta__headline {
+    font-size: clamp(65px, 11vw, 150px);
+    font-weight: 950;
+    line-height: .82;
+    letter-spacing: -7px;
+    margin: 0 0 45px;
+    text-transform: uppercase;
+}
+
+.fa-final-cta__headline .fa-red {
+    color: #111;
+}
+
+.fa-final-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 25px;
+    border: 1px solid rgba(255,255,255,.8);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition: .3s ease;
+}
+
+.fa-final-cta__btn:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* FOOTER MAIN */
+
+.fa-footer {
+    width: 100%;
+    background: #090909;
+    color: #fff;
+    padding: 80px 7% 25px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.fa-footer *,
+.fa-final-cta * {
+    box-sizing: border-box;
+}
+
+.fa-footer__top {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.35fr;
+    gap: 55px;
+}
+
+
+/* BRAND */
+
+.fa-footer__logo {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 950;
+    letter-spacing: -1.5px;
+}
+
+.fa-footer__logo span {
+    color: #e10600;
+}
+
+.fa-footer__description {
+    max-width: 280px;
+    color: #999;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 22px 0 30px;
+}
+
+.fa-footer__social-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.fa-footer__social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.fa-footer__social-links a {
+    font-size: 11px;
+    color: #ddd;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.fa-footer__social-links a:hover {
+    color: #e10600;
+    transform: translateX(4px);
+}
+
+
+/* COLUMNS */
+
+.fa-footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fa-footer__title {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 8px 0 27px;
+    position: relative;
+    padding-bottom: 13px;
+}
+
+.fa-footer__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: #e10600;
+}
+
+.fa-footer__col > a {
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 17px;
+    transition: .25s;
+}
+
+.fa-footer__col > a:hover {
+    color: #e10600;
+    transform: translateX(4px);
+}
+
+
+/* CONTACT */
+
+.fa-footer__contact-label {
+    color: #777;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.fa-footer__contact-value {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 25px;
+    overflow-wrap: anywhere;
+    transition: .25s;
+}
+
+.fa-footer__contact-value:hover {
+    color: #e10600;
+}
+
+.fa-footer__email {
+    font-size: 13px;
+}
+
+.fa-footer__location {
+    color: #bbb;
+    font-size: 13px;
+    margin: 0 0 20px;
+}
+
+
+/* LARGE WORDMARK */
+
+.fa-footer__wordmark {
+    max-width: 1400px;
+    margin: 85px auto 30px;
+    color: #171717;
+    font-size: clamp(65px, 15vw, 210px);
+    font-weight: 950;
+    letter-spacing: -12px;
+    line-height: .85;
+    white-space: nowrap;
+    text-align: center;
+    user-select: none;
+}
+
+.fa-footer__wordmark span {
+    color: #e10600;
+}
+
+
+/* LEGAL */
+
+.fa-footer__legal {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid #292929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: #777;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.fa-footer__tagline {
+    color: #e10600;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .fa-footer__top {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 35px;
+    }
+
+    .fa-footer__wordmark {
+        letter-spacing: -6px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .fa-final-cta {
+        padding: 75px 22px;
+    }
+
+    .fa-final-cta__eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .fa-final-cta__headline {
+        font-size: clamp(65px, 16vw, 95px);
+        letter-spacing: -4px;
+        line-height: .88;
+        margin-bottom: 35px;
+    }
+
+    .fa-final-cta__btn {
+        font-size: 10px;
+        padding: 15px 18px;
+    }
+
+    .fa-footer {
+        padding: 55px 23px 22px;
+    }
+
+    .fa-footer__top {
+        grid-template-columns: 1fr 1fr;
+        gap: 42px 20px;
+    }
+
+    .fa-footer__brand {
+        grid-column: 1 / -1;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #292929;
+    }
+
+    .fa-footer__logo {
+        font-size: 27px;
+    }
+
+    .fa-footer__description {
+        max-width: 310px;
+        font-size: 12px;
+        margin: 15px 0 25px;
+    }
+
+    .fa-footer__social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .fa-footer__social-links a {
+        font-size: 10px;
+    }
+
+    .fa-footer__title {
+        font-size: 11px;
+        margin: 0 0 23px;
+    }
+
+    .fa-footer__col > a {
+        font-size: 11px;
+        margin-bottom: 16px;
+    }
+
+    .fa-footer__contact {
+        grid-column: 1 / -1;
+        border-top: 1px solid #292929;
+        padding-top: 30px;
+    }
+
+    .fa-footer__contact-value {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .fa-footer__email {
+        font-size: 12px;
+    }
+
+
+.fa-footer__wordmark {
+    max-width: 1400px;
+    margin: 85px auto 30px;
+    color: #E2141F;
+    font-size: clamp(65px, 15vw, 210px);
+    font-weight: 950;
+    letter-spacing: -12px;
+    line-height: .85;
+    white-space: nowrap;
+    text-align: center;
+    user-select: none;
+}
+
+.fa-footer__wordmark span:first-child {
+    color: #E2141F;
+}
+
+.fa-footer__wordmark .fa-wordmark-a {
+    color: #F6F5F1;
+}
+
+
+    .fa-footer__legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        font-size: 9px;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+    .fa-footer__top {
+        column-gap: 12px;
+    }
+
+    .fa-footer {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .fa-footer__col > a {
+        font-size: 10px;
+    }
+
+    .fa-footer__wordmark {
+        letter-spacing: -3px;
+    }
+
+}
+
+/* FA SPORTS — EXACT BRAND WORDMARK COLORS */
+
+.fa-footer .fa-footer__wordmark {
+    color: #E2141F !important;
+}
+
+.fa-footer .fa-footer__wordmark .fa-wordmark-f {
+    color: #E2141F !important;
+}
+
+.fa-footer .fa-footer__wordmark .fa-wordmark-a {
+    color: #F6F5F1 !important;
+}
+
+.fa-footer .fa-footer__wordmark .fa-wordmark-sports {
+    color: #E2141F !important;
+}
+
+/* =========================================
+   FA SPORTS — FINAL CTA REDESIGN
+========================================= */
+
+.fa-final-cta {
+    background: #0A0A0B !important;
+    color: #F6F5F1 !important;
+    padding: 100px 7%;
+}
+
+.fa-final-cta__eyebrow {
+    display: block !important;
+    color: #F6F5F1 !important;
+    opacity: 1 !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 30px !important;
+}
+
+.fa-final-cta__headline {
+    color: #F6F5F1 !important;
+}
+
+.fa-final-cta__headline::first-line {
+    color: #E2141F !important;
+}
+
+.fa-final-cta__headline .fa-red {
+    display: inline-block;
+    background: #F6F5F1 !important;
+    color: #0A0A0B !important;
+    padding: 8px 18px;
+    margin-top: 10px;
+}
+
+.fa-final-cta__btn {
+    background: #E2141F !important;
+    color: #F6F5F1 !important;
+    border: 1px solid #E2141F !important;
+    padding: 18px 28px !important;
+    font-weight: 900 !important;
+    transition: .3s ease !important;
+}
+
+.fa-final-cta__btn:hover {
+    background: #9C0D14 !important;
+    border-color: #9C0D14 !important;
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .fa-final-cta {
+        padding: 70px 22px !important;
+    }
+
+    .fa-final-cta__eyebrow {
+        font-size: 9px !important;
+        letter-spacing: 2px !important;
+        line-height: 1.8 !important;
+    }
+
+    .fa-final-cta__headline .fa-red {
+        padding: 7px 10px;
+        letter-spacing: -3px;
+    }
+}
+
+/* FINAL CTA — WHITE BACKGROUND */
+
+.fa-final-cta {
+    background: #F6F5F1 !important;
+    color: #0A0A0B !important;
+}
+
+.fa-final-cta__eyebrow {
+    color: #0A0A0B !important;
+}
+
+.fa-final-cta__headline {
+    color: #0A0A0B !important;
+}
+
+.fa-final-cta__headline::first-line {
+    color: #E2141F !important;
+}
+
+.fa-final-cta__headline .fa-red {
+    background: #0A0A0B !important;
+    color: #F6F5F1 !important;
+}
+
+.fa-final-cta__btn {
+    background: #E2141F !important;
+    color: #F6F5F1 !important;
+    border-color: #E2141F !important;
+}
+
+
+
+
+
 
 
 

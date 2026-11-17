@@ -17,6 +17,7 @@
     {{-- FA SPORTS NAVIGATION CSS --}}
     <link rel="stylesheet" href="{{ asset('css/fa-navigation.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/sports-showcase.css') }}?v=1">
+    <link rel="stylesheet" href="{{ asset('css/fa-footer.css') }}?v=1">
 
     @stack('styles')
 </head>
